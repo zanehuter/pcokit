@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PCO industry knowledge base, AI prompt tools, and compliance guides — built by a field technician for pest control professionals.">
+<meta name="keywords" content="pest control, PCO, BRC audit, HACCP, hotel bed bugs, inspection report, pest management">
+<title>PCOKit — Pest Control Industry Knowledge & Tools</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #0a0a08; --white: #f5f3ee;
+  --green: #1a4a2e; --green-mid: #2d6e45; --green-light: #4a9e6a;
+  --green-pale: #e8f5ec; --amber: #c8860a; --amber-pale: #fef3c7;
+  --border: #d4cfc4; --muted: #6b6456;
+  --mono: 'DM Mono', monospace;
+  --serif: 'DM Serif Display', Georgia, serif;
+  --display: 'Syne', sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--display); background: var(--white); color: var(--black); overflow-x: hidden; }
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .9rem 2.5rem;
+  background: rgba(245,243,238,.92); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo { font-family: var(--display); font-weight: 800; font-size: 1.25rem; color: var(--green); letter-spacing:-.02em; text-decoration:none; }
+.nav-logo span { color: var(--black); }
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links a { font-family: var(--display); font-size:.82rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; transition:color .2s; }
+.nav-links a:hover { color: var(--green); }
+.nav-lang { font-family:var(--mono); font-size:.75rem; padding:4px 10px; border:1px solid var(--border); border-radius:4px; color:var(--muted); text-decoration:none; transition:all .2s; }
+.nav-lang:hover { border-color:var(--green); color:var(--green); }
+.hero { min-height:100vh; display:grid; grid-template-columns:1fr 1fr; padding-top:60px; position:relative; overflow:hidden; }
+.hero-left { display:flex; flex-direction:column; justify-content:center; padding:5rem 3rem 5rem 2.5rem; }
+.hero-eyebrow { font-family:var(--mono); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--green-light); margin-bottom:1.25rem; display:flex; align-items:center; gap:.5rem; }
+.hero-eyebrow::before { content:''; width:24px; height:1px; background:var(--green-light); }
+.hero-title { font-family:var(--serif); font-weight:400; font-size:clamp(2.6rem,4.5vw,4rem); line-height:1.1; letter-spacing:-.01em; color:var(--black); margin-bottom:1.5rem; }
+.hero-title .accent { color:var(--green); }
+.hero-desc { font-family:var(--display); font-weight:400; font-size:.95rem; line-height:1.8; color:var(--muted); max-width:420px; margin-bottom:2.5rem; }
+.hero-actions { display:flex; gap:1rem; flex-wrap:wrap; }
+.btn-primary { font-family:var(--display); font-weight:700; font-size:.82rem; letter-spacing:.04em; text-transform:uppercase; background:var(--green); color:var(--white); padding:.85rem 2rem; border:none; border-radius:4px; cursor:pointer; text-decoration:none; transition:all .2s; display:inline-flex; align-items:center; gap:.5rem; }
+.btn-primary:hover { background:var(--green-mid); transform:translateY(-1px); }
+.btn-secondary { font-family:var(--display); font-weight:600; font-size:.82rem; letter-spacing:.04em; text-transform:uppercase; background:transparent; color:var(--black); padding:.85rem 2rem; border:1.5px solid var(--border); border-radius:4px; cursor:pointer; text-decoration:none; transition:all .2s; }
+.btn-secondary:hover { border-color:var(--green); color:var(--green); }
+.hero-stats { margin-top:3.5rem; display:flex; gap:2.5rem; padding-top:2rem; border-top:1px solid var(--border); }
+.stat-num { font-family:var(--display); font-weight:800; font-size:1.8rem; color:var(--green); line-height:1; }
+.stat-lbl { font-size:.72rem; color:var(--muted); margin-top:.25rem; font-family:var(--display); }
+.hero-right { background:var(--green); display:flex; flex-direction:column; justify-content:center; padding:5rem 3rem; position:relative; overflow:hidden; }
+.hero-right::before { content:'PCOKit'; font-family:var(--display); font-weight:800; font-size:10rem; line-height:1; color:rgba(255,255,255,.04); position:absolute; bottom:-1rem; right:-1rem; pointer-events:none; letter-spacing:-.05em; }
+.industry-cards { display:flex; flex-direction:column; gap:.65rem; }
+.ind-card { background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12); border-radius:8px; padding:.9rem 1.1rem; transition:all .25s; }
+.ind-card:hover { background:rgba(255,255,255,.11); transform:translateX(4px); }
+.ind-title { font-family:var(--display); font-weight:700; font-size:.88rem; color:#fff; margin-bottom:.25rem; }
+.ind-desc { font-size:.72rem; color:rgba(255,255,255,.5); font-family:var(--mono); }
+section { padding:5rem 2.5rem; }
+.section-label { font-family:var(--mono); font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--green-light); margin-bottom:.75rem; display:flex; align-items:center; gap:.5rem; }
+.section-label::before { content:''; width:16px; height:1px; background:var(--green-light); }
+.section-title { font-family:var(--serif); font-weight:400; font-size:clamp(1.8rem,3vw,2.6rem); letter-spacing:-.01em; line-height:1.15; margin-bottom:.75rem; }
+.section-desc { font-family:var(--display); font-size:.92rem; color:var(--muted); line-height:1.8; max-width:520px; }
+.features { background:var(--black); color:var(--white); }
+.features .section-label { color:var(--green-light); }
+.features .section-label::before { background:var(--green-light); }
+.features .section-title { color:var(--white); }
+.features .section-desc { color:rgba(255,255,255,.5); }
+.features-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1px; margin-top:3.5rem; border:1px solid rgba(255,255,255,.08); }
+.feature-item { padding:2rem 1.75rem; border:1px solid rgba(255,255,255,.06); transition:background .2s; }
+.feature-item:hover { background:rgba(255,255,255,.04); }
+.feature-num { font-family:var(--mono); font-size:.7rem; color:var(--green-light); letter-spacing:.08em; margin-bottom:1.25rem; }
+.feature-icon { font-size:1.6rem; margin-bottom:.75rem; }
+.feature-title { font-family:var(--display); font-weight:700; font-size:1rem; color:var(--white); margin-bottom:.5rem; }
+.feature-desc { font-family:var(--display); font-size:.82rem; color:rgba(255,255,255,.45); line-height:1.7; }
+.subscribe { background:var(--green); color:var(--white); text-align:center; }
+.subscribe .section-title { color:var(--white); font-family:var(--serif); }
+.subscribe .section-desc { color:rgba(255,255,255,.65); margin:0 auto 2.5rem; }
+.sub-form { display:flex; gap:.75rem; max-width:420px; margin:0 auto; flex-wrap:wrap; justify-content:center; }
+.sub-form input { flex:1; min-width:200px; font-family:var(--display); font-size:.88rem; padding:.8rem 1.1rem; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2); border-radius:4px; color:#fff; outline:none; }
+.sub-form input::placeholder { color:rgba(255,255,255,.4); }
+.sub-form button { font-family:var(--display); font-weight:700; font-size:.82rem; letter-spacing:.05em; text-transform:uppercase; background:var(--white); color:var(--green); padding:.8rem 1.5rem; border:none; border-radius:4px; cursor:pointer; transition:all .2s; }
+footer { background:var(--black); color:rgba(255,255,255,.4); padding:2.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; font-family:var(--mono); font-size:.72rem; }
+footer a { color:rgba(255,255,255,.4); text-decoration:none; }
+footer a:hover { color:var(--green-light); }
+.footer-links { display:flex; gap:1.5rem; }
+@media(max-width:768px){ .hero{grid-template-columns:1fr} .hero-right{display:none} .hero-left{padding:3rem 1.25rem} section{padding:3.5rem 1.25rem} }
+</style>
+</head>
+<body>
+<nav>
+  <a href="/en/" class="nav-logo">PCO<span>Kit</span></a>
+  <div class="nav-links">
+    <a href="#features">Features</a>
+    <a href="#prompts">Prompts</a>
+    <a href="#about">About</a>
+    <a href="/" class="nav-lang">中文</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Pest Control Industry Knowledge Platform</div>
+    <h1 class="hero-title">
+      Field Knowledge.<br>
+      <span class="accent">Professional Tools.</span><br>
+      Real Results.
+    </h1>
+    <p class="hero-desc">
+      Built by a hotel on-site PCO technician. Pest identification library, AI prompt tools, compliance document templates — everything you need to work smarter in pest control.
+    </p>
+    <div class="hero-actions">
+      <a href="#features" class="btn-primary">📖 Explore Library</a>
+      <a href="#prompts" class="btn-secondary">💬 Get AI Prompts</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">30+</div><div class="stat-lbl">Pest Species</div></div>
+      <div><div class="stat-num">70+</div><div class="stat-lbl">AI Prompts</div></div>
+      <div><div class="stat-num">5</div><div class="stat-lbl">Industry Sectors</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="industry-cards">
+      <div class="ind-card">
+        <div class="ind-title">🍔 Food Service & Restaurant Chains</div>
+        <div class="ind-desc">BRC / HACCP compliance · Cockroach & rodent control · Drain fly management</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-title">🏨 Hotels & Hospitality</div>
+        <div class="ind-desc">Bed bug protocols · Guest complaint handling · Monthly service reports</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-title">🏭 Food Manufacturing</div>
+        <div class="ind-desc">HACCP PRP documentation · Stored product pests · Supplier qualification</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-title">💊 Pharmaceutical</div>
+        <div class="ind-desc">GMP compliance · Cleanroom restrictions · FDA audit support</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-title">🏠 Residential & General</div>
+        <div class="ind-desc">Client communication · Inspection records · Annual service packages</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="section-label">Core Features</div>
+  <h2 class="section-title">Tools built for<br>pest control professionals</h2>
+  <p class="section-desc">Not theory — field-tested knowledge from years of hotel on-site pest management work.</p>
+  <div class="features-grid">
+    <div class="feature-item">
+      <div class="feature-num">01</div><div class="feature-icon">📖</div>
+      <div class="feature-title">Pest Identification Library</div>
+      <div class="feature-desc">30+ common pest species with identification features, biology, habitats, and treatment notes. Bilingual Chinese/English.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">02</div><div class="feature-icon">💬</div>
+      <div class="feature-title">AI Prompt Library</div>
+      <div class="feature-desc">70+ ready-to-use prompts for client communications, compliance documents, staff training, and marketing copy.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">03</div><div class="feature-icon">📋</div>
+      <div class="feature-title">Compliance Templates</div>
+      <div class="feature-desc">Inspection records, service reports, HACCP prerequisite programs, BRC audit support documents — ready to customize.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">04</div><div class="feature-icon">🏨</div>
+      <div class="feature-title">Industry-Specific Content</div>
+      <div class="feature-desc">Dedicated content for food service, hotels, food manufacturing, and pharma — mapped to BRC, SQF, GMP, ISO 22000.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">05</div><div class="feature-icon">🌐</div>
+      <div class="feature-title">Bilingual Chinese / English</div>
+      <div class="feature-desc">All core content available in both languages, serving domestic PCO professionals and international food safety auditors.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">06</div><div class="feature-icon">🖥️</div>
+      <div class="feature-title">Pest_system (Coming Soon)</div>
+      <div class="feature-desc">Digital inspection records, automated service report generation, pest trend tracking — a management system built for PCO companies.</div>
+    </div>
+  </div>
+</section>
+
+<section class="subscribe" id="prompts">
+  <div class="section-label" style="justify-content:center;margin-bottom:.5rem">Free AI Prompt Pack</div>
+  <h2 class="section-title">Get 70+ Prompts<br>Delivered to Your Inbox</h2>
+  <p class="section-desc">Client complaint responses, HACCP documents, BRC audit prep, staff training materials — all ready to use with any AI tool.</p>
+  <form class="sub-form" onsubmit="handleSub(event)">
+    <input type="email" placeholder="your@email.com" required>
+    <button type="submit">Get Free Pack →</button>
+  </form>
+  <div style="font-family:var(--mono);font-size:.72rem;color:rgba(255,255,255,.4);margin-top:1rem">No spam · Unsubscribe anytime · Trusted by PCO professionals</div>
+</section>
+
+<footer>
+  <div>© 2025 PCOKit.com · Pest Control Industry Knowledge Platform</div>
+  <div class="footer-links">
+    <a href="/">中文</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="mailto:hello@pcokit.com">Contact</a>
+  </div>
+</footer>
+
+<script>
+function handleSub(e){
+  e.preventDefault();
+  const btn=e.target.querySelector('button');
+  btn.textContent='✓ Check your inbox!';
+  setTimeout(()=>{btn.textContent='Get Free Pack →';e.target.reset();},3000);
+}
+</script>
+</body>
+</html>
