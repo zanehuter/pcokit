@@ -154,8 +154,10 @@ nav {
   border: 1px solid rgba(255,255,255,.1);
   border-radius: 8px; padding: .85rem 1.1rem;
   display: flex; align-items: center; gap: 1rem;
-  transition: all .25s; cursor: default;
+  transition: all .25s; cursor: pointer;
+  text-decoration: none;
 }
+a.pest-card { text-decoration: none; }
 .pest-card:hover {
   background: rgba(255,255,255,.1);
   transform: translateX(4px);
@@ -259,6 +261,10 @@ section { padding: 5rem 2.5rem; }
   border-radius: 8px; padding: 1rem 1.25rem;
   display: flex; align-items: center; gap: 1rem;
   transition: all .2s; cursor: pointer;
+}
+a.prompt-row:hover {
+  border-color: var(--green);
+  box-shadow: 0 2px 12px rgba(26,74,46,.08);
 }
 .prompt-row:hover { border-color: var(--green); }
 .pr-scene {
@@ -425,54 +431,54 @@ footer a:hover { color: var(--green-light); }
 
   <div class="hero-right">
     <div class="pest-cards">
-      <div class="pest-card">
+      <a href="/pests/german-cockroach/" class="pest-card">
         <span class="pest-icon">🪳</span>
         <div>
           <div class="pest-name">德国小蠊</div>
           <div class="pest-sub">Blattella germanica</div>
         </div>
         <span class="pest-badge pb-high">高风险</span>
-      </div>
-      <div class="pest-card">
+      </a>
+      <a href="/pests/norway-rat/" class="pest-card">
         <span class="pest-icon">🐀</span>
         <div>
           <div class="pest-name">褐家鼠</div>
           <div class="pest-sub">Rattus norvegicus</div>
         </div>
         <span class="pest-badge pb-high">高风险</span>
-      </div>
-      <div class="pest-card">
+      </a>
+      <a href="/pests/bed-bug/" class="pest-card">
         <span class="pest-icon">🦟</span>
         <div>
           <div class="pest-name">臭虫 / 床虱</div>
           <div class="pest-sub">Cimex lectularius</div>
         </div>
         <span class="pest-badge pb-high">酒店重点</span>
-      </div>
-      <div class="pest-card">
+      </a>
+      <a href="/pests/termite/" class="pest-card">
         <span class="pest-icon">🐜</span>
         <div>
           <div class="pest-name">台湾乳白蚁</div>
           <div class="pest-sub">Coptotermes formosanus</div>
         </div>
         <span class="pest-badge pb-mid">中风险</span>
-      </div>
-      <div class="pest-card">
+      </a>
+      <a href="/pests/fruit-fly/" class="pest-card">
         <span class="pest-icon">🍊</span>
         <div>
           <div class="pest-name">果蝇 / 蛾蠓</div>
           <div class="pest-sub">Drosophila / Psychodidae</div>
         </div>
         <span class="pest-badge pb-mid">餐饮重点</span>
-      </div>
-      <div class="pest-card">
+      </a>
+      <a href="/pests/red-flour-beetle/" class="pest-card">
         <span class="pest-icon">🌾</span>
         <div>
           <div class="pest-name">赤拟谷盗</div>
           <div class="pest-sub">Tribolium castaneum</div>
         </div>
         <span class="pest-badge pb-low">仓储</span>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -487,7 +493,7 @@ footer a:hover { color: var(--green-light); }
       <div class="feature-num">01</div>
       <div class="feature-icon">📖</div>
       <div class="feature-title">虫害知识库</div>
-      <div class="feature-desc">30+ 种常见有害生物详解，包含识别特征、生活习性、孳生场所、危害说明，中英双语，SEO 友好</div>
+      <div class="feature-desc">30+ 种常见有害生物详解，包含识别特征、生活习性、孳生场所、危害说明，中英双语</div>
     </div>
     <div class="feature-item">
       <div class="feature-num">02</div>
@@ -646,37 +652,37 @@ footer a:hover { color: var(--green-light); }
     <p class="section-desc">70+ 条专业提示词，覆盖客服、合规、培训、营销四大场景。免费预览，完整版留邮箱获取。</p>
   </div>
   <div class="prompts-grid">
-    <div class="prompt-row">
+    <a href="/prompts/" class="prompt-row" style="text-decoration:none;color:inherit">
       <span class="pr-scene s-client">客服回复</span>
       <span class="pr-title">连锁门店蟑螂投诉紧急响应（含社媒危机）</span>
       <span class="pr-industry">餐饮连锁</span>
-      <span class="pr-lock">🔓</span>
-    </div>
-    <div class="prompt-row">
+      <span class="pr-lock">🔓 点击查看</span>
+    </a>
+    <a href="/prompts/" class="prompt-row" style="text-decoration:none;color:inherit">
       <span class="pr-scene s-client">客服回复</span>
       <span class="pr-title">客房臭虫投诉全流程处理话术</span>
       <span class="pr-industry">酒店</span>
-      <span class="pr-lock">🔓</span>
-    </div>
-    <div class="prompt-row">
+      <span class="pr-lock">🔓 点击查看</span>
+    </a>
+    <a href="/prompts/" class="prompt-row" style="text-decoration:none;color:inherit">
       <span class="pr-scene s-doc">合规文件</span>
       <span class="pr-title">食品工厂虫害防治计划（HACCP/ISO 22000）</span>
       <span class="pr-industry">食品工厂</span>
-      <span class="pr-lock">🔓</span>
-    </div>
-    <div class="prompt-row">
+      <span class="pr-lock">🔓 点击查看</span>
+    </a>
+    <div class="prompt-row" style="opacity:.55">
       <span class="pr-scene s-doc">合规文件</span>
       <span class="pr-title">制药企业虫害防治控制程序（GMP SOP）</span>
       <span class="pr-industry">药厂</span>
       <span class="pr-lock">🔒</span>
     </div>
-    <div class="prompt-row">
+    <div class="prompt-row" style="opacity:.55">
       <span class="pr-scene s-train">员工培训</span>
       <span class="pr-title">新员工常见虫害识别手册（9种虫害）</span>
       <span class="pr-industry">通用</span>
       <span class="pr-lock">🔒</span>
     </div>
-    <div class="prompt-row">
+    <div class="prompt-row" style="opacity:.55">
       <span class="pr-scene s-doc">方案提案</span>
       <span class="pr-title">大型食品企业招标技术标书</span>
       <span class="pr-industry">食品工厂</span>
@@ -742,7 +748,7 @@ footer a:hover { color: var(--green-light); }
 
 <!-- FOOTER -->
 <footer>
-  <div>© 2025 PCOKit.com · 虫害防治行业知识平台</div>
+  <div>© 2026 PCOKit.com · 虫害防治行业知识平台</div>
   <div class="footer-links">
     <a href="/en/">English</a>
     <a href="/privacy/">隐私政策</a>
