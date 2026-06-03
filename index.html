@@ -2,784 +2,310 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-  <meta name="google-site-verification" content="Xgjb-F23tRtUM3TxUere_f6OZWvLMswh8bGxAUr5A5E" />
-  <meta name="msvalidate.01" content="B9DBDBCAB18E6BBEB95B3BCB9D6683AE" />
-
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="PCO行业知识库、AI提示词工具、合规指南——专为虫害防治从业者打造">
-<meta name="keywords" content="PCO,虫害防治,pest control,巡检记录,HACCP,BRC审核,提示词">
-<title>PCOKit — 虫害防治行业知识与工具平台</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta name="description" content="PCO行业AI提示词库——70+条专业提示词，覆盖餐饮连锁/酒店/食品工厂/药厂/住宅通用5个行业，客服回复/合规文件/培训材料/营销文案，复制即用。">
+<title>AI 提示词库 — 70+条PCO行业专业提示词 | PCOKit</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Noto+Serif+SC:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --black: #0a0a08;
-  --white: #f5f3ee;
-  --green: #1a4a2e;
-  --green-mid: #2d6e45;
-  --green-light: #4a9e6a;
-  --green-pale: #e8f5ec;
-  --amber: #c8860a;
-  --amber-pale: #fef3c7;
-  --red-pale: #fee2e2;
-  --red: #7f1d1d;
-  --border: #d4cfc4;
-  --muted: #6b6456;
-  --mono: 'DM Mono', monospace;
-  --serif: 'Noto Serif SC', Georgia, serif;
-  --display: 'Syne', sans-serif;
-}
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: var(--serif);
-  background: var(--white);
-  color: var(--black);
-  overflow-x: hidden;
-}
-
-/* ── NAV ── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: .9rem 2.5rem;
-  background: rgba(245,243,238,.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-}
-.nav-logo {
-  font-family: var(--display);
-  font-weight: 800; font-size: 1.25rem;
-  color: var(--green); letter-spacing: -.02em;
-  text-decoration: none;
-}
-.nav-logo span { color: var(--black); }
-.nav-links { display: flex; gap: 2rem; align-items: center; }
-.nav-links a {
-  font-family: var(--display); font-size: .82rem; font-weight: 600;
-  letter-spacing: .06em; text-transform: uppercase;
-  color: var(--muted); text-decoration: none; transition: color .2s;
-}
-.nav-links a:hover { color: var(--green); }
-.nav-lang {
-  font-family: var(--mono); font-size: .75rem;
-  padding: 4px 10px; border: 1px solid var(--border);
-  border-radius: 4px; color: var(--muted);
-  text-decoration: none; transition: all .2s;
-}
-.nav-lang:hover { border-color: var(--green); color: var(--green); }
-
-/* ── HERO ── */
-.hero {
-  min-height: 100vh;
-  display: grid; grid-template-columns: 1fr 1fr;
-  padding-top: 60px;
-  position: relative; overflow: hidden;
-}
-.hero-left {
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 5rem 3rem 5rem 2.5rem;
-}
-.hero-eyebrow {
-  font-family: var(--mono); font-size: .72rem; letter-spacing: .12em;
-  text-transform: uppercase; color: var(--green-light);
-  margin-bottom: 1.25rem;
-  display: flex; align-items: center; gap: .5rem;
-}
-.hero-eyebrow::before {
-  content: ''; width: 24px; height: 1px; background: var(--green-light);
-}
-.hero-title {
-  font-family: var(--display); font-weight: 800;
-  font-size: clamp(2.8rem, 5vw, 4.2rem);
-  line-height: 1.05; letter-spacing: -.03em;
-  color: var(--black); margin-bottom: 1.5rem;
-}
-.hero-title .accent { color: var(--green); }
-.hero-title .line2 {
-  display: block;
-  -webkit-text-stroke: 1.5px var(--black);
-  color: transparent;
-}
-.hero-desc {
-  font-size: 1rem; line-height: 1.8; color: var(--muted);
-  max-width: 420px; margin-bottom: 2.5rem;
-}
-.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
-.btn-primary {
-  font-family: var(--display); font-weight: 700; font-size: .85rem;
-  letter-spacing: .04em; text-transform: uppercase;
-  background: var(--green); color: var(--white);
-  padding: .85rem 2rem; border: none; border-radius: 4px;
-  cursor: pointer; text-decoration: none; transition: all .2s;
-  display: inline-flex; align-items: center; gap: .5rem;
-}
-.btn-primary:hover { background: var(--green-mid); transform: translateY(-1px); }
-.btn-secondary {
-  font-family: var(--display); font-weight: 600; font-size: .85rem;
-  letter-spacing: .04em; text-transform: uppercase;
-  background: transparent; color: var(--black);
-  padding: .85rem 2rem; border: 1.5px solid var(--border);
-  border-radius: 4px; cursor: pointer; text-decoration: none;
-  transition: all .2s; display: inline-flex; align-items: center; gap: .5rem;
-}
-.btn-secondary:hover { border-color: var(--green); color: var(--green); }
-.hero-stats {
-  margin-top: 3.5rem; display: flex; gap: 2.5rem;
-  padding-top: 2rem; border-top: 1px solid var(--border);
-}
-.stat-num {
-  font-family: var(--display); font-weight: 800; font-size: 1.8rem;
-  color: var(--green); line-height: 1;
-}
-.stat-lbl { font-size: .75rem; color: var(--muted); margin-top: .25rem; }
-
-.hero-right {
-  background: var(--green);
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 5rem 3rem;
-  position: relative; overflow: hidden;
-}
-.hero-right::before {
-  content: 'PCOKit';
-  font-family: var(--display); font-weight: 800;
-  font-size: 11rem; line-height: 1;
-  color: rgba(255,255,255,.04);
-  position: absolute; bottom: -1rem; right: -1rem;
-  pointer-events: none; letter-spacing: -.05em;
-}
-.pest-cards { display: flex; flex-direction: column; gap: .75rem; }
-.pest-card {
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.1);
-  border-radius: 8px; padding: .85rem 1.1rem;
-  display: flex; align-items: center; gap: 1rem;
-  transition: all .25s; cursor: pointer;
-  text-decoration: none;
-}
-a.pest-card { text-decoration: none; }
-.pest-card:hover {
-  background: rgba(255,255,255,.1);
-  transform: translateX(4px);
-}
-.pest-icon { font-size: 1.4rem; flex-shrink: 0; }
-.pest-name {
-  font-family: var(--display); font-weight: 700; font-size: .9rem;
-  color: #fff; margin-bottom: .1rem;
-}
-.pest-sub { font-size: .72rem; color: rgba(255,255,255,.5); font-family: var(--mono); }
-.pest-badge {
-  margin-left: auto; font-size: .65rem; padding: 2px 8px;
-  border-radius: 20px; font-family: var(--mono); flex-shrink: 0;
-}
-.pb-high { background: #fee2e2; color: #7f1d1d; }
-.pb-mid  { background: #fef3c7; color: #854d0e; }
-.pb-low  { background: #e8f5ec; color: #085041; }
-
-/* ── SECTION COMMON ── */
-section { padding: 5rem 2.5rem; }
-.section-label {
-  font-family: var(--mono); font-size: .7rem; letter-spacing: .12em;
-  text-transform: uppercase; color: var(--green-light);
-  margin-bottom: .75rem;
-  display: flex; align-items: center; gap: .5rem;
-}
-.section-label::before { content:''; width:16px; height:1px; background:var(--green-light); }
-.section-title {
-  font-family: var(--display); font-weight: 800;
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  letter-spacing: -.02em; line-height: 1.1;
-  margin-bottom: .75rem;
-}
-.section-desc { font-size: .95rem; color: var(--muted); line-height: 1.8; max-width: 520px; }
-
-/* ── FEATURES ── */
-.features { background: var(--black); color: var(--white); }
-.features .section-label { color: var(--green-light); }
-.features .section-label::before { background: var(--green-light); }
-.features .section-title { color: var(--white); }
-.features .section-desc { color: rgba(255,255,255,.5); }
-.features-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1px; margin-top: 3.5rem;
-  border: 1px solid rgba(255,255,255,.08);
-}
-.feature-item {
-  padding: 2rem 1.75rem;
-  border: 1px solid rgba(255,255,255,.06);
-  transition: background .2s;
-}
-.feature-item:hover { background: rgba(255,255,255,.04); }
-.feature-num {
-  font-family: var(--mono); font-size: .7rem; color: var(--green-light);
-  letter-spacing: .08em; margin-bottom: 1.25rem;
-}
-.feature-icon { font-size: 1.6rem; margin-bottom: .75rem; }
-.feature-title {
-  font-family: var(--display); font-weight: 700; font-size: 1rem;
-  color: var(--white); margin-bottom: .5rem;
-}
-.feature-desc { font-size: .83rem; color: rgba(255,255,255,.45); line-height: 1.7; }
-
-/* ── KNOWLEDGE ── */
-.knowledge { background: var(--white); }
-.knowledge-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: .75rem; margin-top: 3rem;
-}
-.pest-entry {
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: 8px; padding: 1.1rem 1.25rem;
-  text-decoration: none; color: var(--black);
-  transition: all .2s; display: flex; flex-direction: column; gap: .35rem;
-}
-.pest-entry:hover {
-  border-color: var(--green); box-shadow: 0 4px 16px rgba(26,74,46,.08);
-  transform: translateY(-2px);
-}
-.pe-icon { font-size: 1.3rem; }
-.pe-name { font-family: var(--display); font-weight: 700; font-size: .9rem; }
-.pe-latin { font-family: var(--mono); font-size: .65rem; color: var(--muted); }
-.pe-tags { display: flex; gap: .3rem; flex-wrap: wrap; margin-top: .35rem; }
-.pe-tag {
-  font-size: .6rem; padding: 1px 6px; border-radius: 3px;
-  background: var(--green-pale); color: var(--green);
-  font-family: var(--mono);
-}
-.pe-tag.red { background: var(--red-pale); color: var(--red); }
-.pe-tag.amber { background: var(--amber-pale); color: var(--amber); }
-
-/* ── PROMPTS ── */
-.prompts { background: var(--green-pale); }
-.prompts-header {
-  display: flex; justify-content: space-between; align-items: flex-end;
-  margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem;
-}
-.prompts-grid { display: flex; flex-direction: column; gap: .6rem; }
-.prompt-row {
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: 8px; padding: 1rem 1.25rem;
-  display: flex; align-items: center; gap: 1rem;
-  transition: all .2s; cursor: pointer;
-}
-a.prompt-row:hover {
-  border-color: var(--green);
-  box-shadow: 0 2px 12px rgba(26,74,46,.08);
-}
-.prompt-row:hover { border-color: var(--green); }
-.pr-scene {
-  font-family: var(--mono); font-size: .65rem; padding: 2px 7px;
-  border-radius: 3px; flex-shrink: 0;
-}
-.s-client { background: var(--green-pale); color: var(--green); }
-.s-doc    { background: var(--amber-pale); color: var(--amber); }
-.s-train  { background: #ede9fe; color: #4c1d95; }
-.pr-title { font-size: .88rem; font-weight: 500; flex: 1; color: var(--black); }
-.pr-industry {
-  font-size: .7rem; color: var(--muted);
-  font-family: var(--mono); flex-shrink: 0;
-}
-.pr-lock { font-size: .85rem; flex-shrink: 0; }
-.prompts-cta {
-  margin-top: 1.5rem; text-align: center;
-  padding: 1.5rem; background: var(--white);
-  border: 1.5px dashed var(--border); border-radius: 8px;
-}
-.prompts-cta p {
-  font-size: .88rem; color: var(--muted); margin-bottom: .85rem;
-}
-
-/* ── SUBSCRIBE ── */
-.subscribe { background: var(--green); color: var(--white); text-align: center; }
-.subscribe .section-title { color: var(--white); }
-.subscribe .section-desc { color: rgba(255,255,255,.65); margin: 0 auto 2.5rem; }
-.sub-form {
-  display: flex; gap: .75rem; max-width: 420px; margin: 0 auto;
-  flex-wrap: wrap; justify-content: center;
-}
-.sub-form input {
-  flex: 1; min-width: 200px;
-  font-family: var(--serif); font-size: .88rem;
-  padding: .8rem 1.1rem;
-  background: rgba(255,255,255,.1);
-  border: 1px solid rgba(255,255,255,.2);
-  border-radius: 4px; color: #fff; outline: none;
-  transition: border-color .2s;
-}
-.sub-form input::placeholder { color: rgba(255,255,255,.4); }
-.sub-form input:focus { border-color: rgba(255,255,255,.5); }
-.sub-form button {
-  font-family: var(--display); font-weight: 700; font-size: .82rem;
-  letter-spacing: .05em; text-transform: uppercase;
-  background: var(--white); color: var(--green);
-  padding: .8rem 1.5rem; border: none; border-radius: 4px;
-  cursor: pointer; transition: all .2s;
-}
-.sub-form button:hover { background: var(--green-pale); }
-.sub-note { font-size: .72rem; color: rgba(255,255,255,.4); margin-top: 1rem; font-family: var(--mono); }
-
-/* ── ABOUT ── */
-.about { background: var(--white); }
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-.about-badge {
-  display: inline-flex; align-items: center; gap: .5rem;
-  background: var(--green-pale); border: 1px solid var(--border);
-  border-radius: 4px; padding: .4rem .85rem;
-  font-family: var(--mono); font-size: .72rem; color: var(--green);
-  margin-bottom: 1.5rem;
-}
-.about-text { font-size: .95rem; line-height: 1.9; color: var(--muted); margin-bottom: 1rem; }
-.about-right {
-  background: var(--black); border-radius: 12px; padding: 2rem;
-  color: var(--white);
-}
-.about-terminal-hd {
-  font-family: var(--mono); font-size: .7rem; color: rgba(255,255,255,.3);
-  margin-bottom: 1.25rem; display: flex; align-items: center; gap: .5rem;
-}
-.about-terminal-hd::before { content:'●'; color:#e24b4a; }
-.about-terminal-hd::after { content:'—— pcokit.com'; }
-.terminal-line {
-  font-family: var(--mono); font-size: .78rem; line-height: 2;
-  color: rgba(255,255,255,.6);
-}
-.terminal-line .g { color: var(--green-light); }
-.terminal-line .w { color: #fff; }
-.terminal-line .a { color: var(--amber); }
-
-/* ── FOOTER ── */
-footer {
-  background: var(--black); color: rgba(255,255,255,.4);
-  padding: 2.5rem 2.5rem;
-  display: flex; justify-content: space-between; align-items: center;
-  flex-wrap: wrap; gap: 1rem;
-  font-family: var(--mono); font-size: .72rem;
-}
-footer a { color: rgba(255,255,255,.4); text-decoration: none; }
-footer a:hover { color: var(--green-light); }
-.footer-links { display: flex; gap: 1.5rem; }
-
-/* ── ANIMATIONS ── */
-@keyframes fadeUp {
-  from { opacity:0; transform:translateY(20px); }
-  to   { opacity:1; transform:translateY(0); }
-}
-.fade-up { animation: fadeUp .6s ease both; }
-.delay-1 { animation-delay: .1s; }
-.delay-2 { animation-delay: .2s; }
-.delay-3 { animation-delay: .3s; }
-.delay-4 { animation-delay: .45s; }
-
-/* ── RESPONSIVE ── */
-@media(max-width:768px){
-  nav { padding: .75rem 1.25rem; }
-  .nav-links { display: none; }
-  .hero { grid-template-columns: 1fr; }
-  .hero-right { display: none; }
-  .hero-left { padding: 3rem 1.25rem; }
-  section { padding: 3.5rem 1.25rem; }
-  .about-grid { grid-template-columns: 1fr; }
-  footer { flex-direction: column; text-align: center; }
-}
+:root{--black:#0a0a08;--white:#f5f3ee;--green:#1a4a2e;--green-mid:#2d6e45;--green-light:#4a9e6a;--green-pale:#e8f5ec;--amber:#c8860a;--amber-pale:#fef3c7;--border:#d4cfc4;--muted:#6b6456;--mono:"DM Mono",monospace;--serif:"Noto Serif SC",Georgia,serif;--display:"Syne",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);background:var(--white);color:var(--black)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2.5rem;background:rgba(245,243,238,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--green);letter-spacing:-.02em;text-decoration:none}
+.nav-logo span{color:var(--black)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-family:var(--display);font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.on{color:var(--green)}
+.page-hero{background:var(--green);color:#fff;padding:5.5rem 2.5rem 3rem;text-align:center}
+.hero-eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green-light);margin-bottom:1rem}
+.hero-title{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.02em;line-height:1.05;margin-bottom:.85rem}
+.hero-desc{font-size:.95rem;color:rgba(255,255,255,.7);line-height:1.8;max-width:500px;margin:0 auto 2rem}
+.hero-stats{display:flex;gap:2.5rem;justify-content:center;padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.12)}
+.hs-num{font-family:var(--display);font-weight:800;font-size:1.8rem;color:#fff;line-height:1}
+.hs-lbl{font-size:.7rem;color:rgba(255,255,255,.5);margin-top:.2rem}
+.filter-bar{background:#fff;border-bottom:1px solid var(--border);padding:.85rem 2.5rem;position:sticky;top:60px;z-index:10;display:flex;gap:.4rem;flex-wrap:wrap;align-items:center}
+.filter-lbl{font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-right:.25rem;flex-shrink:0}
+.fbtn{font-family:var(--mono);font-size:.7rem;padding:4px 11px;border-radius:20px;border:1px solid var(--border);cursor:pointer;background:transparent;color:var(--muted);transition:all .15s;white-space:nowrap}
+.fbtn:hover,.fbtn.on{background:var(--green);color:#fff;border-color:var(--green)}
+.main{max-width:860px;margin:0 auto;padding:2rem 2rem 4rem}
+.sec-label{font-family:var(--display);font-weight:700;font-size:.75rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:2rem 0 .85rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+.card-list{display:flex;flex-direction:column;gap:.55rem}
+.pcard{background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden;cursor:pointer;transition:border-color .2s}
+.pcard:hover{border-color:var(--green)}
+.pcard-hd{display:flex;align-items:center;gap:.75rem;padding:.85rem 1.1rem;user-select:none}
+.pcard-tags{display:flex;gap:.3rem;flex-shrink:0}
+.tag{font-size:.6rem;padding:2px 7px;border-radius:3px;font-family:var(--mono);white-space:nowrap}
+.tag-g{background:var(--green-pale);color:var(--green)}
+.tag-a{background:var(--amber-pale);color:var(--amber)}
+.tag-p{background:#ede9fe;color:#4c1d95}
+.tag-b{background:#e8f0fb;color:#1e3a5f}
+.tag-n{background:#f0f0f0;color:#555}
+.pcard-title{font-size:.88rem;font-weight:500;color:var(--black);flex:1;line-height:1.4}
+.pcard-arr{font-size:.8rem;color:var(--muted);flex-shrink:0;transition:transform .2s;font-family:var(--mono)}
+.pcard-arr.open{transform:rotate(180deg)}
+.pcard-body{display:none;border-top:1px solid var(--border);padding:.85rem 1.1rem;background:var(--white)}
+.pcard-body.show{display:block}
+.pb-label{font-family:var(--mono);font-size:.62rem;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.45rem}
+.pb-content{font-family:var(--mono);font-size:.72rem;line-height:1.9;background:#fff;border:1px solid var(--border);border-radius:6px;padding:.8rem;color:var(--black);white-space:pre-wrap;max-height:260px;overflow-y:auto}
+.pb-actions{margin-top:.6rem}
+.copy-btn{font-size:.72rem;padding:5px 12px;border-radius:4px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all .15s}
+.copy-btn:hover{background:var(--green-pale);border-color:var(--green);color:var(--green)}
+.copy-btn.ok{background:var(--green-pale);border-color:var(--green);color:var(--green)}
+.unlock-box{background:var(--green);border-radius:10px;padding:2rem 2.25rem;color:#fff;text-align:center;margin:2.5rem 0}
+.ub-title{font-family:var(--display);font-weight:700;font-size:1.05rem;margin-bottom:.45rem}
+.ub-desc{font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:1.4rem}
+.ub-form{display:flex;gap:.55rem;max-width:400px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.ub-input{font-family:var(--serif);font-size:.85rem;padding:.65rem .9rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:4px;color:#fff;flex:1;min-width:190px;outline:none}
+.ub-input::placeholder{color:rgba(255,255,255,.4)}
+.ub-input:focus{border-color:rgba(255,255,255,.5)}
+.ub-btn{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;background:#fff;color:var(--green);padding:.65rem 1.3rem;border:none;border-radius:4px;cursor:pointer;transition:all .2s;white-space:nowrap}
+.ub-btn:hover{background:var(--green-pale)}
+.ub-note{font-size:.68rem;color:rgba(255,255,255,.4);margin-top:.85rem;font-family:var(--mono)}
+.locked-item{display:flex;align-items:center;gap:.85rem;padding:.8rem 1rem;background:#fff;border:1px solid var(--border);border-radius:8px;margin-bottom:.5rem;opacity:.62}
+.locked-title{font-size:.85rem;color:var(--muted);flex:1}
+.locked-badges{display:flex;gap:.3rem}
+footer{background:var(--black);color:rgba(255,255,255,.4);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.72rem;margin-top:1rem}
+footer a{color:rgba(255,255,255,.4);text-decoration:none}
+footer a:hover{color:var(--green-light)}
+@media(max-width:640px){nav{padding:.75rem 1.25rem}.nav-links{display:none}.page-hero{padding:4.5rem 1.25rem 2.5rem}.filter-bar{padding:.75rem 1.25rem}.main{padding:1.5rem 1.25rem 3rem}.hero-stats{gap:1.5rem}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="/" class="nav-logo">PCO<span>Kit</span></a>
   <div class="nav-links">
     <a href="/pests/">知识库</a>
-    <a href="/prompts/">提示词</a>
+    <a href="/prompts/" class="on">提示词</a>
     <a href="/blog/">博客</a>
     <a href="/#about">关于</a>
-    <a href="/en/" class="nav-lang">EN</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <div class="hero-eyebrow fade-up">PCO 行业知识与工具平台</div>
-    <h1 class="hero-title fade-up delay-1">
-      专业虫害<br>
-      <span class="accent">防治</span>
-      <span class="line2">从这里开始</span>
-    </h1>
-    <p class="hero-desc fade-up delay-2">
-      来自酒店驻场一线的专业知识库。虫害识别图册、AI 提示词工具、合规文件模板——帮助 PCO 从业者和食品安全管理人员更专业、更高效。
-    </p>
-    <div class="hero-actions fade-up delay-3">
-      <a href="/pests/" class="btn-primary">📖 查看知识库</a>
-      <a href="/prompts/" class="btn-secondary">💬 获取提示词</a>
+<div class="page-hero">
+  <div class="hero-eyebrow">— AI 提示词库</div>
+  <h1 class="hero-title">复制即用<br>省去从零写作</h1>
+  <p class="hero-desc">70+ 条专业提示词，覆盖餐饮连锁、酒店、食品工厂、药厂、住宅通用五大场景。客服、合规、培训、营销——粘贴到任意 AI 工具直接用。</p>
+  <div class="hero-stats">
+    <div><div class="hs-num">70+</div><div class="hs-lbl">专业提示词</div></div>
+    <div><div class="hs-num">5</div><div class="hs-lbl">行业场景</div></div>
+    <div><div class="hs-num">4</div><div class="hs-lbl">内容类型</div></div>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <span class="filter-lbl">筛选：</span>
+  <button class="fbtn on" onclick="doFilter('all',this)">全部</button>
+  <button class="fbtn" onclick="doFilter('餐饮连锁',this)">🍔 餐饮连锁</button>
+  <button class="fbtn" onclick="doFilter('酒店',this)">🏨 酒店</button>
+  <button class="fbtn" onclick="doFilter('食品工厂',this)">🏭 食品工厂</button>
+  <button class="fbtn" onclick="doFilter('药厂',this)">💊 药厂</button>
+  <button class="fbtn" onclick="doFilter('住宅/通用',this)">🏠 住宅/通用</button>
+</div>
+
+<div class="main">
+  <div class="sec-label">🔓 免费预览 — 点击展开复制</div>
+  <div class="card-list" id="freeArea"></div>
+
+  <div class="unlock-box">
+    <div class="ub-title">还有 60+ 条提示词等你解锁</div>
+    <div class="ub-desc">留下邮箱，免费获取完整版 PDF 工具包<br>全行业场景 · 持续更新 · 随时退订</div>
+    <div class="ub-form">
+      <input class="ub-input" type="email" placeholder="your@email.com" id="emailPreview">
+      <a href="https://eepurl.com/6SnUi6eNbE" target="_blank" class="ub-btn" onclick="document.getElementById('emailPreview').value=''">免费获取完整版 →</a>
     </div>
-    <div class="hero-stats fade-up delay-4">
-      <div>
-        <div class="stat-num">30+</div>
-        <div class="stat-lbl">虫害种类详解</div>
-      </div>
-      <div>
-        <div class="stat-num">70+</div>
-        <div class="stat-lbl">行业 AI 提示词</div>
-      </div>
-      <div>
-        <div class="stat-num">5</div>
-        <div class="stat-lbl">行业场景覆盖</div>
-      </div>
-    </div>
+    <div class="ub-note">不发广告 · 随时退订</div>
   </div>
 
-  <div class="hero-right">
-    <div class="pest-cards">
-      <a href="/pests/german-cockroach/" class="pest-card">
-        <span class="pest-icon">🪳</span>
-        <div>
-          <div class="pest-name">德国小蠊</div>
-          <div class="pest-sub">Blattella germanica</div>
-        </div>
-        <span class="pest-badge pb-high">高风险</span>
-      </a>
-      <a href="/pests/norway-rat/" class="pest-card">
-        <span class="pest-icon">🐀</span>
-        <div>
-          <div class="pest-name">褐家鼠</div>
-          <div class="pest-sub">Rattus norvegicus</div>
-        </div>
-        <span class="pest-badge pb-high">高风险</span>
-      </a>
-      <a href="/pests/bed-bug/" class="pest-card">
-        <span class="pest-icon">🦟</span>
-        <div>
-          <div class="pest-name">臭虫 / 床虱</div>
-          <div class="pest-sub">Cimex lectularius</div>
-        </div>
-        <span class="pest-badge pb-high">酒店重点</span>
-      </a>
-      <a href="/pests/termite/" class="pest-card">
-        <span class="pest-icon">🐜</span>
-        <div>
-          <div class="pest-name">台湾乳白蚁</div>
-          <div class="pest-sub">Coptotermes formosanus</div>
-        </div>
-        <span class="pest-badge pb-mid">中风险</span>
-      </a>
-      <a href="/pests/fruit-fly/" class="pest-card">
-        <span class="pest-icon">🍊</span>
-        <div>
-          <div class="pest-name">果蝇 / 蛾蠓</div>
-          <div class="pest-sub">Drosophila / Psychodidae</div>
-        </div>
-        <span class="pest-badge pb-mid">餐饮重点</span>
-      </a>
-      <a href="/pests/red-flour-beetle/" class="pest-card">
-        <span class="pest-icon">🌾</span>
-        <div>
-          <div class="pest-name">赤拟谷盗</div>
-          <div class="pest-sub">Tribolium castaneum</div>
-        </div>
-        <span class="pest-badge pb-low">仓储</span>
-      </a>
-    </div>
-  </div>
-</section>
+  <div class="sec-label">🔒 完整版包含（留邮箱解锁）</div>
+  <div id="lockedArea"></div>
+</div>
 
-<!-- FEATURES -->
-<section class="features" id="features">
-  <div class="section-label">核心功能</div>
-  <h2 class="section-title">为行业从业者<br>真正设计的工具</h2>
-  <p class="section-desc">不是理论，是一线经验的沉淀。每一个内容都来自真实的酒店驻场服务场景。</p>
-  <div class="features-grid">
-    <div class="feature-item">
-      <div class="feature-num">01</div>
-      <div class="feature-icon">📖</div>
-      <div class="feature-title">虫害知识库</div>
-      <div class="feature-desc">30+ 种常见有害生物详解，包含识别特征、生活习性、孳生场所、危害说明，中英双语</div>
-    </div>
-    <div class="feature-item">
-      <div class="feature-num">02</div>
-      <div class="feature-icon">💬</div>
-      <div class="feature-title">AI 提示词库</div>
-      <div class="feature-desc">70+ 条专业提示词，覆盖客服回复、合规文件、培训材料、营销文案——复制即用，节省大量时间</div>
-    </div>
-    <div class="feature-item">
-      <div class="feature-num">03</div>
-      <div class="feature-icon">📋</div>
-      <div class="feature-title">合规文件模板</div>
-      <div class="feature-desc">巡检记录表、服务报告、HACCP 前提方案、BRC 审核支持文件，符合 GB 14881 等国内标准</div>
-    </div>
-    <div class="feature-item">
-      <div class="feature-num">04</div>
-      <div class="feature-icon">🏨</div>
-      <div class="feature-title">行业专项内容</div>
-      <div class="feature-desc">餐饮连锁 / 酒店 / 食品工厂 / 药厂四大场景专项内容，针对 BRC、SQF、GMP、ISO 22000 合规要求</div>
-    </div>
-    <div class="feature-item">
-      <div class="feature-num">05</div>
-      <div class="feature-icon">🌐</div>
-      <div class="feature-title">中英双语</div>
-      <div class="feature-desc">所有核心内容提供中英双语版本，覆盖国内 PCO 从业者与国际食品安全审核人员</div>
-    </div>
-    <div class="feature-item">
-      <div class="feature-num">06</div>
-      <div class="feature-icon">🖥️</div>
-      <div class="feature-title">Pest_system（即将推出）</div>
-      <div class="feature-desc">数字化巡检记录、服务报告自动生成、虫害数据追踪——专为 PCO 公司设计的管理系统</div>
-    </div>
-  </div>
-</section>
-
-<!-- KNOWLEDGE -->
-<section class="knowledge" id="knowledge">
-  <div class="section-label">虫害知识库</div>
-  <h2 class="section-title">认识你的对手</h2>
-  <p class="section-desc">基于权威行业资料与一线驻场经验整理。每种虫害均含识别要点、行为习性、防治建议。</p>
-  <div class="knowledge-grid">
-    <a href="/pests/german-cockroach/" class="pest-entry">
-      <span class="pe-icon">🪳</span>
-      <div class="pe-name">德国小蠊</div>
-      <div class="pe-latin">Blattella germanica</div>
-      <div class="pe-tags">
-        <span class="pe-tag red">高风险</span>
-        <span class="pe-tag">餐饮</span><span class="pe-tag">酒店</span>
-      </div>
-    </a>
-    <a href="/pests/american-cockroach/" class="pest-entry">
-      <span class="pe-icon">🪲</span>
-      <div class="pe-name">美洲大蠊</div>
-      <div class="pe-latin">Periplaneta americana</div>
-      <div class="pe-tags">
-        <span class="pe-tag amber">中风险</span>
-        <span class="pe-tag">下水道</span>
-      </div>
-    </a>
-    <a href="/pests/norway-rat/" class="pest-entry">
-      <span class="pe-icon">🐀</span>
-      <div class="pe-name">褐家鼠</div>
-      <div class="pe-latin">Rattus norvegicus</div>
-      <div class="pe-tags">
-        <span class="pe-tag red">高风险</span>
-        <span class="pe-tag">工厂</span><span class="pe-tag">仓储</span>
-      </div>
-    </a>
-    <a href="/pests/roof-rat/" class="pest-entry">
-      <span class="pe-icon">🐁</span>
-      <div class="pe-name">黄胸鼠</div>
-      <div class="pe-latin">Rattus flavipectus</div>
-      <div class="pe-tags">
-        <span class="pe-tag red">高风险</span>
-        <span class="pe-tag">高处活动</span>
-      </div>
-    </a>
-    <a href="/pests/bed-bug/" class="pest-entry">
-      <span class="pe-icon">🦟</span>
-      <div class="pe-name">臭虫（床虱）</div>
-      <div class="pe-latin">Cimex lectularius</div>
-      <div class="pe-tags">
-        <span class="pe-tag red">酒店重点</span>
-        <span class="pe-tag">客房</span>
-      </div>
-    </a>
-    <a href="/pests/termite/" class="pest-entry">
-      <span class="pe-icon">🐜</span>
-      <div class="pe-name">台湾乳白蚁</div>
-      <div class="pe-latin">Coptotermes formosanus</div>
-      <div class="pe-tags">
-        <span class="pe-tag amber">结构危害</span>
-        <span class="pe-tag">住宅</span>
-      </div>
-    </a>
-    <a href="/pests/fruit-fly/" class="pest-entry">
-      <span class="pe-icon">🍊</span>
-      <div class="pe-name">果蝇</div>
-      <div class="pe-latin">Drosophila spp.</div>
-      <div class="pe-tags">
-        <span class="pe-tag amber">餐饮重点</span>
-        <span class="pe-tag">茶饮</span>
-      </div>
-    </a>
-    <a href="/pests/drain-fly/" class="pest-entry">
-      <span class="pe-icon">🦋</span>
-      <div class="pe-name">蛾蠓（下水道蝇）</div>
-      <div class="pe-latin">family Psychodidae</div>
-      <div class="pe-tags">
-        <span class="pe-tag">排水管道</span>
-        <span class="pe-tag">餐饮</span>
-      </div>
-    </a>
-    <a href="/pests/red-flour-beetle/" class="pest-entry">
-      <span class="pe-icon">🌾</span>
-      <div class="pe-name">赤拟谷盗</div>
-      <div class="pe-latin">Tribolium castaneum</div>
-      <div class="pe-tags">
-        <span class="pe-tag">仓储</span>
-        <span class="pe-tag">食品工厂</span>
-      </div>
-    </a>
-    <a href="/pests/indian-meal-moth/" class="pest-entry">
-      <span class="pe-icon">🦗</span>
-      <div class="pe-name">印度谷斑螟</div>
-      <div class="pe-latin">Plodia interpunctella</div>
-      <div class="pe-tags">
-        <span class="pe-tag">坚果</span>
-        <span class="pe-tag">仓储</span>
-      </div>
-    </a>
-    <a href="/pests/mite/" class="pest-entry">
-      <span class="pe-icon">🕷️</span>
-      <div class="pe-name">螨虫</div>
-      <div class="pe-latin">Acari</div>
-      <div class="pe-tags">
-        <span class="pe-tag red">新兴威胁</span>
-        <span class="pe-tag">园林</span>
-      </div>
-    </a>
-    <a href="/pests/" class="pest-entry" style="border-style:dashed;justify-content:center;align-items:center;text-align:center;min-height:100px;">
-      <div>
-        <div style="font-size:1.5rem;margin-bottom:.35rem">+</div>
-        <div class="pe-name" style="color:var(--muted)">查看全部 30+ 种</div>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- PROMPTS -->
-<section class="prompts" id="prompts">
-  <div class="prompts-header">
-    <div>
-      <div class="section-label">AI 提示词库</div>
-      <h2 class="section-title">复制即用<br>省去从零写作</h2>
-    </div>
-    <p class="section-desc">70+ 条专业提示词，覆盖客服、合规、培训、营销四大场景。免费预览，完整版留邮箱获取。</p>
-  </div>
-  <div class="prompts-grid">
-    <a href="/prompts/" class="prompt-row" style="text-decoration:none;color:inherit">
-      <span class="pr-scene s-client">客服回复</span>
-      <span class="pr-title">连锁门店蟑螂投诉紧急响应（含社媒危机）</span>
-      <span class="pr-industry">餐饮连锁</span>
-      <span class="pr-lock">🔓 点击查看</span>
-    </a>
-    <a href="/prompts/" class="prompt-row" style="text-decoration:none;color:inherit">
-      <span class="pr-scene s-client">客服回复</span>
-      <span class="pr-title">客房臭虫投诉全流程处理话术</span>
-      <span class="pr-industry">酒店</span>
-      <span class="pr-lock">🔓 点击查看</span>
-    </a>
-    <a href="/prompts/" class="prompt-row" style="text-decoration:none;color:inherit">
-      <span class="pr-scene s-doc">合规文件</span>
-      <span class="pr-title">食品工厂虫害防治计划（HACCP/ISO 22000）</span>
-      <span class="pr-industry">食品工厂</span>
-      <span class="pr-lock">🔓 点击查看</span>
-    </a>
-    <div class="prompt-row" style="opacity:.55">
-      <span class="pr-scene s-doc">合规文件</span>
-      <span class="pr-title">制药企业虫害防治控制程序（GMP SOP）</span>
-      <span class="pr-industry">药厂</span>
-      <span class="pr-lock">🔒</span>
-    </div>
-    <div class="prompt-row" style="opacity:.55">
-      <span class="pr-scene s-train">员工培训</span>
-      <span class="pr-title">新员工常见虫害识别手册（9种虫害）</span>
-      <span class="pr-industry">通用</span>
-      <span class="pr-lock">🔒</span>
-    </div>
-    <div class="prompt-row" style="opacity:.55">
-      <span class="pr-scene s-doc">方案提案</span>
-      <span class="pr-title">大型食品企业招标技术标书</span>
-      <span class="pr-industry">食品工厂</span>
-      <span class="pr-lock">🔒</span>
-    </div>
-  </div>
-  <div class="prompts-cta">
-    <p>🔒 完整版 70+ 条提示词，留下邮箱免费获取 PDF 工具包</p>
-    <form style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap" onsubmit="handleSub(event)">
-      <input type="email" placeholder="your@email.com" required
-        style="font-family:var(--serif);font-size:.85rem;padding:.6rem 1rem;border:1.5px solid var(--border);border-radius:4px;width:260px;outline:none">
-      <button type="submit" class="btn-primary" style="font-size:.8rem;padding:.6rem 1.25rem">
-        免费获取完整版 →
-      </button>
-    </form>
-  </div>
-</section>
-
-<!-- SUBSCRIBE -->
-<section class="subscribe" id="subscribe">
-  <div class="section-label" style="justify-content:center;margin-bottom:.5rem">行业简报</div>
-  <h2 class="section-title">每月一次<br>行业动态直达邮箱</h2>
-  <p class="section-desc">虫害趋势预警、合规法规更新、提示词库更新——订阅后第一时间收到，完全免费。</p>
-  <div class="sub-form">
-    <input type="email" placeholder="输入你的邮箱地址" id="subEmail">
-    <a href="https://eepurl.com/6SnUi6eNbE" target="_blank" class="sub-btn">订阅 →</a>
-  </div>
-  <div class="sub-note">不发广告 · 随时退订 · 已有 xx 位从业者订阅</div>
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="about-grid">
-    <div>
-      <div class="about-badge">🏨 酒店驻场 · PCO 从业者</div>
-      <div class="section-label">关于 PCOKit</div>
-      <h2 class="section-title">一线经验<br>不该被浪费</h2>
-      <p class="about-text">
-        我在酒店做驻场虫害防治工作多年，每天面对的是真实的投诉、真实的审核、真实的虫害问题。
-      </p>
-      <p class="about-text">
-        这个网站是我把多年积累的专业知识系统化的尝试——虫害识别、合规文件、行业标准、AI 工具，都在这里。
-      </p>
-      <p class="about-text">
-        PCOKit 面向所有 PCO 从业者和食品安全管理人员，帮你花更少时间处理文书、用更专业的方式应对客户和审核。
-      </p>
-    </div>
-    <div class="about-right">
-      <div class="about-terminal-hd"></div>
-      <div class="terminal-line"><span class="g">$</span> <span class="w">whoami</span></div>
-      <div class="terminal-line"><span class="a">→</span> 酒店驻场 PCO 技术员</div>
-      <div class="terminal-line" style="margin-top:.5rem"><span class="g">$</span> <span class="w">ls expertise/</span></div>
-      <div class="terminal-line"><span class="a">→</span> 臭虫处理 / 鼠害防控 / BRC审核应对</div>
-      <div class="terminal-line"><span class="a">→</span> HACCP合规 / 巡检记录 / 客户沟通</div>
-      <div class="terminal-line" style="margin-top:.5rem"><span class="g">$</span> <span class="w">cat mission.txt</span></div>
-      <div class="terminal-line"><span class="a">→</span> 让每个 PCO 从业者都能</div>
-      <div class="terminal-line"><span class="a">→</span> 用专业知识赢得客户信任</div>
-      <div class="terminal-line" style="margin-top:.5rem"><span class="g">$</span> <span class="w">./contact --email</span></div>
-      <div class="terminal-line"><span class="a">→</span> hello@pcokit.com</div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
   <div>© 2026 PCOKit.com · 虫害防治行业知识平台</div>
-  <div class="footer-links">
-    <a href="/en/">English</a>
-    <a href="/privacy/">隐私政策</a>
-    <a href="mailto:hello@pcokit.com">联系我们</a>
-  </div>
+  <div><a href="/">首页</a> &nbsp;|&nbsp; <a href="/pests/">知识库</a> &nbsp;|&nbsp; <a href="/blog/">博客</a></div>
 </footer>
 
 <script>
-function handleSub(e){ e.preventDefault(); window.open('https://eepurl.com/6SnUi6eNbE','_blank'); }, 3000);
+var PROMPTS = [
+  {free:true, ind:"餐饮连锁", scene:"客服回复", title:"连锁门店蟑螂投诉紧急响应（含社媒危机）",
+   text:"你是虫害防治服务商，接到连锁快餐门店店长的紧急来电：\n「顾客拍到蟑螂视频发到小红书了，今晚能来处理吗？」\n\n请提供：\n【1. 电话中第一句话】（5秒内安抚+专业感）\n【2. 当晚上门时间承诺话术】\n【3. 店长在技术员到达前需准备的3件事】\n【4. 处理完成后提供给品牌方的文件清单】\n【5. 向品牌总部说明事件的邮件框架】\n【6. 将此次事件转化为年度合同的销售切入话术】\n附：发给店长的确认短信模板（100字以内）"},
+  {free:true, ind:"酒店", scene:"客服回复", title:"客房臭虫（床虱）投诉全流程处理话术",
+   text:"场景：前台接到住客投诉「房间床上有虫子，腿上有红包」，初步判断可能是臭虫。\n\n请提供：\n【一、前台即时应对（黄金3分钟）】\n- 第一句回应话术（不确认也不否认，先安抚）\n- 换房操作标准话术\n【二、通知虫害服务商的标准描述】\n【三、对住客的后续沟通话术】\n- 处理完成后的解释措辞\n- 补偿方案建议（升房/免早餐/折扣券梯度）\n【四、大众点评/小红书官方回应模板】\n【五、内部处理SOP节点】"},
+  {free:true, ind:"食品工厂", scene:"合规文件", title:"食品工厂虫害防治控制计划（HACCP/ISO 22000）",
+   text:"为食品生产企业起草虫害防治控制计划，作为HACCP前提方案（PRP）支持文件。\n\n企业：[XXX食品有限公司] 品类：[饮料/方便面/食用油]\n\n【1. 目的与适用范围】\n【2. 引用标准】GB 14881 / ISO 22000 / BRC Issue 9\n【3. 职责分工】食安小组/车间主任/工程部/服务商\n【4. 虫害风险区域分级】\nA级（生产车间）：禁用化学农药，仅物理措施\nB级（成品仓/半成品区）：常规管控\nC级（外围停车场）：一般管控\n【5. 防控措施矩阵】区域×虫害类型×防控手段（表格）\n【6. 监控频次与方法】\n【7. 记录要求】\n【8. 不符合处理程序】\n格式：体系文件风格，含文件编号/版本/签字栏"},
+  {free:true, ind:"住宅/通用", scene:"客服回复", title:"住宅蟑螂咨询专业回复",
+   text:"你是专业虫害防治顾问，请用亲切专业的语气回复：\n「我家厨房最近发现很多蟑螂，请问你们怎么处理？」\n\n回复要求：\n① 简要说明上门检查流程\n② 主要处理方法介绍（凝胶饵剂+滞留粉，区分德国小蠊与美洲大蠊处理差异）\n③ 药物安全性说明（儿童/宠物/孕妇注意事项）\n④ 自然引导预约上门，150字以内\n注意：不要过度夸大处理效果，实事求是"},
+  {free:true, ind:"餐饮连锁", scene:"合规文件", title:"食安检查虫害项目应对指南（防扣分版）",
+   text:"为餐饮门店编写食品安全监督检查虫害防治项目达标指南。\n\n【一、监管重点核查项目】\n防鼠设施/防蝇设施/防蟑措施/药剂管理/服务记录\n\n【二、常见扣分点及整改对策】\n【三、检查前自查清单】（逐项勾选）\n【四、检查当天需展示的文件清单】\n【五、被查到虫害痕迹时的现场应对话术】\n【六、收到整改通知书后的处理流程】\n格式：可操作清单，适合打印给店长"},
+  {free:true, ind:"酒店", scene:"合规文件", title:"酒店虫害月度服务报告模板（可存档版）",
+   text:"设计专业的酒店虫害防治月度服务报告模板，要求可存档、可应对审计。\n\n【封面】酒店名/报告周期/服务商/技术员/报告编号\n【一、服务执行摘要】计划次数 vs 实际执行次数\n【二、虫害监控数据汇总表】各区域发现情况/粘鼠板消耗/灭蝇灯捕获\n【三、本月处理措施详情】日期/技术员/区域/处理方式/用药\n【四、风险趋势分析】与上月对比/高风险区域预警\n【五、环境问题与改善建议】\n【六、下月服务计划】\n签名栏：技术员+服务商公章+酒店代表"},
+  {free:true, ind:"食品工厂", scene:"员工培训", title:"食品工厂员工虫害预防行为规范（GMP培训）",
+   text:"为食品工厂全体员工编写虫害预防行为规范培训材料。\n\n【1. 员工行为如何影响虫害风险】（用真实场景说明）\n【2. 生产区域禁止行为清单】\n- 带食品/零食进生产区\n- 自行处理发现的虫害（为什么不能自己处理）\n【3. 日常卫生行为标准】废弃物处理/原辅料拆包位置\n【4. 如何正确上报虫害】\n① 停下来拍照（不要碰）\n② 立即告知班组长/品控\n③ 等待专业人员处理\n【5. 季节性特别注意事项】\n格式：语言简单，适合一线工人阅读"},
+  {free:true, ind:"住宅/通用", scene:"员工培训", title:"新员工常见虫害识别手册（9种虫害）",
+   text:"为虫害防治公司新员工编写常见虫害识别培训讲义。\n\n涵盖9种：德国小蠊/美洲大蠊/褐家鼠/小家鼠/台湾乳白蚁/果蝇/蛾蠓/家蝇/臭虫\n\n每种按以下结构编写：\n① 外观特征（体长/颜色/最简单识别要点）\n② 活动规律（昼行/夜行/季节性）\n③ 常见藏匿/孳生位置\n④ 主要危害\n⑤ 与近似物种的快速区分\n⑥ 处理提示\n\n格式：要点格式，适合打印A4讲义"},
+  {free:true, ind:"餐饮连锁", scene:"客服回复", title:"茶饮/咖啡店果蝇与蛾蠓专项解答",
+   text:"茶饮门店运营说：「店里夏天果蝇特别多，水吧台糖浆区全是，下水道口还有小飞虫像小蛾子，用了粘纸和灭蝇灯都没用，怎么回事？」\n\n请区分两种虫害专业回答：\n\n【果蝇（Drosophila spp.）】\n① 茶饮店果蝇3大孳生源\n② 为何粘纸和灭蝇灯效果有限\n③ 专业处理方案步骤\n\n【蛾蠓（Drain fly）】\n① 与下水道管道淤泥的关系\n② 与果蝇的区分方法\n③ 根治方法\n\n语气：像内行朋友解答，实用优先"},
+  {free:true, ind:"药厂", scene:"合规文件", title:"制药企业虫害防治控制程序（GMP SOP）",
+   text:"为制药企业起草符合GMP要求的虫害防治控制程序（SOP）。\n\n文件信息：编号[SOP-ENV-XXX] 版本[Ver 1.0]\n\n【1. 目的】\n【2. 范围】洁净区/一般生产区/辅助区/外围\n【3. 职责】QA监督/工程部维护/服务商执行\n【4. 区域分级与管控要求】\n- 洁净区：仅物理措施\n- 一般生产区：有限化学处理\n- 仓储区：常规IPM管理\n【5. 服务商资质要求】\n【6. 操作规程】洁净区进入流程/工具消毒/材料审批\n【7. 监控方法与频次】\n【8. 记录与数据完整性（ALCOA原则）】\n【9. 偏差与CAPA】\n格式：GMP标准文件，含版本历史/审核/批准签字栏"},
+  {free:false, ind:"餐饮连锁", scene:"合规文件", title:"连锁门店年度虫害防治计划（内审级）"},
+  {free:false, ind:"餐饮连锁", scene:"合规文件", title:"餐饮门店月度虫害巡检记录表（GB 14881）"},
+  {free:false, ind:"餐饮连锁", scene:"方案提案", title:"连锁餐饮品牌总部合作提案（PPT大纲）"},
+  {free:false, ind:"餐饮连锁", scene:"知识科普", title:"餐饮行业虫害四季预警通知模板（全年）"},
+  {free:false, ind:"酒店", scene:"合规文件", title:"酒店虫害综合防治计划（含客房/餐饮/后厨）"},
+  {free:false, ind:"酒店", scene:"客服回复", title:"酒店餐厅鼠患投诉应急处理"},
+  {free:false, ind:"酒店", scene:"员工培训", title:"酒店全员虫害发现上报培训材料"},
+  {free:false, ind:"酒店", scene:"知识科普", title:"臭虫专项防治知识手册（酒店管理版）"},
+  {free:false, ind:"食品工厂", scene:"合规文件", title:"食品工厂鼠类专项防治方案与布点设计说明"},
+  {free:false, ind:"食品工厂", scene:"合规文件", title:"食品仓储虫害专项防治方案（谷象/印度谷斑螟）"},
+  {free:false, ind:"食品工厂", scene:"合规文件", title:"食品工厂虫害服务商资质审核清单（BRC/SQF）"},
+  {free:false, ind:"食品工厂", scene:"客服回复", title:"食品工厂第三方审核前紧急协助响应"},
+  {free:false, ind:"食品工厂", scene:"方案提案", title:"大型食品企业招标技术标书（年度服务）"},
+  {free:false, ind:"药厂", scene:"合规文件", title:"药厂GMP供应商审计清单（虫害防治服务商）"},
+  {free:false, ind:"药厂", scene:"客服回复", title:"GMP偏差事件协助响应（含药监局检查应对）"},
+  {free:false, ind:"住宅/通用", scene:"客服回复", title:"白蚁自查问题专业解答"},
+  {free:false, ind:"住宅/通用", scene:"客服回复", title:"养宠家庭跳蚤问题解答"},
+  {free:false, ind:"住宅/通用", scene:"客服回复", title:"宠物/户外蜱虫问题解答"},
+  {free:false, ind:"住宅/通用", scene:"营销文案", title:"住宅除虫服务朋友圈/小红书双版本文案"},
+  {free:false, ind:"住宅/通用", scene:"营销文案", title:"年度家庭防护套餐促销文案（A/B两版）"},
+  {free:false, ind:"住宅/通用", scene:"员工培训", title:"技术员上门服务话术+销售转化培训"},
+  {free:false, ind:"住宅/通用", scene:"知识科普", title:"全年12个月虫害科普内容日历（运营策划版）"}
+];
+
+var currentInd = 'all';
+var openCard = null;
+
+var tagClass = {
+  '客服回复': 'tag-g',
+  '合规文件': 'tag-a',
+  '员工培训': 'tag-p',
+  '营销文案': 'tag-b',
+  '知识科普': 'tag-p',
+  '方案提案': 'tag-a'
+};
+
+function doFilter(ind, btn) {
+  currentInd = ind;
+  openCard = null;
+  document.querySelectorAll('.fbtn').forEach(function(b) { b.classList.remove('on'); });
+  btn.classList.add('on');
+  renderAll();
 }
 
-// 滚动入场动画
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.style.opacity = '1';
-      e.target.style.transform = 'translateY(0)';
-    }
+function renderAll() {
+  var freeData = PROMPTS.filter(function(p) {
+    return p.free && (currentInd === 'all' || p.ind === currentInd);
   });
-}, { threshold: 0.1 });
+  var lockedData = PROMPTS.filter(function(p) {
+    return !p.free && (currentInd === 'all' || p.ind === currentInd);
+  });
 
-document.querySelectorAll('.feature-item, .pest-entry, .prompt-row').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(16px)';
-  el.style.transition = 'opacity .5s ease, transform .5s ease';
-  observer.observe(el);
-});
+  var freeArea = document.getElementById('freeArea');
+  freeArea.innerHTML = '';
+
+  if (freeData.length === 0) {
+    freeArea.innerHTML = '<div style="padding:1.5rem;text-align:center;color:var(--muted);font-size:.85rem">该行业暂无免费预览，留邮箱获取完整版</div>';
+  } else {
+    freeData.forEach(function(p) {
+      var globalIdx = PROMPTS.indexOf(p);
+      var isOpen = (openCard === globalIdx);
+      var tc = tagClass[p.scene] || 'tag-a';
+
+      var card = document.createElement('div');
+      card.className = 'pcard';
+
+      var hd = document.createElement('div');
+      hd.className = 'pcard-hd';
+      hd.dataset.idx = globalIdx;
+
+      var tags = document.createElement('div');
+      tags.className = 'pcard-tags';
+      tags.innerHTML = '<span class="tag ' + tc + '">' + p.scene + '</span><span class="tag tag-n">' + p.ind + '</span>';
+
+      var titleEl = document.createElement('span');
+      titleEl.className = 'pcard-title';
+      titleEl.textContent = p.title;
+
+      var arr = document.createElement('span');
+      arr.className = 'pcard-arr' + (isOpen ? ' open' : '');
+      arr.textContent = '▾';
+
+      hd.appendChild(tags);
+      hd.appendChild(titleEl);
+      hd.appendChild(arr);
+
+      hd.addEventListener('click', function() {
+        var idx = parseInt(this.dataset.idx);
+        openCard = (openCard === idx) ? null : idx;
+        renderAll();
+      });
+
+      var body = document.createElement('div');
+      body.className = 'pcard-body' + (isOpen ? ' show' : '');
+
+      var lbl = document.createElement('div');
+      lbl.className = 'pb-label';
+      lbl.textContent = '提示词内容';
+
+      var txt = document.createElement('div');
+      txt.className = 'pb-content';
+      txt.textContent = p.text;
+
+      var acts = document.createElement('div');
+      acts.className = 'pb-actions';
+
+      var copyBtn = document.createElement('button');
+      copyBtn.className = 'copy-btn';
+      copyBtn.textContent = '📋 复制提示词';
+      copyBtn.dataset.idx = globalIdx;
+      copyBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var i = parseInt(this.dataset.idx);
+        var btn = this;
+        navigator.clipboard.writeText(PROMPTS[i].text).then(function() {
+          btn.textContent = '✅ 已复制';
+          btn.classList.add('ok');
+          setTimeout(function() {
+            btn.textContent = '📋 复制提示词';
+            btn.classList.remove('ok');
+          }, 2000);
+        }).catch(function() {
+          var ta = document.createElement('textarea');
+          ta.value = PROMPTS[i].text;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+          btn.textContent = '✅ 已复制';
+          setTimeout(function() { btn.textContent = '📋 复制提示词'; }, 2000);
+        });
+      });
+
+      acts.appendChild(copyBtn);
+      body.appendChild(lbl);
+      body.appendChild(txt);
+      body.appendChild(acts);
+      card.appendChild(hd);
+      card.appendChild(body);
+      freeArea.appendChild(card);
+    });
+  }
+
+  var lockedArea = document.getElementById('lockedArea');
+  lockedArea.innerHTML = '';
+  lockedData.forEach(function(p) {
+    var tc = tagClass[p.scene] || 'tag-a';
+    var item = document.createElement('div');
+    item.className = 'locked-item';
+    item.innerHTML = '<span style="font-size:.95rem;flex-shrink:0">🔒</span><span class="locked-title">' + p.title + '</span><div class="locked-badges"><span class="tag ' + tc + '">' + p.scene + '</span><span class="tag tag-n">' + p.ind + '</span></div>';
+    lockedArea.appendChild(item);
+  });
+}
+
+function submitEmail(e){ e.preventDefault(); window.open('https://eepurl.com/6SnUi6eNbE','_blank'); }, 3000);
+}
+
+renderAll();
 </script>
 </body>
 </html>
