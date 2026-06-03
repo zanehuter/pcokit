@@ -110,10 +110,10 @@ footer a:hover{color:var(--green-light)}
   <div class="unlock-box">
     <div class="ub-title">还有 60+ 条提示词等你解锁</div>
     <div class="ub-desc">留下邮箱，免费获取完整版 PDF 工具包<br>全行业场景 · 持续更新 · 随时退订</div>
-    <form class="ub-form" onsubmit="submitEmail(event)">
-      <input class="ub-input" type="email" placeholder="your@email.com" required>
-      <button class="ub-btn" type="submit">免费获取完整版 →</button>
-    </form>
+    <div class="ub-form">
+      <input class="ub-input" type="email" placeholder="your@email.com" id="emailPreview">
+      <a href="https://eepurl.com/6SnUi6eNbE" target="_blank" class="ub-btn" onclick="document.getElementById('emailPreview').value=''">免费获取完整版 →</a>
+    </div>
     <div class="ub-note">不发广告 · 随时退订</div>
   </div>
 
