@@ -3,101 +3,153 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="PCO industry knowledge base, AI prompt tools, and compliance guides — built by a field technician for pest control professionals.">
-<meta name="keywords" content="pest control, PCO, BRC audit, HACCP, hotel bed bugs, inspection report, pest management">
+<meta name="description" content="PCOKit — Pest control industry knowledge base, AI prompt tools, and compliance guides. Built by a hotel on-site PCO technician for pest management professionals.">
+<meta name="keywords" content="pest control, PCO, BRC audit, HACCP, hotel bed bugs, inspection report, pest management, AI prompts">
 <title>PCOKit — Pest Control Industry Knowledge & Tools</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --black: #0a0a08; --white: #f5f3ee;
-  --green: #1a4a2e; --green-mid: #2d6e45; --green-light: #4a9e6a;
-  --green-pale: #e8f5ec; --amber: #c8860a; --amber-pale: #fef3c7;
-  --border: #d4cfc4; --muted: #6b6456;
-  --mono: 'DM Mono', monospace;
-  --serif: 'DM Serif Display', Georgia, serif;
-  --display: 'Syne', sans-serif;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: var(--display); background: var(--white); color: var(--black); overflow-x: hidden; }
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: .9rem 2.5rem;
-  background: rgba(245,243,238,.92); backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-}
-.nav-logo { font-family: var(--display); font-weight: 800; font-size: 1.25rem; color: var(--green); letter-spacing:-.02em; text-decoration:none; }
-.nav-logo span { color: var(--black); }
-.nav-links { display: flex; gap: 2rem; align-items: center; }
-.nav-links a { font-family: var(--display); font-size:.82rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; transition:color .2s; }
-.nav-links a:hover { color: var(--green); }
-.nav-lang { font-family:var(--mono); font-size:.75rem; padding:4px 10px; border:1px solid var(--border); border-radius:4px; color:var(--muted); text-decoration:none; transition:all .2s; }
-.nav-lang:hover { border-color:var(--green); color:var(--green); }
-.hero { min-height:100vh; display:grid; grid-template-columns:1fr 1fr; padding-top:60px; position:relative; overflow:hidden; }
-.hero-left { display:flex; flex-direction:column; justify-content:center; padding:5rem 3rem 5rem 2.5rem; }
-.hero-eyebrow { font-family:var(--mono); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--green-light); margin-bottom:1.25rem; display:flex; align-items:center; gap:.5rem; }
-.hero-eyebrow::before { content:''; width:24px; height:1px; background:var(--green-light); }
-.hero-title { font-family:var(--serif); font-weight:400; font-size:clamp(2.6rem,4.5vw,4rem); line-height:1.1; letter-spacing:-.01em; color:var(--black); margin-bottom:1.5rem; }
-.hero-title .accent { color:var(--green); }
-.hero-desc { font-family:var(--display); font-weight:400; font-size:.95rem; line-height:1.8; color:var(--muted); max-width:420px; margin-bottom:2.5rem; }
-.hero-actions { display:flex; gap:1rem; flex-wrap:wrap; }
-.btn-primary { font-family:var(--display); font-weight:700; font-size:.82rem; letter-spacing:.04em; text-transform:uppercase; background:var(--green); color:var(--white); padding:.85rem 2rem; border:none; border-radius:4px; cursor:pointer; text-decoration:none; transition:all .2s; display:inline-flex; align-items:center; gap:.5rem; }
-.btn-primary:hover { background:var(--green-mid); transform:translateY(-1px); }
-.btn-secondary { font-family:var(--display); font-weight:600; font-size:.82rem; letter-spacing:.04em; text-transform:uppercase; background:transparent; color:var(--black); padding:.85rem 2rem; border:1.5px solid var(--border); border-radius:4px; cursor:pointer; text-decoration:none; transition:all .2s; }
-.btn-secondary:hover { border-color:var(--green); color:var(--green); }
-.hero-stats { margin-top:3.5rem; display:flex; gap:2.5rem; padding-top:2rem; border-top:1px solid var(--border); }
-.stat-num { font-family:var(--display); font-weight:800; font-size:1.8rem; color:var(--green); line-height:1; }
-.stat-lbl { font-size:.72rem; color:var(--muted); margin-top:.25rem; font-family:var(--display); }
-.hero-right { background:var(--green); display:flex; flex-direction:column; justify-content:center; padding:5rem 3rem; position:relative; overflow:hidden; }
-.hero-right::before { content:'PCOKit'; font-family:var(--display); font-weight:800; font-size:10rem; line-height:1; color:rgba(255,255,255,.04); position:absolute; bottom:-1rem; right:-1rem; pointer-events:none; letter-spacing:-.05em; }
-.industry-cards { display:flex; flex-direction:column; gap:.65rem; }
-.ind-card { background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12); border-radius:8px; padding:.9rem 1.1rem; transition:all .25s; }
-.ind-card:hover { background:rgba(255,255,255,.11); transform:translateX(4px); }
-.ind-title { font-family:var(--display); font-weight:700; font-size:.88rem; color:#fff; margin-bottom:.25rem; }
-.ind-desc { font-size:.72rem; color:rgba(255,255,255,.5); font-family:var(--mono); }
-section { padding:5rem 2.5rem; }
-.section-label { font-family:var(--mono); font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--green-light); margin-bottom:.75rem; display:flex; align-items:center; gap:.5rem; }
-.section-label::before { content:''; width:16px; height:1px; background:var(--green-light); }
-.section-title { font-family:var(--serif); font-weight:400; font-size:clamp(1.8rem,3vw,2.6rem); letter-spacing:-.01em; line-height:1.15; margin-bottom:.75rem; }
-.section-desc { font-family:var(--display); font-size:.92rem; color:var(--muted); line-height:1.8; max-width:520px; }
-.features { background:var(--black); color:var(--white); }
-.features .section-label { color:var(--green-light); }
-.features .section-label::before { background:var(--green-light); }
-.features .section-title { color:var(--white); }
-.features .section-desc { color:rgba(255,255,255,.5); }
-.features-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1px; margin-top:3.5rem; border:1px solid rgba(255,255,255,.08); }
-.feature-item { padding:2rem 1.75rem; border:1px solid rgba(255,255,255,.06); transition:background .2s; }
-.feature-item:hover { background:rgba(255,255,255,.04); }
-.feature-num { font-family:var(--mono); font-size:.7rem; color:var(--green-light); letter-spacing:.08em; margin-bottom:1.25rem; }
-.feature-icon { font-size:1.6rem; margin-bottom:.75rem; }
-.feature-title { font-family:var(--display); font-weight:700; font-size:1rem; color:var(--white); margin-bottom:.5rem; }
-.feature-desc { font-family:var(--display); font-size:.82rem; color:rgba(255,255,255,.45); line-height:1.7; }
-.subscribe { background:var(--green); color:var(--white); text-align:center; }
-.subscribe .section-title { color:var(--white); font-family:var(--serif); }
-.subscribe .section-desc { color:rgba(255,255,255,.65); margin:0 auto 2.5rem; }
-.sub-form { display:flex; gap:.75rem; max-width:420px; margin:0 auto; flex-wrap:wrap; justify-content:center; }
-.sub-form input { flex:1; min-width:200px; font-family:var(--display); font-size:.88rem; padding:.8rem 1.1rem; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2); border-radius:4px; color:#fff; outline:none; }
-.sub-form input::placeholder { color:rgba(255,255,255,.4); }
-.sub-form button { font-family:var(--display); font-weight:700; font-size:.82rem; letter-spacing:.05em; text-transform:uppercase; background:var(--white); color:var(--green); padding:.8rem 1.5rem; border:none; border-radius:4px; cursor:pointer; transition:all .2s; }
-footer { background:var(--black); color:rgba(255,255,255,.4); padding:2.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; font-family:var(--mono); font-size:.72rem; }
-footer a { color:rgba(255,255,255,.4); text-decoration:none; }
-footer a:hover { color:var(--green-light); }
-.footer-links { display:flex; gap:1.5rem; }
-@media(max-width:768px){ .hero{grid-template-columns:1fr} .hero-right{display:none} .hero-left{padding:3rem 1.25rem} section{padding:3.5rem 1.25rem} }
+:root{--black:#0a0a08;--white:#f5f3ee;--green:#1a4a2e;--green-mid:#2d6e45;--green-light:#4a9e6a;--green-pale:#e8f5ec;--amber:#c8860a;--amber-pale:#fef3c7;--red:#7f1d1d;--red-pale:#fee2e2;--border:#d4cfc4;--muted:#6b6456;--mono:"DM Mono",monospace;--serif:"DM Serif Display",Georgia,serif;--display:"Syne",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--display);background:var(--white);color:var(--black)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2.5rem;background:rgba(245,243,238,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--green);letter-spacing:-.02em;text-decoration:none}
+.nav-logo span{color:var(--black)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-family:var(--display);font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--green)}
+.nav-lang{font-family:var(--mono);font-size:.75rem;padding:4px 10px;border:1px solid var(--border);border-radius:4px;color:var(--muted);text-decoration:none;transition:all .2s}
+.nav-lang:hover{border-color:var(--green);color:var(--green)}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:60px;position:relative;overflow:hidden}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:5rem 3rem 5rem 2.5rem}
+.hero-eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green-light);margin-bottom:1.25rem;display:flex;align-items:center;gap:.5rem}
+.hero-eyebrow::before{content:"";width:24px;height:1px;background:var(--green-light)}
+.hero-title{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,4.5vw,3.8rem);line-height:1.1;letter-spacing:-.01em;color:var(--black);margin-bottom:1.5rem}
+.hero-title .accent{color:var(--green)}
+.hero-desc{font-family:var(--display);font-size:.95rem;line-height:1.8;color:var(--muted);max-width:420px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{font-family:var(--display);font-weight:700;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;background:var(--green);color:var(--white);padding:.85rem 2rem;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:all .2s;display:inline-flex;align-items:center;gap:.5rem}
+.btn-primary:hover{background:var(--green-mid);transform:translateY(-1px)}
+.btn-secondary{font-family:var(--display);font-weight:600;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;background:transparent;color:var(--black);padding:.85rem 2rem;border:1.5px solid var(--border);border-radius:4px;cursor:pointer;text-decoration:none;transition:all .2s;display:inline-flex;align-items:center;gap:.5rem}
+.btn-secondary:hover{border-color:var(--green);color:var(--green)}
+.hero-stats{margin-top:3.5rem;display:flex;gap:2.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+.stat-num{font-family:var(--display);font-weight:800;font-size:1.8rem;color:var(--green);line-height:1}
+.stat-lbl{font-size:.72rem;color:var(--muted);margin-top:.25rem;font-family:var(--display)}
+.hero-right{background:var(--green);display:flex;flex-direction:column;justify-content:center;padding:5rem 3rem;position:relative;overflow:hidden}
+.hero-right::before{content:"PCOKit";font-family:var(--display);font-weight:800;font-size:10rem;line-height:1;color:rgba(255,255,255,.04);position:absolute;bottom:-1rem;right:-1rem;pointer-events:none;letter-spacing:-.05em}
+.pest-cards{display:flex;flex-direction:column;gap:.65rem}
+.pest-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:.9rem 1.1rem;transition:all .25s;text-decoration:none;display:flex;align-items:center;gap:1rem}
+.pest-card:hover{background:rgba(255,255,255,.12);transform:translateX(4px)}
+.pest-icon{font-size:1.4rem;flex-shrink:0}
+.pest-name{font-family:var(--display);font-weight:700;font-size:.88rem;color:#fff;margin-bottom:.1rem}
+.pest-sub{font-size:.7rem;color:rgba(255,255,255,.5);font-family:var(--mono)}
+.pest-badge{margin-left:auto;font-size:.62rem;padding:2px 8px;border-radius:20px;font-family:var(--mono);flex-shrink:0}
+.pb-high{background:var(--red-pale);color:var(--red)}
+.pb-mid{background:var(--amber-pale);color:var(--amber)}
+.pb-low{background:var(--green-pale);color:var(--green)}
+
+/* SECTIONS */
+section{padding:5rem 2.5rem}
+.section-label{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green-light);margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.section-label::before{content:"";width:16px;height:1px;background:var(--green-light)}
+.section-title{font-family:var(--serif);font-weight:400;font-size:clamp(1.8rem,3vw,2.6rem);letter-spacing:-.01em;line-height:1.15;margin-bottom:.75rem}
+.section-desc{font-family:var(--display);font-size:.92rem;color:var(--muted);line-height:1.8;max-width:520px}
+
+/* FEATURES */
+.features{background:var(--black);color:var(--white)}
+.features .section-label{color:var(--green-light)}
+.features .section-label::before{background:var(--green-light)}
+.features .section-title{color:var(--white)}
+.features .section-desc{color:rgba(255,255,255,.5)}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;margin-top:3.5rem;border:1px solid rgba(255,255,255,.08)}
+.feature-item{padding:2rem 1.75rem;border:1px solid rgba(255,255,255,.06);transition:background .2s}
+.feature-item:hover{background:rgba(255,255,255,.04)}
+.feature-num{font-family:var(--mono);font-size:.7rem;color:var(--green-light);letter-spacing:.08em;margin-bottom:1.25rem}
+.feature-icon{font-size:1.6rem;margin-bottom:.75rem}
+.feature-title{font-family:var(--display);font-weight:700;font-size:1rem;color:var(--white);margin-bottom:.5rem}
+.feature-desc{font-family:var(--display);font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.7}
+
+/* KNOWLEDGE */
+.knowledge{background:var(--white)}
+.pest-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.75rem;margin-top:2.5rem}
+.pest-entry{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem;text-decoration:none;color:var(--black);transition:all .2s;display:flex;flex-direction:column;gap:.3rem}
+.pest-entry:hover{border-color:var(--green);box-shadow:0 4px 16px rgba(26,74,46,.08);transform:translateY(-2px)}
+.pe-icon{font-size:1.3rem}
+.pe-name{font-family:var(--display);font-weight:700;font-size:.9rem}
+.pe-latin{font-family:var(--mono);font-size:.63rem;color:var(--muted)}
+.pe-tags{display:flex;gap:.3rem;flex-wrap:wrap;margin-top:.3rem}
+.pe-tag{font-size:.6rem;padding:1px 6px;border-radius:3px;font-family:var(--mono)}
+.pe-tag.red{background:var(--red-pale);color:var(--red)}
+.pe-tag.amber{background:var(--amber-pale);color:var(--amber)}
+.pe-tag{background:var(--green-pale);color:var(--green)}
+
+/* PROMPTS */
+.prompts-section{background:var(--green-pale)}
+.prompts-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem}
+.prompt-list{display:flex;flex-direction:column;gap:.6rem}
+.prompt-row{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem;transition:all .2s;text-decoration:none;color:var(--black)}
+.prompt-row:hover{border-color:var(--green)}
+.pr-scene{font-family:var(--mono);font-size:.63rem;padding:2px 7px;border-radius:3px;flex-shrink:0}
+.s-client{background:var(--green-pale);color:var(--green)}
+.s-doc{background:var(--amber-pale);color:var(--amber)}
+.s-train{background:#ede9fe;color:#4c1d95}
+.pr-title{font-size:.88rem;font-weight:500;flex:1;color:var(--black)}
+.pr-industry{font-size:.7rem;color:var(--muted);font-family:var(--mono);flex-shrink:0}
+.pr-lock{font-size:.85rem;flex-shrink:0}
+.prompts-cta{margin-top:1.5rem;text-align:center;padding:1.5rem;background:var(--white);border:1.5px dashed var(--border);border-radius:8px}
+.prompts-cta p{font-size:.88rem;color:var(--muted);margin-bottom:.85rem}
+.sub-row{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+.sub-input{font-family:var(--display);font-size:.85rem;padding:.6rem 1rem;border:1.5px solid var(--border);border-radius:4px;width:240px;outline:none}
+.sub-input:focus{border-color:var(--green)}
+
+/* SUBSCRIBE */
+.subscribe{background:var(--green);color:var(--white);text-align:center}
+.subscribe .section-title{color:var(--white);font-family:var(--serif)}
+.subscribe .section-desc{color:rgba(255,255,255,.65);margin:0 auto 2.5rem}
+.sub-form{display:flex;gap:.75rem;max-width:420px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.sub-form input{flex:1;min-width:200px;font-family:var(--display);font-size:.88rem;padding:.8rem 1.1rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:4px;color:#fff;outline:none}
+.sub-form input::placeholder{color:rgba(255,255,255,.4)}
+.sub-form button{font-family:var(--display);font-weight:700;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase;background:var(--white);color:var(--green);padding:.8rem 1.5rem;border:none;border-radius:4px;cursor:pointer;transition:all .2s}
+.sub-form button:hover{background:var(--green-pale)}
+.sub-note{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:1rem;font-family:var(--mono)}
+
+/* ABOUT */
+.about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.about-badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--green-pale);border:1px solid var(--border);border-radius:4px;padding:.4rem .85rem;font-family:var(--mono);font-size:.72rem;color:var(--green);margin-bottom:1.5rem}
+.about-text{font-family:var(--display);font-size:.95rem;line-height:1.9;color:var(--muted);margin-bottom:1rem}
+.about-right{background:var(--black);border-radius:12px;padding:2rem;color:var(--white)}
+.terminal-hd{font-family:var(--mono);font-size:.7rem;color:rgba(255,255,255,.3);margin-bottom:1.25rem;display:flex;align-items:center;gap:.5rem}
+.terminal-hd::before{content:"●";color:#e24b4a}
+.terminal-line{font-family:var(--mono);font-size:.78rem;line-height:2;color:rgba(255,255,255,.6)}
+.terminal-line .g{color:var(--green-light)}
+.terminal-line .w{color:#fff}
+.terminal-line .a{color:var(--amber)}
+
+/* FOOTER */
+footer{background:var(--black);color:rgba(255,255,255,.4);padding:2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.72rem}
+footer a{color:rgba(255,255,255,.4);text-decoration:none}
+footer a:hover{color:var(--green-light)}
+.footer-links{display:flex;gap:1.5rem}
+
+@media(max-width:768px){nav{padding:.75rem 1.25rem}.nav-links{display:none}.hero{grid-template-columns:1fr}.hero-right{display:none}.hero-left{padding:3rem 1.25rem}section{padding:3.5rem 1.25rem}.about-grid{grid-template-columns:1fr}footer{flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
+
 <nav>
   <a href="/en/" class="nav-logo">PCO<span>Kit</span></a>
   <div class="nav-links">
-    <a href="#features">Features</a>
-    <a href="#prompts">Prompts</a>
-    <a href="#about">About</a>
+    <a href="/pests/">Library</a>
+    <a href="/prompts/">Prompts</a>
+    <a href="/blog/">Blog</a>
+    <a href="/#about">About</a>
     <a href="/" class="nav-lang">中文</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-left">
     <div class="hero-eyebrow">Pest Control Industry Knowledge Platform</div>
@@ -106,45 +158,54 @@ footer a:hover { color:var(--green-light); }
       <span class="accent">Professional Tools.</span><br>
       Real Results.
     </h1>
-    <p class="hero-desc">
-      Built by a hotel on-site PCO technician. Pest identification library, AI prompt tools, compliance document templates — everything you need to work smarter in pest control.
-    </p>
+    <p class="hero-desc">Built by a hotel on-site PCO technician. Pest identification library, AI prompt tools, compliance document templates — everything you need to work smarter in pest control.</p>
     <div class="hero-actions">
-      <a href="#features" class="btn-primary">📖 Explore Library</a>
-      <a href="#prompts" class="btn-secondary">💬 Get AI Prompts</a>
+      <a href="/pests/" class="btn-primary">📖 Explore Library</a>
+      <a href="/prompts/" class="btn-secondary">💬 Get AI Prompts</a>
     </div>
     <div class="hero-stats">
-      <div><div class="stat-num">30+</div><div class="stat-lbl">Pest Species</div></div>
+      <div><div class="stat-num">29+</div><div class="stat-lbl">Pest Species</div></div>
       <div><div class="stat-num">70+</div><div class="stat-lbl">AI Prompts</div></div>
       <div><div class="stat-num">5</div><div class="stat-lbl">Industry Sectors</div></div>
     </div>
   </div>
   <div class="hero-right">
-    <div class="industry-cards">
-      <div class="ind-card">
-        <div class="ind-title">🍔 Food Service & Restaurant Chains</div>
-        <div class="ind-desc">BRC / HACCP compliance · Cockroach & rodent control · Drain fly management</div>
-      </div>
-      <div class="ind-card">
-        <div class="ind-title">🏨 Hotels & Hospitality</div>
-        <div class="ind-desc">Bed bug protocols · Guest complaint handling · Monthly service reports</div>
-      </div>
-      <div class="ind-card">
-        <div class="ind-title">🏭 Food Manufacturing</div>
-        <div class="ind-desc">HACCP PRP documentation · Stored product pests · Supplier qualification</div>
-      </div>
-      <div class="ind-card">
-        <div class="ind-title">💊 Pharmaceutical</div>
-        <div class="ind-desc">GMP compliance · Cleanroom restrictions · FDA audit support</div>
-      </div>
-      <div class="ind-card">
-        <div class="ind-title">🏠 Residential & General</div>
-        <div class="ind-desc">Client communication · Inspection records · Annual service packages</div>
-      </div>
+    <div class="pest-cards">
+      <a href="/pests/german-cockroach/" class="pest-card">
+        <span class="pest-icon">🪳</span>
+        <div><div class="pest-name">German Cockroach</div><div class="pest-sub">Blattella germanica</div></div>
+        <span class="pest-badge pb-high">High Risk</span>
+      </a>
+      <a href="/pests/norway-rat/" class="pest-card">
+        <span class="pest-icon">🐀</span>
+        <div><div class="pest-name">Norway Rat</div><div class="pest-sub">Rattus norvegicus</div></div>
+        <span class="pest-badge pb-high">High Risk</span>
+      </a>
+      <a href="/pests/bed-bug/" class="pest-card">
+        <span class="pest-icon">🩸</span>
+        <div><div class="pest-name">Bed Bug</div><div class="pest-sub">Cimex lectularius</div></div>
+        <span class="pest-badge pb-high">Hotel Priority</span>
+      </a>
+      <a href="/pests/termite/" class="pest-card">
+        <span class="pest-icon">🐜</span>
+        <div><div class="pest-name">Termite</div><div class="pest-sub">Coptotermes formosanus</div></div>
+        <span class="pest-badge pb-mid">Structural Risk</span>
+      </a>
+      <a href="/pests/fruit-fly/" class="pest-card">
+        <span class="pest-icon">🍊</span>
+        <div><div class="pest-name">Fruit Fly / Drain Fly</div><div class="pest-sub">Drosophila / Psychodidae</div></div>
+        <span class="pest-badge pb-mid">F&B Priority</span>
+      </a>
+      <a href="/pests/red-flour-beetle/" class="pest-card">
+        <span class="pest-icon">🌾</span>
+        <div><div class="pest-name">Red Flour Beetle</div><div class="pest-sub">Tribolium castaneum</div></div>
+        <span class="pest-badge pb-low">Storage</span>
+      </a>
     </div>
   </div>
 </section>
 
+<!-- FEATURES -->
 <section class="features" id="features">
   <div class="section-label">Core Features</div>
   <h2 class="section-title">Tools built for<br>pest control professionals</h2>
@@ -153,7 +214,7 @@ footer a:hover { color:var(--green-light); }
     <div class="feature-item">
       <div class="feature-num">01</div><div class="feature-icon">📖</div>
       <div class="feature-title">Pest Identification Library</div>
-      <div class="feature-desc">30+ common pest species with identification features, biology, habitats, and treatment notes. Bilingual Chinese/English.</div>
+      <div class="feature-desc">29+ common pest species with identification features, biology, habitats, and treatment notes. Bilingual Chinese/English.</div>
     </div>
     <div class="feature-item">
       <div class="feature-num">02</div><div class="feature-icon">💬</div>
@@ -173,7 +234,7 @@ footer a:hover { color:var(--green-light); }
     <div class="feature-item">
       <div class="feature-num">05</div><div class="feature-icon">🌐</div>
       <div class="feature-title">Bilingual Chinese / English</div>
-      <div class="feature-desc">All core content available in both languages, serving domestic PCO professionals and international food safety auditors.</div>
+      <div class="feature-desc">All core content in both languages, serving domestic PCO professionals and international food safety auditors.</div>
     </div>
     <div class="feature-item">
       <div class="feature-num">06</div><div class="feature-icon">🖥️</div>
@@ -183,19 +244,170 @@ footer a:hover { color:var(--green-light); }
   </div>
 </section>
 
-<section class="subscribe" id="prompts">
-  <div class="section-label" style="justify-content:center;margin-bottom:.5rem">Free AI Prompt Pack</div>
-  <h2 class="section-title">Get 70+ Prompts<br>Delivered to Your Inbox</h2>
-  <p class="section-desc">Client complaint responses, HACCP documents, BRC audit prep, staff training materials — all ready to use with any AI tool.</p>
+<!-- KNOWLEDGE -->
+<section class="knowledge" id="knowledge">
+  <div class="section-label">Pest Library</div>
+  <h2 class="section-title">Know Your Target</h2>
+  <p class="section-desc">Field-tested identification guides based on professional resources and hotel on-site experience. Each species includes ID features, biology, habitats, and treatment notes.</p>
+  <div class="pest-grid">
+    <a href="/pests/german-cockroach/" class="pest-entry">
+      <span class="pe-icon">🪳</span><div class="pe-name">German Cockroach</div>
+      <div class="pe-latin">Blattella germanica</div>
+      <div class="pe-tags"><span class="pe-tag red">Highest Risk</span><span class="pe-tag">F&B</span><span class="pe-tag">Hotel</span></div>
+    </a>
+    <a href="/pests/american-cockroach/" class="pest-entry">
+      <span class="pe-icon">🪲</span><div class="pe-name">American Cockroach</div>
+      <div class="pe-latin">Periplaneta americana</div>
+      <div class="pe-tags"><span class="pe-tag red">High Risk</span><span class="pe-tag">Drains</span></div>
+    </a>
+    <a href="/pests/norway-rat/" class="pest-entry">
+      <span class="pe-icon">🐀</span><div class="pe-name">Norway Rat</div>
+      <div class="pe-latin">Rattus norvegicus</div>
+      <div class="pe-tags"><span class="pe-tag red">High Risk</span><span class="pe-tag">Warehouse</span></div>
+    </a>
+    <a href="/pests/roof-rat/" class="pest-entry">
+      <span class="pe-icon">🐁</span><div class="pe-name">Roof Rat</div>
+      <div class="pe-latin">Rattus rattus</div>
+      <div class="pe-tags"><span class="pe-tag red">High Risk</span><span class="pe-tag">Hotel</span></div>
+    </a>
+    <a href="/pests/bed-bug/" class="pest-entry">
+      <span class="pe-icon">🩸</span><div class="pe-name">Bed Bug</div>
+      <div class="pe-latin">Cimex lectularius</div>
+      <div class="pe-tags"><span class="pe-tag red">Hotel Priority</span><span class="pe-tag">Guestroom</span></div>
+    </a>
+    <a href="/pests/termite/" class="pest-entry">
+      <span class="pe-icon">🐜</span><div class="pe-name">Termite</div>
+      <div class="pe-latin">Coptotermes formosanus</div>
+      <div class="pe-tags"><span class="pe-tag amber">Structural</span><span class="pe-tag">Residential</span></div>
+    </a>
+    <a href="/pests/fruit-fly/" class="pest-entry">
+      <span class="pe-icon">🍊</span><div class="pe-name">Fruit Fly</div>
+      <div class="pe-latin">Drosophila spp.</div>
+      <div class="pe-tags"><span class="pe-tag amber">F&B Priority</span><span class="pe-tag">Beverages</span></div>
+    </a>
+    <a href="/pests/drain-fly/" class="pest-entry">
+      <span class="pe-icon">🦋</span><div class="pe-name">Drain Fly</div>
+      <div class="pe-latin">family Psychodidae</div>
+      <div class="pe-tags"><span class="pe-tag red">Hotel Priority</span><span class="pe-tag">Drains</span></div>
+    </a>
+    <a href="/pests/indian-meal-moth/" class="pest-entry">
+      <span class="pe-icon">🦋</span><div class="pe-name">Indian Meal Moth</div>
+      <div class="pe-latin">Plodia interpunctella</div>
+      <div class="pe-tags"><span class="pe-tag red">Food Safety</span><span class="pe-tag">Storage</span></div>
+    </a>
+    <a href="/pests/red-flour-beetle/" class="pest-entry">
+      <span class="pe-icon">🟠</span><div class="pe-name">Red Flour Beetle</div>
+      <div class="pe-latin">Tribolium castaneum</div>
+      <div class="pe-tags"><span class="pe-tag red">Food Safety</span><span class="pe-tag">Flour</span></div>
+    </a>
+    <a href="/pests/mite/" class="pest-entry">
+      <span class="pe-icon">🔬</span><div class="pe-name">Mite</div>
+      <div class="pe-latin">Acari</div>
+      <div class="pe-tags"><span class="pe-tag amber">Allergen Risk</span><span class="pe-tag">Storage</span></div>
+    </a>
+    <a href="/pests/" class="pest-entry" style="border-style:dashed;justify-content:center;align-items:center;text-align:center;min-height:100px">
+      <div><div style="font-size:1.5rem;margin-bottom:.3rem">+</div><div class="pe-name" style="color:var(--muted)">View All 29+ Species</div></div>
+    </a>
+  </div>
+</section>
+
+<!-- PROMPTS -->
+<section class="prompts-section" id="prompts">
+  <div class="prompts-header">
+    <div>
+      <div class="section-label">AI Prompt Library</div>
+      <h2 class="section-title">Copy. Paste. Done.</h2>
+    </div>
+    <p class="section-desc">70+ professional prompts for pest control work. Free preview — full pack delivered to your inbox.</p>
+  </div>
+  <div class="prompt-list">
+    <a href="/prompts/" class="prompt-row">
+      <span class="pr-scene s-client">Client Reply</span>
+      <span class="pr-title">Restaurant Cockroach Complaint — Emergency Response + Social Media Crisis</span>
+      <span class="pr-industry">F&B Chain</span>
+      <span class="pr-lock">🔓</span>
+    </a>
+    <a href="/prompts/" class="prompt-row">
+      <span class="pr-scene s-client">Client Reply</span>
+      <span class="pr-title">Hotel Room Bed Bug Complaint — Full Response Protocol</span>
+      <span class="pr-industry">Hotel</span>
+      <span class="pr-lock">🔓</span>
+    </a>
+    <a href="/prompts/" class="prompt-row">
+      <span class="pr-scene s-doc">Compliance</span>
+      <span class="pr-title">Food Factory Pest Control Plan (HACCP / ISO 22000)</span>
+      <span class="pr-industry">Food Mfg</span>
+      <span class="pr-lock">🔓</span>
+    </a>
+    <div class="prompt-row" style="opacity:.55">
+      <span class="pr-scene s-doc">Compliance</span>
+      <span class="pr-title">Pharmaceutical Pest Control SOP (GMP)</span>
+      <span class="pr-industry">Pharma</span>
+      <span class="pr-lock">🔒</span>
+    </div>
+    <div class="prompt-row" style="opacity:.55">
+      <span class="pr-scene s-train">Training</span>
+      <span class="pr-title">New Staff Pest ID Handbook — 9 Common Species</span>
+      <span class="pr-industry">General</span>
+      <span class="pr-lock">🔒</span>
+    </div>
+    <div class="prompt-row" style="opacity:.55">
+      <span class="pr-scene s-doc">Proposal</span>
+      <span class="pr-title">Annual Service Contract Tender — Technical Specification</span>
+      <span class="pr-industry">Food Mfg</span>
+      <span class="pr-lock">🔒</span>
+    </div>
+  </div>
+  <div class="prompts-cta">
+    <p>🔒 Full pack: 70+ prompts across all industries — leave your email to get the free PDF</p>
+    <form class="sub-row" onsubmit="handleSub(event)">
+      <input class="sub-input" type="email" placeholder="your@email.com" required>
+      <button type="submit" class="btn-primary" style="font-size:.8rem;padding:.6rem 1.25rem">Get Free Pack →</button>
+    </form>
+  </div>
+</section>
+
+<!-- SUBSCRIBE -->
+<section class="subscribe" id="subscribe">
+  <div class="section-label" style="justify-content:center;margin-bottom:.5rem">Monthly Newsletter</div>
+  <h2 class="section-title">Industry Updates<br>Straight to Your Inbox</h2>
+  <p class="section-desc">Pest trend alerts, compliance updates, new prompt releases — free, monthly, unsubscribe anytime.</p>
   <form class="sub-form" onsubmit="handleSub(event)">
     <input type="email" placeholder="your@email.com" required>
-    <button type="submit">Get Free Pack →</button>
+    <button type="submit">Subscribe →</button>
   </form>
-  <div style="font-family:var(--mono);font-size:.72rem;color:rgba(255,255,255,.4);margin-top:1rem">No spam · Unsubscribe anytime · Trusted by PCO professionals</div>
+  <div class="sub-note">No spam · Unsubscribe anytime</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div>
+      <div class="about-badge">🏨 Hotel On-Site PCO Technician</div>
+      <div class="section-label">About PCOKit</div>
+      <h2 class="section-title">Field Experience<br>Shouldn't Go to Waste</h2>
+      <p class="about-text">I've worked as an on-site pest control technician in hotels for years — dealing with real complaints, real audits, and real pest problems every day.</p>
+      <p class="about-text">PCOKit is my attempt to systematize that accumulated knowledge — pest ID, compliance documents, industry standards, and AI tools — all in one place.</p>
+      <p class="about-text">Built for PCO professionals and food safety managers who want to spend less time on paperwork and more time solving real problems.</p>
+    </div>
+    <div class="about-right">
+      <div class="terminal-hd">— pcokit.com</div>
+      <div class="terminal-line"><span class="g">$</span> <span class="w">whoami</span></div>
+      <div class="terminal-line"><span class="a">→</span> Hotel on-site PCO technician</div>
+      <div class="terminal-line" style="margin-top:.5rem"><span class="g">$</span> <span class="w">ls expertise/</span></div>
+      <div class="terminal-line"><span class="a">→</span> Bed bugs / Rodent control / BRC audits</div>
+      <div class="terminal-line"><span class="a">→</span> HACCP compliance / Inspection records</div>
+      <div class="terminal-line" style="margin-top:.5rem"><span class="g">$</span> <span class="w">cat mission.txt</span></div>
+      <div class="terminal-line"><span class="a">→</span> Help every PCO professional</div>
+      <div class="terminal-line"><span class="a">→</span> win client trust through expertise</div>
+      <div class="terminal-line" style="margin-top:.5rem"><span class="g">$</span> <span class="w">./contact --email</span></div>
+      <div class="terminal-line"><span class="a">→</span> hello@pcokit.com</div>
+    </div>
+  </div>
 </section>
 
 <footer>
-  <div>© 2025 PCOKit.com · Pest Control Industry Knowledge Platform</div>
+  <div>© 2026 PCOKit.com · Pest Control Industry Knowledge Platform</div>
   <div class="footer-links">
     <a href="/">中文</a>
     <a href="/privacy/">Privacy</a>
@@ -206,9 +418,11 @@ footer a:hover { color:var(--green-light); }
 <script>
 function handleSub(e){
   e.preventDefault();
-  const btn=e.target.querySelector('button');
-  btn.textContent='✓ Check your inbox!';
-  setTimeout(()=>{btn.textContent='Get Free Pack →';e.target.reset();},3000);
+  var btn=e.target.querySelector("button");
+  var orig=btn.textContent;
+  btn.textContent="✓ Check your inbox!";
+  btn.style.background="#e8f5ec";btn.style.color="#085041";
+  setTimeout(function(){btn.textContent=orig;btn.style.background="";btn.style.color="";e.target.reset();},3000);
 }
 </script>
 </body>
