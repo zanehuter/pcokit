@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PCO行业实战案例博客——酒店驻场技术员一线处理记录，蟑螂、蛾蠓、鼠害真实案例脱敏分享，面向PCO从业者和食品安全管理人员。">
+<title>实战案例博客 | PCOKit</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Noto+Serif+SC:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0a0a08;--white:#f5f3ee;--green:#1a4a2e;--green-mid:#2d6e45;--green-light:#4a9e6a;--green-pale:#e8f5ec;--amber:#c8860a;--amber-pale:#fef3c7;--border:#d4cfc4;--muted:#6b6456;--mono:'DM Mono',monospace;--serif:'Noto Serif SC',Georgia,serif;--display:'Syne',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);background:var(--white);color:var(--black)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2.5rem;background:rgba(245,243,238,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--green);letter-spacing:-.02em;text-decoration:none}
+.nav-logo span{color:var(--black)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-family:var(--display);font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.on{color:var(--green)}
+.wrap{max-width:860px;margin:0 auto;padding:5rem 2rem 4rem}
+.page-cat{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green-light);margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.page-cat::before{content:'';width:16px;height:1px;background:var(--green-light)}
+.page-title{font-family:var(--display);font-weight:800;font-size:clamp(2rem,4vw,3rem);letter-spacing:-.02em;line-height:1.05;margin-bottom:.75rem}
+.page-desc{font-size:.95rem;color:var(--muted);line-height:1.8;max-width:540px;margin-bottom:3rem}
+.post-list{display:flex;flex-direction:column;gap:1.25rem}
+.post-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.5rem 1.75rem;text-decoration:none;color:var(--black);transition:all .2s;display:block}
+.post-card:hover{border-color:var(--green);box-shadow:0 4px 16px rgba(26,74,46,.08);transform:translateY(-2px)}
+.post-meta{display:flex;gap:.6rem;align-items:center;margin-bottom:.75rem;flex-wrap:wrap}
+.post-tag{font-family:var(--mono);font-size:.62rem;padding:2px 8px;border-radius:3px}
+.t-green{background:var(--green-pale);color:var(--green)}
+.t-amber{background:var(--amber-pale);color:var(--amber)}
+.t-blue{background:#e8f0fb;color:#1e3a5f}
+.post-date{font-family:var(--mono);font-size:.65rem;color:var(--muted)}
+.post-title{font-family:var(--display);font-weight:700;font-size:1.15rem;line-height:1.3;margin-bottom:.6rem;color:var(--black)}
+.post-excerpt{font-size:.88rem;color:var(--muted);line-height:1.75;margin-bottom:1rem}
+.post-footer{display:flex;align-items:center;justify-content:space-between}
+.post-read{font-family:var(--mono);font-size:.7rem;color:var(--green)}
+.post-arrow{font-size:.85rem;color:var(--muted);transition:transform .2s}
+.post-card:hover .post-arrow{transform:translateX(4px)}
+.divider{height:1px;background:var(--border);margin:3rem 0}
+.cta-box{background:var(--green);border-radius:10px;padding:2rem 2.25rem;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+.cta-text{}
+.cta-title{font-family:var(--display);font-weight:700;font-size:1rem;margin-bottom:.35rem}
+.cta-desc{font-size:.85rem;color:rgba(255,255,255,.7);line-height:1.6}
+.cta-btn{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;background:#fff;color:var(--green);padding:.7rem 1.4rem;border:none;border-radius:4px;cursor:pointer;text-decoration:none;white-space:nowrap;transition:all .2s;display:inline-block}
+.cta-btn:hover{background:var(--green-pale)}
+footer{background:var(--black);color:rgba(255,255,255,.4);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.72rem;margin-top:4rem}
+footer a{color:rgba(255,255,255,.4);text-decoration:none}
+footer a:hover{color:var(--green-light)}
+@media(max-width:640px){nav{padding:.75rem 1.25rem}.nav-links{display:none}.wrap{padding:4rem 1.25rem 3rem}.cta-box{flex-direction:column}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">PCO<span>Kit</span></a>
+  <div class="nav-links">
+    <a href="/pests/">知识库</a>
+    <a href="/#prompts">提示词</a>
+    <a href="/blog/" class="on">博客</a>
+    <a href="/#about">关于</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="page-cat">实战案例博客</div>
+  <h1 class="page-title">一线记录，不加滤镜</h1>
+  <p class="page-desc">来自酒店驻场技术员的真实处理案例——脱敏后还原现场，分析原因，记录解决过程。写给所有在一线干活的 PCO 从业者。</p>
+
+  <div class="post-list">
+
+    <a href="/blog/blog-drain-fly-hotel.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-tag t-green">实战案例</span>
+        <span class="post-tag t-amber">蛾蠓溯源</span>
+        <span class="post-tag t-blue">酒店客房</span>
+        <span class="post-date">2025年</span>
+      </div>
+      <div class="post-title">酒店19楼客房蛾蠓溯源实录：每天20只，从哪里来的？</div>
+      <div class="post-excerpt">连续三四天，窗台每天出现超过20只蛾蠓尸体。19楼，蛾蠓不可能从室外飞入。三区隔离灭蝇灯监测，第二天定位孳生源为马桶封堵不严——记录完整的排查和处理过程。</div>
+      <div class="post-footer">
+        <span class="post-read">阅读全文 →</span>
+        <span class="post-arrow">→</span>
+      </div>
+    </a>
+
+    <a href="/blog/blog-laundry-cockroach.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-tag t-green">实战案例</span>
+        <span class="post-tag t-amber">德国小蠊</span>
+        <span class="post-tag t-blue">酒店洗衣房</span>
+        <span class="post-date">2025年</span>
+      </div>
+      <div class="post-title">酒店洗衣房德国小蠊处理实录：为什么这里最容易被忽视</div>
+      <div class="post-excerpt">洗衣房：持续的热源、充足的湿气、密集的设备缝隙——几乎是为德国小蠊量身定制的栖息地。发现成虫和若虫同时存在，凝胶饵剂联合滞留粉，连续两次处理后零粘捕。</div>
+      <div class="post-footer">
+        <span class="post-read">阅读全文 →</span>
+        <span class="post-arrow">→</span>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="cta-box">
+    <div class="cta-text">
+      <div class="cta-title">有类似案例想讨论，或者想获取提示词工具？</div>
+      <div class="cta-desc">留下邮箱，获取 PCO 行业 AI 提示词完整包——70+ 条客服、合规、培训提示词，复制即用</div>
+    </div>
+    <a href="/#prompts" class="cta-btn">免费获取提示词包 →</a>
+  </div>
+</div>
+
+<footer>
+  <div>© 2025 PCOKit.com · 虫害防治行业知识平台</div>
+  <div><a href="/">首页</a> &nbsp;|&nbsp; <a href="/pests/">知识库</a> &nbsp;|&nbsp; <a href="/en/">English</a></div>
+</footer>
+</body>
+</html>
