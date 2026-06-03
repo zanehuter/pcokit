@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="PCO行业AI提示词库——70+条专业提示词，覆盖餐饮连锁/酒店/食品工厂/药厂/住宅通用5个行业，客服回复/合规文件/培训材料/营销文案，复制即用。">
-<meta name="keywords" content="PCO提示词,虫害防治AI,pest control prompts,食品工厂合规,酒店虫害处理,BRC审核提示词">
 <title>AI 提示词库 — 70+条PCO行业专业提示词 | PCOKit</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Noto+Serif+SC:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -17,60 +16,62 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-links{display:flex;gap:2rem;align-items:center}
 .nav-links a{font-family:var(--display);font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
 .nav-links a:hover,.nav-links a.on{color:var(--green)}
-.hero{background:var(--green);color:#fff;padding:5.5rem 2.5rem 3.5rem;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:"PROMPT";font-family:var(--display);font-weight:800;font-size:13rem;color:rgba(255,255,255,.04);position:absolute;bottom:-2rem;left:50%;transform:translateX(-50%);white-space:nowrap;pointer-events:none}
-.hero-label{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green-light);margin-bottom:1rem;display:flex;align-items:center;justify-content:center;gap:.5rem}
-.hero-label::before,.hero-label::after{content:"";width:24px;height:1px;background:var(--green-light)}
-.hero-title{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-.02em;line-height:1.05;margin-bottom:1rem}
-.hero-desc{font-size:1rem;color:rgba(255,255,255,.7);line-height:1.8;max-width:520px;margin:0 auto 2rem}
-.hero-stats{display:flex;gap:2.5rem;justify-content:center;padding-top:2rem;border-top:1px solid rgba(255,255,255,.12)}
-.hs-num{font-family:var(--display);font-weight:800;font-size:2rem;color:#fff;line-height:1}
-.hs-lbl{font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.2rem}
-.filter-wrap{background:#fff;border-bottom:1px solid var(--border);padding:.9rem 2.5rem;position:sticky;top:60px;z-index:10;display:flex;gap:.4rem;flex-wrap:wrap;align-items:center}
-.filter-lbl{font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-right:.3rem}
+.page-hero{background:var(--green);color:#fff;padding:5.5rem 2.5rem 3rem;text-align:center}
+.hero-eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green-light);margin-bottom:1rem}
+.hero-title{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.02em;line-height:1.05;margin-bottom:.85rem}
+.hero-desc{font-size:.95rem;color:rgba(255,255,255,.7);line-height:1.8;max-width:500px;margin:0 auto 2rem}
+.hero-stats{display:flex;gap:2.5rem;justify-content:center;padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.12)}
+.hs-num{font-family:var(--display);font-weight:800;font-size:1.8rem;color:#fff;line-height:1}
+.hs-lbl{font-size:.7rem;color:rgba(255,255,255,.5);margin-top:.2rem}
+.filter-bar{background:#fff;border-bottom:1px solid var(--border);padding:.85rem 2.5rem;position:sticky;top:60px;z-index:10;display:flex;gap:.4rem;flex-wrap:wrap;align-items:center}
+.filter-lbl{font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-right:.25rem;flex-shrink:0}
 .fbtn{font-family:var(--mono);font-size:.7rem;padding:4px 11px;border-radius:20px;border:1px solid var(--border);cursor:pointer;background:transparent;color:var(--muted);transition:all .15s;white-space:nowrap}
 .fbtn:hover,.fbtn.on{background:var(--green);color:#fff;border-color:var(--green)}
-.prompts-wrap{max-width:860px;margin:0 auto;padding:1.5rem 2rem 4rem}
-.section-lbl{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:2rem 0 .85rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
-.prompt-list{display:flex;flex-direction:column;gap:.6rem}
-.prompt-card{background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:border-color .2s}
-.prompt-card:hover{border-color:var(--green)}
-.prompt-hd{display:flex;align-items:center;gap:.75rem;padding:.85rem 1.1rem;cursor:pointer}
-.prompt-tags{display:flex;gap:.3rem;flex-wrap:wrap;flex-shrink:0}
-.ptag{font-size:.6rem;padding:2px 7px;border-radius:3px;font-family:var(--mono);white-space:nowrap}
-.pt-client{background:var(--green-pale);color:var(--green)}
-.pt-doc{background:var(--amber-pale);color:var(--amber)}
-.pt-train{background:#ede9fe;color:#4c1d95}
-.pt-market{background:#e8f0fb;color:#1e3a5f}
-.prompt-title{font-size:.88rem;font-weight:500;color:var(--black);flex:1}
-.prompt-chv{font-size:.8rem;color:var(--muted);flex-shrink:0;transition:transform .2s}
-.prompt-chv.open{transform:rotate(180deg)}
-.prompt-body{display:none;border-top:1px solid var(--border);padding:.85rem 1.1rem}
-.prompt-body.show{display:block}
-.pb-lbl{font-family:var(--mono);font-size:.62rem;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.4rem}
-.pb-text{font-family:var(--mono);font-size:.72rem;line-height:1.85;background:var(--white);border:1px solid var(--border);border-radius:6px;padding:.75rem;color:var(--black);white-space:pre-wrap;max-height:280px;overflow-y:auto}
-.pb-actions{margin-top:.6rem;display:flex;gap:.4rem}
-.pb-btn{font-size:.7rem;padding:4px 10px;border-radius:4px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all .15s}
-.pb-btn:hover,.pb-btn.ok{background:var(--green-pale);border-color:var(--green);color:var(--green)}
-.locked-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:.85rem 1.1rem;display:flex;align-items:center;gap:.85rem;opacity:.6;margin-bottom:.5rem}
-.lock-title{font-size:.85rem;color:var(--muted);flex:1}
-.lock-badge{font-family:var(--mono);font-size:.62rem;padding:2px 7px;border-radius:3px;background:var(--border);color:var(--muted);flex-shrink:0}
-.unlock-cta{background:var(--green);border-radius:10px;padding:2rem 2.25rem;color:#fff;text-align:center;margin:2.5rem 0}
-.uc-title{font-family:var(--display);font-weight:700;font-size:1.1rem;margin-bottom:.5rem}
-.uc-desc{font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:1.5rem}
-.uc-form{display:flex;gap:.6rem;max-width:420px;margin:0 auto;flex-wrap:wrap;justify-content:center}
-.uc-input{font-family:var(--serif);font-size:.88rem;padding:.7rem 1rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:4px;color:#fff;flex:1;min-width:200px;outline:none}
-.uc-input::placeholder{color:rgba(255,255,255,.45)}
-.uc-btn{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;background:#fff;color:var(--green);padding:.7rem 1.4rem;border:none;border-radius:4px;cursor:pointer;transition:all .2s;white-space:nowrap}
-.uc-btn:hover{background:var(--green-pale)}
-.uc-note{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.85rem;font-family:var(--mono)}
-footer{background:var(--black);color:rgba(255,255,255,.4);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.72rem;margin-top:2rem}
+.main{max-width:860px;margin:0 auto;padding:2rem 2rem 4rem}
+.sec-label{font-family:var(--display);font-weight:700;font-size:.75rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:2rem 0 .85rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+.card-list{display:flex;flex-direction:column;gap:.55rem}
+.pcard{background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden;cursor:pointer;transition:border-color .2s}
+.pcard:hover{border-color:var(--green)}
+.pcard-hd{display:flex;align-items:center;gap:.75rem;padding:.85rem 1.1rem;user-select:none}
+.pcard-tags{display:flex;gap:.3rem;flex-shrink:0}
+.tag{font-size:.6rem;padding:2px 7px;border-radius:3px;font-family:var(--mono);white-space:nowrap}
+.tag-g{background:var(--green-pale);color:var(--green)}
+.tag-a{background:var(--amber-pale);color:var(--amber)}
+.tag-p{background:#ede9fe;color:#4c1d95}
+.tag-b{background:#e8f0fb;color:#1e3a5f}
+.tag-n{background:#f0f0f0;color:#555}
+.pcard-title{font-size:.88rem;font-weight:500;color:var(--black);flex:1;line-height:1.4}
+.pcard-arr{font-size:.8rem;color:var(--muted);flex-shrink:0;transition:transform .2s;font-family:var(--mono)}
+.pcard-arr.open{transform:rotate(180deg)}
+.pcard-body{display:none;border-top:1px solid var(--border);padding:.85rem 1.1rem;background:var(--white)}
+.pcard-body.show{display:block}
+.pb-label{font-family:var(--mono);font-size:.62rem;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.45rem}
+.pb-content{font-family:var(--mono);font-size:.72rem;line-height:1.9;background:#fff;border:1px solid var(--border);border-radius:6px;padding:.8rem;color:var(--black);white-space:pre-wrap;max-height:260px;overflow-y:auto}
+.pb-actions{margin-top:.6rem}
+.copy-btn{font-size:.72rem;padding:5px 12px;border-radius:4px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all .15s}
+.copy-btn:hover{background:var(--green-pale);border-color:var(--green);color:var(--green)}
+.copy-btn.ok{background:var(--green-pale);border-color:var(--green);color:var(--green)}
+.unlock-box{background:var(--green);border-radius:10px;padding:2rem 2.25rem;color:#fff;text-align:center;margin:2.5rem 0}
+.ub-title{font-family:var(--display);font-weight:700;font-size:1.05rem;margin-bottom:.45rem}
+.ub-desc{font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:1.4rem}
+.ub-form{display:flex;gap:.55rem;max-width:400px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.ub-input{font-family:var(--serif);font-size:.85rem;padding:.65rem .9rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:4px;color:#fff;flex:1;min-width:190px;outline:none}
+.ub-input::placeholder{color:rgba(255,255,255,.4)}
+.ub-input:focus{border-color:rgba(255,255,255,.5)}
+.ub-btn{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;background:#fff;color:var(--green);padding:.65rem 1.3rem;border:none;border-radius:4px;cursor:pointer;transition:all .2s;white-space:nowrap}
+.ub-btn:hover{background:var(--green-pale)}
+.ub-note{font-size:.68rem;color:rgba(255,255,255,.4);margin-top:.85rem;font-family:var(--mono)}
+.locked-item{display:flex;align-items:center;gap:.85rem;padding:.8rem 1rem;background:#fff;border:1px solid var(--border);border-radius:8px;margin-bottom:.5rem;opacity:.62}
+.locked-title{font-size:.85rem;color:var(--muted);flex:1}
+.locked-badges{display:flex;gap:.3rem}
+footer{background:var(--black);color:rgba(255,255,255,.4);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.72rem;margin-top:1rem}
 footer a{color:rgba(255,255,255,.4);text-decoration:none}
 footer a:hover{color:var(--green-light)}
-@media(max-width:640px){nav{padding:.75rem 1.25rem}.nav-links{display:none}.hero{padding:4.5rem 1.25rem 2.5rem}.filter-wrap{padding:.75rem 1.25rem}.prompts-wrap{padding:1rem 1.25rem 3rem}.hero-stats{gap:1.5rem}}
+@media(max-width:640px){nav{padding:.75rem 1.25rem}.nav-links{display:none}.page-hero{padding:4.5rem 1.25rem 2.5rem}.filter-bar{padding:.75rem 1.25rem}.main{padding:1.5rem 1.25rem 3rem}.hero-stats{gap:1.5rem}}
 </style>
 </head>
 <body>
+
 <nav>
   <a href="/" class="nav-logo">PCO<span>Kit</span></a>
   <div class="nav-links">
@@ -81,10 +82,10 @@ footer a:hover{color:var(--green-light)}
   </div>
 </nav>
 
-<div class="hero">
-  <div class="hero-label">PCO 行业 AI 提示词库</div>
+<div class="page-hero">
+  <div class="hero-eyebrow">— AI 提示词库</div>
   <h1 class="hero-title">复制即用<br>省去从零写作</h1>
-  <p class="hero-desc">70+ 条专业提示词，覆盖餐饮连锁、酒店、食品工厂、药厂、住宅通用五大场景。客服回复、合规文件、培训材料、营销文案——粘贴到任意 AI 工具直接用。</p>
+  <p class="hero-desc">70+ 条专业提示词，覆盖餐饮连锁、酒店、食品工厂、药厂、住宅通用五大场景。客服、合规、培训、营销——粘贴到任意 AI 工具直接用。</p>
   <div class="hero-stats">
     <div><div class="hs-num">70+</div><div class="hs-lbl">专业提示词</div></div>
     <div><div class="hs-num">5</div><div class="hs-lbl">行业场景</div></div>
@@ -92,99 +93,230 @@ footer a:hover{color:var(--green-light)}
   </div>
 </div>
 
-<div class="filter-wrap">
+<div class="filter-bar">
   <span class="filter-lbl">筛选：</span>
-  <button class="fbtn on" onclick="filt('all',this)">全部</button>
-  <button class="fbtn" onclick="filt('餐饮连锁',this)">🍔 餐饮连锁</button>
-  <button class="fbtn" onclick="filt('酒店',this)">🏨 酒店</button>
-  <button class="fbtn" onclick="filt('食品工厂',this)">🏭 食品工厂</button>
-  <button class="fbtn" onclick="filt('药厂',this)">💊 药厂</button>
-  <button class="fbtn" onclick="filt('住宅/通用',this)">🏠 住宅/通用</button>
+  <button class="fbtn on" onclick="doFilter('all',this)">全部</button>
+  <button class="fbtn" onclick="doFilter('餐饮连锁',this)">🍔 餐饮连锁</button>
+  <button class="fbtn" onclick="doFilter('酒店',this)">🏨 酒店</button>
+  <button class="fbtn" onclick="doFilter('食品工厂',this)">🏭 食品工厂</button>
+  <button class="fbtn" onclick="doFilter('药厂',this)">💊 药厂</button>
+  <button class="fbtn" onclick="doFilter('住宅/通用',this)">🏠 住宅/通用</button>
 </div>
 
-<div class="prompts-wrap">
-  <div class="section-lbl">🔓 免费预览 — 10条</div>
-  <div class="prompt-list" id="freeList"></div>
-  <div class="unlock-cta">
-    <div class="uc-title">还有 60+ 条提示词等你解锁</div>
-    <div class="uc-desc">留下邮箱，免费获取完整版 PDF 工具包<br>包含全部行业场景 · 持续更新 · 随时退订</div>
-    <form class="uc-form" onsubmit="handleSub(event)">
-      <input class="uc-input" type="email" placeholder="your@email.com" required>
-      <button class="uc-btn" type="submit">免费获取完整版 →</button>
+<div class="main">
+  <div class="sec-label">🔓 免费预览 — 点击展开复制</div>
+  <div class="card-list" id="freeArea"></div>
+
+  <div class="unlock-box">
+    <div class="ub-title">还有 60+ 条提示词等你解锁</div>
+    <div class="ub-desc">留下邮箱，免费获取完整版 PDF 工具包<br>全行业场景 · 持续更新 · 随时退订</div>
+    <form class="ub-form" onsubmit="submitEmail(event)">
+      <input class="ub-input" type="email" placeholder="your@email.com" required>
+      <button class="ub-btn" type="submit">免费获取完整版 →</button>
     </form>
-    <div class="uc-note">不发广告 · 随时退订</div>
+    <div class="ub-note">不发广告 · 随时退订</div>
   </div>
-  <div class="section-lbl">🔒 完整版包含（留邮箱解锁）</div>
-  <div id="lockedList"></div>
+
+  <div class="sec-label">🔒 完整版包含（留邮箱解锁）</div>
+  <div id="lockedArea"></div>
 </div>
 
 <footer>
-  <div>© 2025 PCOKit.com · 虫害防治行业知识平台</div>
+  <div>© 2026 PCOKit.com · 虫害防治行业知识平台</div>
   <div><a href="/">首页</a> &nbsp;|&nbsp; <a href="/pests/">知识库</a> &nbsp;|&nbsp; <a href="/blog/">博客</a></div>
 </footer>
+
 <script>
-var D=[
-{free:true,ind:"餐饮连锁",scene:"客服回复",title:"连锁门店蟑螂投诉紧急响应（含社媒危机）",prompt:"你是虫害防治服务商，接到一家连锁快餐门店店长的紧急来电：\n「我们门店今天下午顾客拍到蟑螂视频，发到小红书了，今晚能来处理吗？」\n\n请提供：\n【1. 电话中第一句话】（5秒内安抚+专业感）\n【2. 当晚上门时间承诺话术】\n【3. 店长在技术员到达前需准备的3件事】\n【4. 处理完成后提供给品牌方的文件清单】\n【5. 向品牌总部说明此次事件的邮件框架】\n【6. 转化为年度合同的销售切入话术】\n附：发给店长的确认短信模板（100字以内）"},
-{free:true,ind:"酒店",scene:"客服回复",title:"客房臭虫（床虱）投诉全流程处理话术",prompt:"场景：前台接到住客投诉「房间床上有虫子，腿上有红包」，初步判断可能是臭虫。\n\n请提供：\n【一、前台即时应对（黄金3分钟）】\n- 第一句回应话术（不确认也不否认，先安抚）\n- 换房操作标准话术\n【二、通知虫害服务商的标准描述】\n【三、对住客的后续沟通话术】\n- 处理完成后的解释措辞\n- 补偿方案建议（升房/免早餐/折扣券梯度）\n【四、声誉管理】大众点评/小红书官方回应模板\n【五、内部处理SOP】投诉→隔离→检查→处理→验收→开放，含责任人和时间节点"},
-{free:true,ind:"食品工厂",scene:"合规文件",title:"食品工厂虫害防治控制计划（HACCP/ISO 22000）",prompt:"为食品生产企业起草虫害防治控制计划，作为 HACCP/ISO 22000 前提方案（PRP）支持文件。\n\n企业信息：名称[XXX食品有限公司] 生产品类[饮料/方便面/食用油] 厂区面积[XXX㎡]\n\n【1. 目的与适用范围】\n【2. 引用标准】（GB 14881 / ISO 22000 / BRC Issue 9）\n【3. 职责分工】\n【4. 虫害风险区域分级】A级生产车间/B级成品仓/C级外围\n【5. 防控措施矩阵】区域×虫害类型×防控手段\n【6. 监控频次与方法】\n【7. 记录要求】\n【8. 不符合处理程序】\n格式：体系文件风格，含文件编号/版本/签字栏"},
-{free:true,ind:"住宅/通用",scene:"客服回复",title:"住宅蟑螂咨询专业回复",prompt:"你是专业虫害防治顾问，请用亲切专业的语气回复：\n「我家厨房最近发现很多蟑螂，请问你们怎么处理？」\n\n回复要求：\n① 简要说明上门检查流程\n② 主要处理方法介绍（凝胶饵剂+滞留粉，区分德国小蠊与美洲大蠊）\n③ 药物安全性说明（儿童/宠物/孕妇注意事项）\n④ 自然引导预约上门，150字以内\n注意：不要过度夸大效果，实事求是"},
-{free:true,ind:"餐饮连锁",scene:"合规文件",title:"食安检查虫害项目应对指南（防扣分版）",prompt:"为餐饮门店编写食品安全监督检查虫害防治项目达标指南。\n\n【一、监管重点核查项目】\n- 防鼠设施（挡鼠板/粘鼠板/毒饵站记录）\n- 防蝇设施（纱网/灭蝇灯/风幕机）\n- 防蟑措施（凝胶饵剂/排查记录）\n- 药剂管理（存放规范/未过期/有登记证）\n- 服务记录（巡检报告/处理记录/资质）\n\n【二、常见扣分点及整改对策】\n【三、检查前自查清单】\n【四、检查当天需展示的文件清单】\n【五、被查到虫害痕迹时的现场应对话术】\n【六、收到整改通知书后的处理流程】\n格式：可操作清单，适合打印给店长"},
-{free:true,ind:"酒店",scene:"合规文件",title:"酒店虫害月度服务报告模板（可存档版）",prompt:"设计专业的酒店虫害防治月度服务报告模板，要求可存档、可应对审计。\n\n报告结构：\n【封面】酒店名/报告周期/服务商/技术员/报告编号\n【一、服务执行摘要】计划次数 vs 实际执行次数\n【二、虫害监控数据汇总表】各区域发现情况/粘鼠板消耗/灭蝇灯捕获\n【三、本月处理措施详情】日期/技术员/区域/处理方式/用药\n【四、风险趋势分析】与上月对比/高风险区域预警\n【五、环境问题与改善建议】\n【六、下月服务计划】\n签名栏：技术员+服务商公章+酒店代表"},
-{free:true,ind:"食品工厂",scene:"员工培训",title:"食品工厂员工虫害预防行为规范（GMP培训）",prompt:"为食品工厂全体员工编写虫害预防行为规范培训材料。\n\n【1. 员工行为如何影响虫害风险】（用真实场景说明）\n【2. 生产区域禁止行为清单】\n- 带食品/零食进生产区\n- 自行处理发现的虫害（原因说明）\n【3. 日常卫生行为标准】废弃物处理/原辅料拆包位置\n【4. 如何正确上报虫害】\n① 停下来拍照（不要碰）\n② 立即告知班组长/品控\n③ 填写发现记录单\n④ 等待专业人员处理\n【5. 季节性特别注意事项】\n格式：语言简单，适合一线工人阅读"},
-{free:true,ind:"住宅/通用",scene:"员工培训",title:"新员工常见虫害识别手册（9种虫害）",prompt:"为虫害防治公司新员工编写常见虫害识别培训讲义。\n\n涵盖9种：德国小蠊/美洲大蠊/褐家鼠/小家鼠/台湾乳白蚁/果蝇/蛾蠓/家蝇/臭虫\n\n每种按以下结构编写：\n① 外观特征（体长/颜色/最简单识别要点）\n② 活动规律（昼行/夜行/季节性）\n③ 常见藏匿/孳生位置\n④ 主要危害\n⑤ 与近似物种的快速区分\n⑥ 处理提示\n\n格式：要点格式，适合打印A4讲义"},
-{free:true,ind:"餐饮连锁",scene:"客服回复",title:"茶饮/咖啡店果蝇与蛾蠓专项解答",prompt:"茶饮门店运营说：「店里夏天果蝇特别多，水吧台糖浆区全是，下水道口还有小飞虫像小蛾子，用了粘纸和灭蝇灯都没用，怎么回事？」\n\n请区分两种虫害专业回答：\n\n【果蝇（Drosophila spp.）】\n① 茶饮店果蝇3大孳生源\n② 为何粘纸和灭蝇灯效果有限\n③ 专业处理方案步骤\n\n【蛾蠓（Drain fly）】\n① 与下水道管道淤泥的关系\n② 与果蝇的区分方法\n③ 根治方法\n\n【通用建议】日常预防操作+上门处理切入点\n语气：像内行朋友解答，实用优先"},
-{free:true,ind:"药厂",scene:"合规文件",title:"制药企业虫害防治控制程序（GMP SOP）",prompt:"为制药企业起草符合 GMP 要求的虫害防治控制程序（SOP）。\n\n文件信息：编号[SOP-ENV-XXX] 版本[Ver 1.0] 生效日期[YYYY-MM-DD]\n\n【1. 目的】\n【2. 范围】洁净区/一般生产区/辅助区/外围\n【3. 职责】QA监督/工程部维护/服务商执行\n【4. 区域分级与管控要求】\n- 洁净区：仅物理措施\n- 一般生产区：有限化学处理\n- 仓储区：常规IPM管理\n【5. 服务商资质要求】\n【6. 操作规程】洁净区进入流程/工具消毒/材料审批\n【7. 监控方法与频次】\n【8. 记录与数据完整性】（ALCOA原则）\n【9. 偏差与CAPA】\n格式：GMP标准文件，含版本历史表/审核/批准签字栏"},
-{free:false,ind:"餐饮连锁",scene:"合规文件",title:"连锁门店年度虫害防治计划（内审级）"},
-{free:false,ind:"餐饮连锁",scene:"合规文件",title:"餐饮门店月度虫害巡检记录表（GB 14881）"},
-{free:false,ind:"餐饮连锁",scene:"方案提案",title:"连锁餐饮品牌总部合作提案（PPT大纲）"},
-{free:false,ind:"餐饮连锁",scene:"知识科普",title:"餐饮行业虫害四季预警通知模板（全年）"},
-{free:false,ind:"酒店",scene:"合规文件",title:"酒店虫害综合防治计划（含客房/餐饮/后厨）"},
-{free:false,ind:"酒店",scene:"客服回复",title:"酒店餐厅鼠患投诉应急处理"},
-{free:false,ind:"酒店",scene:"员工培训",title:"酒店全员虫害发现上报培训材料"},
-{free:false,ind:"酒店",scene:"知识科普",title:"臭虫（床虱）专项防治知识手册（酒店管理版）"},
-{free:false,ind:"食品工厂",scene:"合规文件",title:"食品工厂鼠类专项防治方案与布点设计说明"},
-{free:false,ind:"食品工厂",scene:"合规文件",title:"食品仓储虫害专项防治方案（谷象/印度谷斑螟）"},
-{free:false,ind:"食品工厂",scene:"合规文件",title:"食品工厂虫害服务商资质审核清单（BRC/SQF）"},
-{free:false,ind:"食品工厂",scene:"客服回复",title:"食品工厂第三方审核前紧急协助响应"},
-{free:false,ind:"食品工厂",scene:"方案提案",title:"大型食品企业招标技术标书（年度服务）"},
-{free:false,ind:"药厂",scene:"合规文件",title:"药厂GMP供应商审计清单（虫害防治服务商）"},
-{free:false,ind:"药厂",scene:"客服回复",title:"GMP偏差事件协助响应（含药监局检查应对）"},
-{free:false,ind:"住宅/通用",scene:"客服回复",title:"白蚁自查问题专业解答"},
-{free:false,ind:"住宅/通用",scene:"客服回复",title:"养宠家庭跳蚤问题解答"},
-{free:false,ind:"住宅/通用",scene:"客服回复",title:"宠物/户外蜱虫问题解答"},
-{free:false,ind:"住宅/通用",scene:"营销文案",title:"住宅除虫服务朋友圈/小红书双版本文案"},
-{free:false,ind:"住宅/通用",scene:"营销文案",title:"年度家庭防护套餐促销文案（A/B两版）"},
-{free:false,ind:"住宅/通用",scene:"员工培训",title:"技术员上门服务话术+销售转化培训"},
-{free:false,ind:"住宅/通用",scene:"知识科普",title:"全年12个月虫害科普内容日历（运营策划版）"},
+var PROMPTS = [
+  {free:true, ind:"餐饮连锁", scene:"客服回复", title:"连锁门店蟑螂投诉紧急响应（含社媒危机）",
+   text:"你是虫害防治服务商，接到连锁快餐门店店长的紧急来电：\n「顾客拍到蟑螂视频发到小红书了，今晚能来处理吗？」\n\n请提供：\n【1. 电话中第一句话】（5秒内安抚+专业感）\n【2. 当晚上门时间承诺话术】\n【3. 店长在技术员到达前需准备的3件事】\n【4. 处理完成后提供给品牌方的文件清单】\n【5. 向品牌总部说明事件的邮件框架】\n【6. 将此次事件转化为年度合同的销售切入话术】\n附：发给店长的确认短信模板（100字以内）"},
+  {free:true, ind:"酒店", scene:"客服回复", title:"客房臭虫（床虱）投诉全流程处理话术",
+   text:"场景：前台接到住客投诉「房间床上有虫子，腿上有红包」，初步判断可能是臭虫。\n\n请提供：\n【一、前台即时应对（黄金3分钟）】\n- 第一句回应话术（不确认也不否认，先安抚）\n- 换房操作标准话术\n【二、通知虫害服务商的标准描述】\n【三、对住客的后续沟通话术】\n- 处理完成后的解释措辞\n- 补偿方案建议（升房/免早餐/折扣券梯度）\n【四、大众点评/小红书官方回应模板】\n【五、内部处理SOP节点】"},
+  {free:true, ind:"食品工厂", scene:"合规文件", title:"食品工厂虫害防治控制计划（HACCP/ISO 22000）",
+   text:"为食品生产企业起草虫害防治控制计划，作为HACCP前提方案（PRP）支持文件。\n\n企业：[XXX食品有限公司] 品类：[饮料/方便面/食用油]\n\n【1. 目的与适用范围】\n【2. 引用标准】GB 14881 / ISO 22000 / BRC Issue 9\n【3. 职责分工】食安小组/车间主任/工程部/服务商\n【4. 虫害风险区域分级】\nA级（生产车间）：禁用化学农药，仅物理措施\nB级（成品仓/半成品区）：常规管控\nC级（外围停车场）：一般管控\n【5. 防控措施矩阵】区域×虫害类型×防控手段（表格）\n【6. 监控频次与方法】\n【7. 记录要求】\n【8. 不符合处理程序】\n格式：体系文件风格，含文件编号/版本/签字栏"},
+  {free:true, ind:"住宅/通用", scene:"客服回复", title:"住宅蟑螂咨询专业回复",
+   text:"你是专业虫害防治顾问，请用亲切专业的语气回复：\n「我家厨房最近发现很多蟑螂，请问你们怎么处理？」\n\n回复要求：\n① 简要说明上门检查流程\n② 主要处理方法介绍（凝胶饵剂+滞留粉，区分德国小蠊与美洲大蠊处理差异）\n③ 药物安全性说明（儿童/宠物/孕妇注意事项）\n④ 自然引导预约上门，150字以内\n注意：不要过度夸大处理效果，实事求是"},
+  {free:true, ind:"餐饮连锁", scene:"合规文件", title:"食安检查虫害项目应对指南（防扣分版）",
+   text:"为餐饮门店编写食品安全监督检查虫害防治项目达标指南。\n\n【一、监管重点核查项目】\n防鼠设施/防蝇设施/防蟑措施/药剂管理/服务记录\n\n【二、常见扣分点及整改对策】\n【三、检查前自查清单】（逐项勾选）\n【四、检查当天需展示的文件清单】\n【五、被查到虫害痕迹时的现场应对话术】\n【六、收到整改通知书后的处理流程】\n格式：可操作清单，适合打印给店长"},
+  {free:true, ind:"酒店", scene:"合规文件", title:"酒店虫害月度服务报告模板（可存档版）",
+   text:"设计专业的酒店虫害防治月度服务报告模板，要求可存档、可应对审计。\n\n【封面】酒店名/报告周期/服务商/技术员/报告编号\n【一、服务执行摘要】计划次数 vs 实际执行次数\n【二、虫害监控数据汇总表】各区域发现情况/粘鼠板消耗/灭蝇灯捕获\n【三、本月处理措施详情】日期/技术员/区域/处理方式/用药\n【四、风险趋势分析】与上月对比/高风险区域预警\n【五、环境问题与改善建议】\n【六、下月服务计划】\n签名栏：技术员+服务商公章+酒店代表"},
+  {free:true, ind:"食品工厂", scene:"员工培训", title:"食品工厂员工虫害预防行为规范（GMP培训）",
+   text:"为食品工厂全体员工编写虫害预防行为规范培训材料。\n\n【1. 员工行为如何影响虫害风险】（用真实场景说明）\n【2. 生产区域禁止行为清单】\n- 带食品/零食进生产区\n- 自行处理发现的虫害（为什么不能自己处理）\n【3. 日常卫生行为标准】废弃物处理/原辅料拆包位置\n【4. 如何正确上报虫害】\n① 停下来拍照（不要碰）\n② 立即告知班组长/品控\n③ 等待专业人员处理\n【5. 季节性特别注意事项】\n格式：语言简单，适合一线工人阅读"},
+  {free:true, ind:"住宅/通用", scene:"员工培训", title:"新员工常见虫害识别手册（9种虫害）",
+   text:"为虫害防治公司新员工编写常见虫害识别培训讲义。\n\n涵盖9种：德国小蠊/美洲大蠊/褐家鼠/小家鼠/台湾乳白蚁/果蝇/蛾蠓/家蝇/臭虫\n\n每种按以下结构编写：\n① 外观特征（体长/颜色/最简单识别要点）\n② 活动规律（昼行/夜行/季节性）\n③ 常见藏匿/孳生位置\n④ 主要危害\n⑤ 与近似物种的快速区分\n⑥ 处理提示\n\n格式：要点格式，适合打印A4讲义"},
+  {free:true, ind:"餐饮连锁", scene:"客服回复", title:"茶饮/咖啡店果蝇与蛾蠓专项解答",
+   text:"茶饮门店运营说：「店里夏天果蝇特别多，水吧台糖浆区全是，下水道口还有小飞虫像小蛾子，用了粘纸和灭蝇灯都没用，怎么回事？」\n\n请区分两种虫害专业回答：\n\n【果蝇（Drosophila spp.）】\n① 茶饮店果蝇3大孳生源\n② 为何粘纸和灭蝇灯效果有限\n③ 专业处理方案步骤\n\n【蛾蠓（Drain fly）】\n① 与下水道管道淤泥的关系\n② 与果蝇的区分方法\n③ 根治方法\n\n语气：像内行朋友解答，实用优先"},
+  {free:true, ind:"药厂", scene:"合规文件", title:"制药企业虫害防治控制程序（GMP SOP）",
+   text:"为制药企业起草符合GMP要求的虫害防治控制程序（SOP）。\n\n文件信息：编号[SOP-ENV-XXX] 版本[Ver 1.0]\n\n【1. 目的】\n【2. 范围】洁净区/一般生产区/辅助区/外围\n【3. 职责】QA监督/工程部维护/服务商执行\n【4. 区域分级与管控要求】\n- 洁净区：仅物理措施\n- 一般生产区：有限化学处理\n- 仓储区：常规IPM管理\n【5. 服务商资质要求】\n【6. 操作规程】洁净区进入流程/工具消毒/材料审批\n【7. 监控方法与频次】\n【8. 记录与数据完整性（ALCOA原则）】\n【9. 偏差与CAPA】\n格式：GMP标准文件，含版本历史/审核/批准签字栏"},
+  {free:false, ind:"餐饮连锁", scene:"合规文件", title:"连锁门店年度虫害防治计划（内审级）"},
+  {free:false, ind:"餐饮连锁", scene:"合规文件", title:"餐饮门店月度虫害巡检记录表（GB 14881）"},
+  {free:false, ind:"餐饮连锁", scene:"方案提案", title:"连锁餐饮品牌总部合作提案（PPT大纲）"},
+  {free:false, ind:"餐饮连锁", scene:"知识科普", title:"餐饮行业虫害四季预警通知模板（全年）"},
+  {free:false, ind:"酒店", scene:"合规文件", title:"酒店虫害综合防治计划（含客房/餐饮/后厨）"},
+  {free:false, ind:"酒店", scene:"客服回复", title:"酒店餐厅鼠患投诉应急处理"},
+  {free:false, ind:"酒店", scene:"员工培训", title:"酒店全员虫害发现上报培训材料"},
+  {free:false, ind:"酒店", scene:"知识科普", title:"臭虫专项防治知识手册（酒店管理版）"},
+  {free:false, ind:"食品工厂", scene:"合规文件", title:"食品工厂鼠类专项防治方案与布点设计说明"},
+  {free:false, ind:"食品工厂", scene:"合规文件", title:"食品仓储虫害专项防治方案（谷象/印度谷斑螟）"},
+  {free:false, ind:"食品工厂", scene:"合规文件", title:"食品工厂虫害服务商资质审核清单（BRC/SQF）"},
+  {free:false, ind:"食品工厂", scene:"客服回复", title:"食品工厂第三方审核前紧急协助响应"},
+  {free:false, ind:"食品工厂", scene:"方案提案", title:"大型食品企业招标技术标书（年度服务）"},
+  {free:false, ind:"药厂", scene:"合规文件", title:"药厂GMP供应商审计清单（虫害防治服务商）"},
+  {free:false, ind:"药厂", scene:"客服回复", title:"GMP偏差事件协助响应（含药监局检查应对）"},
+  {free:false, ind:"住宅/通用", scene:"客服回复", title:"白蚁自查问题专业解答"},
+  {free:false, ind:"住宅/通用", scene:"客服回复", title:"养宠家庭跳蚤问题解答"},
+  {free:false, ind:"住宅/通用", scene:"客服回复", title:"宠物/户外蜱虫问题解答"},
+  {free:false, ind:"住宅/通用", scene:"营销文案", title:"住宅除虫服务朋友圈/小红书双版本文案"},
+  {free:false, ind:"住宅/通用", scene:"营销文案", title:"年度家庭防护套餐促销文案（A/B两版）"},
+  {free:false, ind:"住宅/通用", scene:"员工培训", title:"技术员上门服务话术+销售转化培训"},
+  {free:false, ind:"住宅/通用", scene:"知识科普", title:"全年12个月虫害科普内容日历（运营策划版）"}
 ];
-var curInd="all",openIdx=null;
-var sc={"客服回复":"pt-client","合规文件":"pt-doc","员工培训":"pt-train","营销文案":"pt-market","知识科普":"pt-train","方案提案":"pt-doc"};
-function filt(ind,btn){curInd=ind;openIdx=null;document.querySelectorAll(".fbtn").forEach(b=>b.classList.remove("on"));btn.classList.add("on");render();}
-function render(){
-  var free=D.filter(d=>d.free&&(curInd==="all"||d.ind===curInd));
-  var locked=D.filter(d=>!d.free&&(curInd==="all"||d.ind===curInd));
-  var fl=document.getElementById("freeList");fl.innerHTML="";
-  free.forEach(function(d){
-    var idx=D.indexOf(d);var isOpen=openIdx===idx;
-    var c=sc[d.scene]||"pt-doc";
-    var card=document.createElement("div");card.className="prompt-card";
-    card.innerHTML="<div class='prompt-hd' onclick='toggle("+idx+")'><div class='prompt-tags'><span class='ptag "+c+"'>"+d.scene+"</span><span class='ptag' style='background:#f0f0f0;color:#555'>"+d.ind+"</span></div><span class='prompt-title'>"+d.title+"</span><span class='prompt-chv"+(isOpen?" open":"")+"'>▾</span></div><div class='prompt-body"+(isOpen?" show":"")+"'><div class='pb-lbl'>提示词内容</div><div class='pb-text'>"+esc(d.prompt)+"</div><div class='pb-actions'><button class='pb-btn' onclick='cp(event,"+idx+")'>📋 复制</button></div></div>";
-    fl.appendChild(card);
+
+var currentInd = 'all';
+var openCard = null;
+
+var tagClass = {
+  '客服回复': 'tag-g',
+  '合规文件': 'tag-a',
+  '员工培训': 'tag-p',
+  '营销文案': 'tag-b',
+  '知识科普': 'tag-p',
+  '方案提案': 'tag-a'
+};
+
+function doFilter(ind, btn) {
+  currentInd = ind;
+  openCard = null;
+  document.querySelectorAll('.fbtn').forEach(function(b) { b.classList.remove('on'); });
+  btn.classList.add('on');
+  renderAll();
+}
+
+function renderAll() {
+  var freeData = PROMPTS.filter(function(p) {
+    return p.free && (currentInd === 'all' || p.ind === currentInd);
   });
-  if(!free.length)fl.innerHTML="<div style='padding:1.5rem;text-align:center;color:var(--muted);font-size:.85rem'>该行业暂无免费预览，留邮箱获取完整版</div>";
-  var ll=document.getElementById("lockedList");ll.innerHTML="";
-  locked.forEach(function(d){
-    var c=sc[d.scene]||"pt-doc";
-    var div=document.createElement("div");
-    div.innerHTML="<div class='locked-card'><span style='font-size:1rem;flex-shrink:0'>🔒</span><span class='lock-title'>"+d.title+"</span><div style='display:flex;gap:.3rem'><span class='lock-badge'>"+d.scene+"</span><span class='lock-badge'>"+d.ind+"</span></div></div>";
-    ll.appendChild(div);
+  var lockedData = PROMPTS.filter(function(p) {
+    return !p.free && (currentInd === 'all' || p.ind === currentInd);
+  });
+
+  var freeArea = document.getElementById('freeArea');
+  freeArea.innerHTML = '';
+
+  if (freeData.length === 0) {
+    freeArea.innerHTML = '<div style="padding:1.5rem;text-align:center;color:var(--muted);font-size:.85rem">该行业暂无免费预览，留邮箱获取完整版</div>';
+  } else {
+    freeData.forEach(function(p) {
+      var globalIdx = PROMPTS.indexOf(p);
+      var isOpen = (openCard === globalIdx);
+      var tc = tagClass[p.scene] || 'tag-a';
+
+      var card = document.createElement('div');
+      card.className = 'pcard';
+
+      var hd = document.createElement('div');
+      hd.className = 'pcard-hd';
+      hd.dataset.idx = globalIdx;
+
+      var tags = document.createElement('div');
+      tags.className = 'pcard-tags';
+      tags.innerHTML = '<span class="tag ' + tc + '">' + p.scene + '</span><span class="tag tag-n">' + p.ind + '</span>';
+
+      var titleEl = document.createElement('span');
+      titleEl.className = 'pcard-title';
+      titleEl.textContent = p.title;
+
+      var arr = document.createElement('span');
+      arr.className = 'pcard-arr' + (isOpen ? ' open' : '');
+      arr.textContent = '▾';
+
+      hd.appendChild(tags);
+      hd.appendChild(titleEl);
+      hd.appendChild(arr);
+
+      hd.addEventListener('click', function() {
+        var idx = parseInt(this.dataset.idx);
+        openCard = (openCard === idx) ? null : idx;
+        renderAll();
+      });
+
+      var body = document.createElement('div');
+      body.className = 'pcard-body' + (isOpen ? ' show' : '');
+
+      var lbl = document.createElement('div');
+      lbl.className = 'pb-label';
+      lbl.textContent = '提示词内容';
+
+      var txt = document.createElement('div');
+      txt.className = 'pb-content';
+      txt.textContent = p.text;
+
+      var acts = document.createElement('div');
+      acts.className = 'pb-actions';
+
+      var copyBtn = document.createElement('button');
+      copyBtn.className = 'copy-btn';
+      copyBtn.textContent = '📋 复制提示词';
+      copyBtn.dataset.idx = globalIdx;
+      copyBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var i = parseInt(this.dataset.idx);
+        var btn = this;
+        navigator.clipboard.writeText(PROMPTS[i].text).then(function() {
+          btn.textContent = '✅ 已复制';
+          btn.classList.add('ok');
+          setTimeout(function() {
+            btn.textContent = '📋 复制提示词';
+            btn.classList.remove('ok');
+          }, 2000);
+        }).catch(function() {
+          var ta = document.createElement('textarea');
+          ta.value = PROMPTS[i].text;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+          btn.textContent = '✅ 已复制';
+          setTimeout(function() { btn.textContent = '📋 复制提示词'; }, 2000);
+        });
+      });
+
+      acts.appendChild(copyBtn);
+      body.appendChild(lbl);
+      body.appendChild(txt);
+      body.appendChild(acts);
+      card.appendChild(hd);
+      card.appendChild(body);
+      freeArea.appendChild(card);
+    });
+  }
+
+  var lockedArea = document.getElementById('lockedArea');
+  lockedArea.innerHTML = '';
+  lockedData.forEach(function(p) {
+    var tc = tagClass[p.scene] || 'tag-a';
+    var item = document.createElement('div');
+    item.className = 'locked-item';
+    item.innerHTML = '<span style="font-size:.95rem;flex-shrink:0">🔒</span><span class="locked-title">' + p.title + '</span><div class="locked-badges"><span class="tag ' + tc + '">' + p.scene + '</span><span class="tag tag-n">' + p.ind + '</span></div>';
+    lockedArea.appendChild(item);
   });
 }
-function toggle(idx){openIdx=openIdx===idx?null:idx;render();}
-function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
-function cp(e,idx){e.stopPropagation();var btn=e.currentTarget;navigator.clipboard.writeText(D[idx].prompt).then(function(){btn.innerHTML="✅ 已复制";btn.classList.add("ok");setTimeout(function(){btn.innerHTML="📋 复制";btn.classList.remove("ok");},2000);}).catch(function(){var ta=document.createElement("textarea");ta.value=D[idx].prompt;document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta);btn.innerHTML="✅ 已复制";setTimeout(function(){btn.innerHTML="📋 复制";},2000);});}
-function handleSub(e){e.preventDefault();var btn=e.target.querySelector("button");btn.textContent="✓ 已提交，请查收邮件";btn.style.background="#e8f5ec";btn.style.color="#085041";setTimeout(function(){btn.textContent="免费获取完整版 →";btn.style.background="";btn.style.color="";e.target.reset();},3000);}
-render();
+
+function submitEmail(e) {
+  e.preventDefault();
+  var btn = e.target.querySelector('button');
+  btn.textContent = '✓ 已提交，请查收邮件';
+  btn.style.background = '#e8f5ec';
+  btn.style.color = '#085041';
+  setTimeout(function() {
+    btn.textContent = '免费获取完整版 →';
+    btn.style.background = '';
+    btn.style.color = '';
+    e.target.reset();
+  }, 3000);
+}
+
+renderAll();
 </script>
 </body>
 </html>
