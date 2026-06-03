@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="蚤蝇（Phoridae）识别特征、习性、防治——体长1-4mm，褐色背部隆起，善于奔跑，孳生于腐败植物和排水管道，有时与蚁巢或白蚁巢穴相关，是容易被忽视的小型蝇类。">
+<meta name="keywords" content="蚤蝇,phorid fly,scuttle fly,Phoridae,小型蝇类,蚁巢相关,腐败植物,PCO">
+<title>蚤蝇 family Phoridae — 识别特征·习性·防治 | PCOKit</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Noto+Serif+SC:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0a0a08;--white:#f5f3ee;--green:#1a4a2e;--green-mid:#2d6e45;--green-light:#4a9e6a;--green-pale:#e8f5ec;--amber:#c8860a;--amber-pale:#fef3c7;--red:#7f1d1d;--red-pale:#fee2e2;--border:#d4cfc4;--muted:#6b6456;--mono:'DM Mono',monospace;--serif:'Noto Serif SC',Georgia,serif;--display:'Syne',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);background:var(--white);color:var(--black)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2.5rem;background:rgba(245,243,238,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--green);letter-spacing:-.02em;text-decoration:none}
+.nav-logo span{color:var(--black)}
+.nav-back{font-family:var(--mono);font-size:.75rem;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-back:hover{color:var(--green)}
+.hero{background:var(--green);color:#fff;padding:5rem 2.5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.hero-cat{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green-light);margin-bottom:.75rem}
+.hero-name{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-.02em;line-height:1;margin-bottom:.35rem}
+.hero-latin{font-family:var(--mono);font-size:.88rem;color:rgba(255,255,255,.5);margin-bottom:1.5rem}
+.hero-badges{display:flex;gap:.5rem;flex-wrap:wrap}
+.badge{font-size:.65rem;padding:3px 9px;border-radius:3px;font-family:var(--mono)}
+.b-red{background:var(--red-pale);color:var(--red)}
+.b-amber{background:var(--amber-pale);color:var(--amber)}
+.b-green{background:var(--green-pale);color:var(--green)}
+.b-blue{background:#e8f0fb;color:#1e3a5f}
+.hero-right{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:1.5rem}
+.hero-icon{font-size:4rem;text-align:center;padding:1.5rem 0}
+.quick-facts{display:flex;flex-direction:column;gap:.6rem}
+.qf-item{display:flex;gap:.75rem;align-items:flex-start}
+.qf-lbl{font-family:var(--mono);font-size:.65rem;color:rgba(255,255,255,.45);width:60px;flex-shrink:0;padding-top:.1rem}
+.qf-val{font-size:.82rem;color:#fff;line-height:1.45}
+.wrap{max-width:900px;margin:0 auto;padding:3rem 2rem 4rem}
+.section{margin-bottom:2.5rem}
+.sec-title{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--black);margin-bottom:1rem;padding-left:.85rem;border-left:3px solid var(--green)}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.info-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem}
+.ic-lbl{font-family:var(--mono);font-size:.63rem;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.35rem}
+.ic-val{font-size:.88rem;color:var(--black);line-height:1.6}
+.insight{background:var(--green-pale);border-left:3px solid var(--green);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:var(--green);line-height:1.7}
+.insight-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green-mid);margin-bottom:.3rem}
+.warn{background:var(--amber-pale);border-left:3px solid var(--amber);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:#633806;line-height:1.7}
+.warn-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:.3rem}
+.alert{background:var(--red-pale);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:var(--red);line-height:1.7}
+.alert-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:.3rem}
+.location-list{display:flex;flex-direction:column;gap:.45rem}
+.loc-item{display:flex;align-items:flex-start;gap:.7rem;font-size:.86rem;color:var(--muted);line-height:1.5}
+.loc-item::before{content:'📍';flex-shrink:0;margin-top:.05rem}
+.treatment-steps{display:flex;flex-direction:column;gap:.6rem}
+.ts-item{display:flex;align-items:flex-start;gap:.85rem;background:var(--white);border:1px solid var(--border);border-radius:6px;padding:.75rem 1rem}
+.ts-num{width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-family:var(--mono);font-size:.7rem;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.ts-title{font-family:var(--display);font-weight:600;font-size:.87rem;color:var(--black);margin-bottom:.15rem}
+.ts-desc{font-size:.8rem;color:var(--muted);line-height:1.5}
+.compare-box{background:var(--black);color:#fff;border-radius:8px;padding:1.25rem 1.5rem;margin:1.25rem 0}
+.cb-title{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-light);margin-bottom:.85rem}
+.cb-rows{display:flex;flex-direction:column;gap:.4rem}
+.cb-row{display:flex;gap:.75rem;font-size:.82rem;color:rgba(255,255,255,.75);line-height:1.5}
+.cb-row::before{content:'→';color:var(--green-light);font-family:var(--mono);flex-shrink:0}
+.lifecycle{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin:1.25rem 0}
+.lc-item{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:.65rem .75rem;text-align:center}
+.lc-icon{font-size:1.2rem;margin-bottom:.25rem}
+.lc-name{font-family:var(--display);font-weight:600;font-size:.75rem;color:var(--black);margin-bottom:.15rem}
+.lc-time{font-family:var(--mono);font-size:.62rem;color:var(--muted)}
+.species-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1.25rem 0}
+.species-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:.9rem 1rem}
+.sc-name{font-family:var(--display);font-weight:700;font-size:.9rem;color:var(--black);margin-bottom:.2rem}
+.sc-latin{font-family:var(--mono);font-size:.62rem;color:var(--muted);margin-bottom:.5rem}
+.sc-desc{font-size:.8rem;color:var(--muted);line-height:1.55}
+.article-cta{margin-top:2.5rem;text-align:center;border:1.5px dashed var(--border);border-radius:8px;padding:1.75rem}
+.cta-title{font-family:var(--display);font-weight:700;font-size:.95rem;color:var(--black);margin-bottom:.4rem}
+.cta-desc{font-size:.83rem;color:var(--muted);margin-bottom:1.1rem}
+.btn{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;background:var(--green);color:var(--white);padding:.7rem 1.5rem;border:none;border-radius:4px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.btn:hover{background:var(--green-mid)}
+footer{background:var(--black);color:rgba(255,255,255,.4);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.72rem}
+footer a{color:rgba(255,255,255,.4);text-decoration:none}
+footer a:hover{color:var(--green-light)}
+@media(max-width:768px){.hero{grid-template-columns:1fr;padding:4rem 1.25rem 2rem}.hero-right{display:none}.wrap{padding:2rem 1.25rem}.info-grid{grid-template-columns:1fr}.lifecycle{grid-template-columns:repeat(2,1fr)}.species-grid{grid-template-columns:1fr}nav{padding:.75rem 1.25rem}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">PCO<span>Kit</span></a>
+  <a href="/pests/" class="nav-back">← 知识库</a>
+</nav>
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-cat">蝇类 · 有害生物详解</div>
+    <h1 class="hero-name">蚤蝇</h1>
+    <div class="hero-latin">family Phoridae</div>
+    <div class="hero-badges"><span class="badge b-amber">中风险</span><span class="badge b-blue">腐败植物</span><span class="badge b-blue">排水管道</span><span class="badge b-green">蚁巢关联</span></div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-icon">🦟</div>
+    <div class="quick-facts"><div class="qf-item"><span class="qf-lbl">体长</span><span class="qf-val">1–4 mm</span></div>
+<div class="qf-item"><span class="qf-lbl">颜色</span><span class="qf-val">褐色至深褐色，背部明显隆起</span></div>
+<div class="qf-item"><span class="qf-lbl">翅膀</span><span class="qf-val">有的物种翅膀退化或无翅</span></div>
+<div class="qf-item"><span class="qf-lbl">行为特征</span><span class="qf-val">奔跑速度快，不常飞行</span></div>
+<div class="qf-item"><span class="qf-lbl">孳生地</span><span class="qf-val">腐败植物、排水管道、蚁巢/白蚁巢</span></div>
+<div class="qf-item"><span class="qf-lbl">生命周期</span><span class="qf-val">10-25天</span></div></div>
+  </div>
+</div>
+<div class="wrap">
+  
+<div class="section">
+  <div class="sec-title">形态特征与识别</div>
+  <div class="info-grid">
+    <div class="info-card"><div class="ic-lbl">外观</div><div class="ic-val">体长1-4mm，体小，褐色至深褐色，背部明显隆起成弓形。有的物种翅膀退化或完全无翅</div></div>
+    <div class="info-card"><div class="ic-lbl">行为特征</div><div class="ic-val">善于奔跑，不常展翅飞行——这是最明显的识别特征。在表面快速跑动而非飞行，因此得名"跑蝇"（scuttle fly）</div></div>
+    <div class="info-card"><div class="ic-lbl">幼虫</div><div class="ic-val">与果蝇幼虫类似，在腐败有机物中活动，成虫聚集于腐败植物周围</div></div>
+    <div class="info-card"><div class="ic-lbl">与果蝇区分</div><div class="ic-val">蚤蝇背部隆起明显、快速奔跑不飞；果蝇背部平坦、飞行活跃围绕食物。在排水口附近快速奔跑的小型蝇类优先考虑蚤蝇</div></div>
+  </div>
+  <div class="insight">
+    <div class="insight-lbl">一线经验：蚤蝇与蚁巢的关联</div>
+    蚤蝇幼虫有时寄生在蚂蚁或白蚁巢穴中，以巢穴有机物为食。如果处理果蝇或蛾蠓的方案执行后效果不佳，且现场发现有蚁群活动，需考虑蚤蝇可能与蚁巢相关。找到并处理蚁巢才能根本解决。
+  </div>
+</div>
+<div class="section">
+  <div class="sec-title">习性与孳生场所</div>
+  <div class="location-list">
+    <div class="loc-item">腐败的植物根部和土壤——室内植物浇水过多导致根部腐烂，是常见孳生源</div>
+    <div class="loc-item">排水管道内腐败有机物——与果蝇类似，但更耐受低氧环境</div>
+    <div class="loc-item">蚂蚁巢穴、白蚁巢穴周围——幼虫寄生或取食巢穴有机物</div>
+    <div class="loc-item">食品加工废弃物——腐败蔬果等有机废料</div>
+    <div class="loc-item">建筑内部腐烂木材——与白蚁活动区域重合</div>
+  </div>
+  <div class="warn">
+    <div class="warn-lbl">室内植物检查</div>
+    酒店大堂、餐厅装饰性植物浇水过多，根部腐烂后成为蚤蝇孳生地。如果室内出现不明小型蝇类且集中在植物周围，检查植物根部是否有腐烂迹象，必要时换盆更换土壤。
+  </div>
+</div>
+<div class="section">
+  <div class="sec-title">防治要点</div>
+  <div class="treatment-steps">
+    <div class="ts-item"><span class="ts-num">1</span><div><div class="ts-title">检查室内植物根部</div><div class="ts-desc">检查所有室内植物是否浇水过多导致根部腐烂。发现烂根立即换盆，更换新土，清除孳生基质</div></div></div>
+    <div class="ts-item"><span class="ts-num">2</span><div><div class="ts-title">清理排水管道有机物</div><div class="ts-desc">与果蝇防治相同，用生物酶制剂清洁管道内壁有机残留物，每周一次</div></div></div>
+    <div class="ts-item"><span class="ts-num">3</span><div><div class="ts-title">排查蚁巢和白蚁活动</div><div class="ts-desc">若处理后效果持续不佳，检查附近是否有蚁群活动或白蚁蛀蚀痕迹，联合处理虫害</div></div></div>
+    <div class="ts-item"><span class="ts-num">4</span><div><div class="ts-title">粘捕监测</div><div class="ts-desc">在植物周围和排水口放置黄色粘虫板（对小型蝇类吸引力强），监测数量变化和判断孳生源位置</div></div></div>
+  </div>
+</div>
+  <div class="article-cta">
+    <div class="cta-title">需要处理这种虫害的专业提示词？</div>
+    <div class="cta-desc">获取 PCO 行业 AI 提示词完整包，含客服话术、处理方案、合规文件</div>
+    <a href="/#prompts" class="btn">免费获取提示词包 →</a>
+  </div>
+</div>
+<footer>
+  <div>© 2025 PCOKit.com · 虫害防治行业知识平台</div>
+  <div><a href="/pests/">← 知识库</a></div>
+</footer>
+</body>
+</html>

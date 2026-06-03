@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="果蝇（Drosophila spp.）识别特征、习性、防治——体长3mm，红棕色红眼，在发酵残留物中孳生，茶饮餐饮咖啡店高频投诉虫害，成虫生命周期2-9周。">
+<meta name="keywords" content="果蝇,fruit fly,Drosophila,茶饮果蝇,餐饮果蝇,发酵孳生,小飞虫,PCO,咖啡店">
+<title>果蝇 Drosophila spp. — 识别特征·习性·防治 | PCOKit</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Noto+Serif+SC:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0a0a08;--white:#f5f3ee;--green:#1a4a2e;--green-mid:#2d6e45;--green-light:#4a9e6a;--green-pale:#e8f5ec;--amber:#c8860a;--amber-pale:#fef3c7;--red:#7f1d1d;--red-pale:#fee2e2;--border:#d4cfc4;--muted:#6b6456;--mono:'DM Mono',monospace;--serif:'Noto Serif SC',Georgia,serif;--display:'Syne',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);background:var(--white);color:var(--black)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2.5rem;background:rgba(245,243,238,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--green);letter-spacing:-.02em;text-decoration:none}
+.nav-logo span{color:var(--black)}
+.nav-back{font-family:var(--mono);font-size:.75rem;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-back:hover{color:var(--green)}
+.hero{background:var(--green);color:#fff;padding:5rem 2.5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.hero-cat{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green-light);margin-bottom:.75rem}
+.hero-name{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-.02em;line-height:1;margin-bottom:.35rem}
+.hero-latin{font-family:var(--mono);font-size:.88rem;color:rgba(255,255,255,.5);margin-bottom:1.5rem}
+.hero-badges{display:flex;gap:.5rem;flex-wrap:wrap}
+.badge{font-size:.65rem;padding:3px 9px;border-radius:3px;font-family:var(--mono)}
+.b-red{background:var(--red-pale);color:var(--red)}
+.b-amber{background:var(--amber-pale);color:var(--amber)}
+.b-green{background:var(--green-pale);color:var(--green)}
+.b-blue{background:#e8f0fb;color:#1e3a5f}
+.hero-right{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:1.5rem}
+.hero-icon{font-size:4rem;text-align:center;padding:1.5rem 0}
+.quick-facts{display:flex;flex-direction:column;gap:.6rem}
+.qf-item{display:flex;gap:.75rem;align-items:flex-start}
+.qf-lbl{font-family:var(--mono);font-size:.65rem;color:rgba(255,255,255,.45);width:60px;flex-shrink:0;padding-top:.1rem}
+.qf-val{font-size:.82rem;color:#fff;line-height:1.45}
+.wrap{max-width:900px;margin:0 auto;padding:3rem 2rem 4rem}
+.section{margin-bottom:2.5rem}
+.sec-title{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--black);margin-bottom:1rem;padding-left:.85rem;border-left:3px solid var(--green)}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.info-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem}
+.ic-lbl{font-family:var(--mono);font-size:.63rem;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.35rem}
+.ic-val{font-size:.88rem;color:var(--black);line-height:1.6}
+.insight{background:var(--green-pale);border-left:3px solid var(--green);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:var(--green);line-height:1.7}
+.insight-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green-mid);margin-bottom:.3rem}
+.warn{background:var(--amber-pale);border-left:3px solid var(--amber);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:#633806;line-height:1.7}
+.warn-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:.3rem}
+.alert{background:var(--red-pale);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:var(--red);line-height:1.7}
+.alert-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:.3rem}
+.location-list{display:flex;flex-direction:column;gap:.45rem}
+.loc-item{display:flex;align-items:flex-start;gap:.7rem;font-size:.86rem;color:var(--muted);line-height:1.5}
+.loc-item::before{content:'📍';flex-shrink:0;margin-top:.05rem}
+.treatment-steps{display:flex;flex-direction:column;gap:.6rem}
+.ts-item{display:flex;align-items:flex-start;gap:.85rem;background:var(--white);border:1px solid var(--border);border-radius:6px;padding:.75rem 1rem}
+.ts-num{width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-family:var(--mono);font-size:.7rem;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.ts-title{font-family:var(--display);font-weight:600;font-size:.87rem;color:var(--black);margin-bottom:.15rem}
+.ts-desc{font-size:.8rem;color:var(--muted);line-height:1.5}
+.compare-box{background:var(--black);color:#fff;border-radius:8px;padding:1.25rem 1.5rem;margin:1.25rem 0}
+.cb-title{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-light);margin-bottom:.85rem}
+.cb-rows{display:flex;flex-direction:column;gap:.4rem}
+.cb-row{display:flex;gap:.75rem;font-size:.82rem;color:rgba(255,255,255,.75);line-height:1.5}
+.cb-row::before{content:'→';color:var(--green-light);font-family:var(--mono);flex-shrink:0}
+.lifecycle{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin:1.25rem 0}
+.lc-item{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:.65rem .75rem;text-align:center}
+.lc-icon{font-size:1.2rem;margin-bottom:.25rem}
+.lc-name{font-family:var(--display);font-weight:600;font-size:.75rem;color:var(--black);margin-bottom:.15rem}
+.lc-time{font-family:var(--mono);font-size:.62rem;color:var(--muted)}
+.species-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1.25rem 0}
+.species-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:.9rem 1rem}
+.sc-name{font-family:var(--display);font-weight:700;font-size:.9rem;color:var(--black);margin-bottom:.2rem}
+.sc-latin{font-family:var(--mono);font-size:.62rem;color:var(--muted);margin-bottom:.5rem}
+.sc-desc{font-size:.8rem;color:var(--muted);line-height:1.55}
+.article-cta{margin-top:2.5rem;text-align:center;border:1.5px dashed var(--border);border-radius:8px;padding:1.75rem}
+.cta-title{font-family:var(--display);font-weight:700;font-size:.95rem;color:var(--black);margin-bottom:.4rem}
+.cta-desc{font-size:.83rem;color:var(--muted);margin-bottom:1.1rem}
+.btn{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;background:var(--green);color:var(--white);padding:.7rem 1.5rem;border:none;border-radius:4px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.btn:hover{background:var(--green-mid)}
+footer{background:var(--black);color:rgba(255,255,255,.4);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.72rem}
+footer a{color:rgba(255,255,255,.4);text-decoration:none}
+footer a:hover{color:var(--green-light)}
+@media(max-width:768px){.hero{grid-template-columns:1fr;padding:4rem 1.25rem 2rem}.hero-right{display:none}.wrap{padding:2rem 1.25rem}.info-grid{grid-template-columns:1fr}.lifecycle{grid-template-columns:repeat(2,1fr)}.species-grid{grid-template-columns:1fr}nav{padding:.75rem 1.25rem}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">PCO<span>Kit</span></a>
+  <a href="/pests/" class="nav-back">← 知识库</a>
+</nav>
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-cat">蝇类 · 有害生物详解</div>
+    <h1 class="hero-name">果蝇</h1>
+    <div class="hero-latin">Drosophila spp.</div>
+    <div class="hero-badges"><span class="badge b-amber">餐饮重点</span><span class="badge b-blue">茶饮咖啡</span><span class="badge b-blue">发酵环境</span><span class="badge b-blue">下水管道</span></div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-icon">🍊</div>
+    <div class="quick-facts"><div class="qf-item"><span class="qf-lbl">体长</span><span class="qf-val">约3 mm</span></div>
+<div class="qf-item"><span class="qf-lbl">颜色</span><span class="qf-val">红棕色或杂色，亮红色眼睛</span></div>
+<div class="qf-item"><span class="qf-lbl">飞行特征</span><span class="qf-val">飞行时腹部下垂，低飞盘旋</span></div>
+<div class="qf-item"><span class="qf-lbl">孳生地</span><span class="qf-val">发酵残留物、不洁净下水管道</span></div>
+<div class="qf-item"><span class="qf-lbl">生命周期</span><span class="qf-val">7-30天发育为成虫</span></div>
+<div class="qf-item"><span class="qf-lbl">成虫寿命</span><span class="qf-val">2-9周</span></div></div>
+  </div>
+</div>
+<div class="wrap">
+  
+<div class="section">
+  <div class="sec-title">形态特征与识别</div>
+  <div class="info-grid">
+    <div class="info-card"><div class="ic-lbl">外观</div><div class="ic-val">体长约3mm，红棕色或杂色，最明显特征是亮红色眼睛，肉眼可见。飞行时腹部下垂，飞行姿态懒散缓慢</div></div>
+    <div class="info-card"><div class="ic-lbl">幼虫</div><div class="ic-val">最后一节有可伸缩呼吸管，在发酵液体中活动，肉眼几乎不可见（约3-4mm）</div></div>
+    <div class="info-card"><div class="ic-lbl">活动特征</div><div class="ic-val">低飞盘旋，聚集在发酵气味来源附近。与蛾蠓不同，果蝇在食物和饮料周围活跃飞行，不喜欢停在墙上</div></div>
+    <div class="info-card"><div class="ic-lbl">出现规律</div><div class="ic-val">夏季高温时数量爆发，傍晚营业结束后关灯时数量最明显。早晨开店时发现大量果蝇，通常意味着夜间有孳生源持续羽化</div></div>
+  </div>
+  <div class="compare-box">
+    <div class="cb-title">果蝇 vs 蛾蠓——两种最常混淆的小飞虫</div>
+    <div class="cb-rows">
+      <div class="cb-row">外观：果蝇光滑红眼；蛾蠓全身绒毛灰色似小飞蛾</div>
+      <div class="cb-row">飞行：果蝇活跃围绕食物飞；蛾蠓飞行弱喜停在墙上</div>
+      <div class="cb-row">孳生：果蝇在发酵残留物和下水管道；蛾蠓在排水管道淤泥</div>
+      <div class="cb-row">出现位置：果蝇聚集在糖浆区食物区；蛾蠓聚集在排水口附近</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <div class="sec-title">生命周期</div>
+  <div class="lifecycle">
+    <div class="lc-item"><div class="lc-icon">🥚</div><div class="lc-name">卵</div><div class="lc-time">产于发酵物表面</div></div>
+    <div class="lc-item"><div class="lc-icon">🐛</div><div class="lc-name">幼虫</div><div class="lc-time">在发酵物中取食</div></div>
+    <div class="lc-item"><div class="lc-icon">🫘</div><div class="lc-name">蛹</div><div class="lc-time">移至干燥处化蛹</div></div>
+    <div class="lc-item"><div class="lc-icon">🍊</div><div class="lc-name">成虫</div><div class="lc-time">寿命2-9周</div></div>
+  </div>
+  <div class="insight">
+    <div class="insight-lbl">为什么粘纸和灭蝇灯效果有限</div>
+    粘纸和灭蝇灯只能捕杀已经羽化的成虫，无法清除发酵物中的幼虫和蛹。只要孳生源还在，每天都有新的成虫羽化补充——这是客户反映"用了各种方法都没用"的根本原因。必须先找到并清除孳生源。
+  </div>
+</div>
+<div class="section">
+  <div class="sec-title">习性与孳生场所</div>
+  <div class="location-list">
+    <div class="loc-item">茶饮店糖浆区、调味瓶底部——糖分残留是果蝇最喜欢的孳生基质</div>
+    <div class="loc-item">咖啡机接水盘、咖啡渣桶——发酵咖啡残留物</div>
+    <div class="loc-item">不洁净的下水管道内壁——发酵有机物在管道中积累</div>
+    <div class="loc-item">垃圾桶内腐烂水果残渣——餐饮厨余最常见孳生地</div>
+    <div class="loc-item">洗碗池排水管、地漏边缘——残留食物发酵</div>
+    <div class="loc-item">酿酒厂、果汁加工车间——大量发酵物，高风险环境</div>
+  </div>
+  <div class="warn">
+    <div class="warn-lbl">茶饮店特别提示</div>
+    茶饮店是果蝇最高频的投诉场所。糖浆瓶底部残留、水吧台缝隙积聚的糖分、下水管道中发酵的奶茶残留——三个孳生源同时存在。处理顺序：先清洁糖浆区→清洁管道→再考虑化学防治。
+  </div>
+</div>
+<div class="section">
+  <div class="sec-title">防治要点</div>
+  <div class="treatment-steps">
+    <div class="ts-item"><span class="ts-num">1</span><div><div class="ts-title">清除孳生源（最关键）</div><div class="ts-desc">彻底清洁糖浆瓶底部和周围、咖啡机接水盘、垃圾桶内壁。每天营业结束后用热水冲洗下水管道，清除管道内发酵残留物</div></div></div>
+    <div class="ts-item"><span class="ts-num">2</span><div><div class="ts-title">密封所有发酵物来源</div><div class="ts-desc">糖浆瓶、果汁桶、酒精饮料等加盖密封存放。垃圾桶每天清运，内壁每天清洗。不留过夜有机废物</div></div></div>
+    <div class="ts-item"><span class="ts-num">3</span><div><div class="ts-title">苹果醋诱捕监测</div><div class="ts-desc">用苹果醋+洗洁精制作诱捕器（碗中倒苹果醋，加几滴洗洁精破坏表面张力），放在孳生源附近监测数量变化，同时辅助减少成虫</div></div></div>
+    <div class="ts-item"><span class="ts-num">4</span><div><div class="ts-title">管道生物酶处理</div><div class="ts-desc">向下水管道投放生物酶制剂，降解管道内积累的有机残留物，清除果蝇幼虫的食物来源。建议每周一次</div></div></div>
+  </div>
+</div>
+  <div class="article-cta">
+    <div class="cta-title">需要处理这种虫害的专业提示词？</div>
+    <div class="cta-desc">获取 PCO 行业 AI 提示词完整包，含客服话术、处理方案、合规文件</div>
+    <a href="/#prompts" class="btn">免费获取提示词包 →</a>
+  </div>
+</div>
+<footer>
+  <div>© 2025 PCOKit.com · 虫害防治行业知识平台</div>
+  <div><a href="/pests/">← 知识库</a></div>
+</footer>
+</body>
+</html>

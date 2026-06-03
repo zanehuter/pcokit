@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="跳蚤（Siphonaptera）识别特征、习性、防治——雌蚤体长3mm，棕黄至深褐色，完全变态，宠物家庭和酒店均可发生，蛹期对药剂有抵抗力，需宠物+环境同步处理。">
+<meta name="keywords" content="跳蚤,flea,Siphonaptera,宠物跳蚤,猫蚤,狗蚤,蚤虫,被咬红包,PCO,宠物家庭">
+<title>跳蚤 Siphonaptera — 识别特征·习性·防治 | PCOKit</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Noto+Serif+SC:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0a0a08;--white:#f5f3ee;--green:#1a4a2e;--green-mid:#2d6e45;--green-light:#4a9e6a;--green-pale:#e8f5ec;--amber:#c8860a;--amber-pale:#fef3c7;--red:#7f1d1d;--red-pale:#fee2e2;--border:#d4cfc4;--muted:#6b6456;--mono:'DM Mono',monospace;--serif:'Noto Serif SC',Georgia,serif;--display:'Syne',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);background:var(--white);color:var(--black)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2.5rem;background:rgba(245,243,238,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--green);letter-spacing:-.02em;text-decoration:none}
+.nav-logo span{color:var(--black)}
+.nav-back{font-family:var(--mono);font-size:.75rem;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-back:hover{color:var(--green)}
+.hero{background:var(--green);color:#fff;padding:5rem 2.5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.hero-cat{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green-light);margin-bottom:.75rem}
+.hero-name{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.02em;line-height:1;margin-bottom:.35rem}
+.hero-latin{font-family:var(--mono);font-size:.85rem;color:rgba(255,255,255,.5);margin-bottom:1.5rem}
+.hero-badges{display:flex;gap:.5rem;flex-wrap:wrap}
+.badge{font-size:.65rem;padding:3px 9px;border-radius:3px;font-family:var(--mono)}
+.b-red{background:var(--red-pale);color:var(--red)}
+.b-amber{background:var(--amber-pale);color:var(--amber)}
+.b-green{background:var(--green-pale);color:var(--green)}
+.b-blue{background:#e8f0fb;color:#1e3a5f}
+.hero-right{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:1.5rem}
+.hero-icon{font-size:4rem;text-align:center;padding:1.5rem 0}
+.quick-facts{display:flex;flex-direction:column;gap:.6rem}
+.qf-item{display:flex;gap:.75rem;align-items:flex-start}
+.qf-lbl{font-family:var(--mono);font-size:.65rem;color:rgba(255,255,255,.45);width:60px;flex-shrink:0;padding-top:.1rem}
+.qf-val{font-size:.82rem;color:#fff;line-height:1.45}
+.wrap{max-width:900px;margin:0 auto;padding:3rem 2rem 4rem}
+.section{margin-bottom:2.5rem}
+.sec-title{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--black);margin-bottom:1rem;padding-left:.85rem;border-left:3px solid var(--green)}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.info-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem}
+.ic-lbl{font-family:var(--mono);font-size:.63rem;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.35rem}
+.ic-val{font-size:.88rem;color:var(--black);line-height:1.6}
+.insight{background:var(--green-pale);border-left:3px solid var(--green);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:var(--green);line-height:1.7}
+.insight-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green-mid);margin-bottom:.3rem}
+.warn{background:var(--amber-pale);border-left:3px solid var(--amber);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:#633806;line-height:1.7}
+.warn-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:.3rem}
+.alert{background:var(--red-pale);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:var(--red);line-height:1.7}
+.alert-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:.3rem}
+.loc-list{display:flex;flex-direction:column;gap:.45rem}
+.loc-item{display:flex;align-items:flex-start;gap:.7rem;font-size:.86rem;color:var(--muted);line-height:1.5}
+.loc-item::before{content:'📍';flex-shrink:0;margin-top:.05rem}
+.steps{display:flex;flex-direction:column;gap:.6rem}
+.step{display:flex;align-items:flex-start;gap:.85rem;background:var(--white);border:1px solid var(--border);border-radius:6px;padding:.75rem 1rem}
+.step-num{width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-family:var(--mono);font-size:.7rem;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.step-title{font-family:var(--display);font-weight:600;font-size:.87rem;color:var(--black);margin-bottom:.15rem}
+.step-desc{font-size:.8rem;color:var(--muted);line-height:1.5}
+.compare{background:var(--black);color:#fff;border-radius:8px;padding:1.25rem 1.5rem;margin:1.25rem 0}
+.compare-title{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-light);margin-bottom:.85rem}
+.compare-rows{display:flex;flex-direction:column;gap:.4rem}
+.compare-row{display:flex;gap:.75rem;font-size:.82rem;color:rgba(255,255,255,.75);line-height:1.5}
+.compare-row::before{content:'→';color:var(--green-light);font-family:var(--mono);flex-shrink:0}
+.lifecycle{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin:1.25rem 0}
+.lc{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:.65rem .75rem;text-align:center}
+.lc-icon{font-size:1.2rem;margin-bottom:.25rem}
+.lc-name{font-family:var(--display);font-weight:600;font-size:.75rem;color:var(--black);margin-bottom:.15rem}
+.lc-time{font-family:var(--mono);font-size:.62rem;color:var(--muted)}
+.species-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1.25rem 0}
+.sp-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:.9rem 1rem}
+.sp-name{font-family:var(--display);font-weight:700;font-size:.9rem;color:var(--black);margin-bottom:.2rem}
+.sp-latin{font-family:var(--mono);font-size:.62rem;color:var(--muted);margin-bottom:.5rem}
+.sp-desc{font-size:.8rem;color:var(--muted);line-height:1.55}
+.article-cta{margin-top:2.5rem;text-align:center;border:1.5px dashed var(--border);border-radius:8px;padding:1.75rem}
+.cta-title{font-family:var(--display);font-weight:700;font-size:.95rem;color:var(--black);margin-bottom:.4rem}
+.cta-desc{font-size:.83rem;color:var(--muted);margin-bottom:1.1rem}
+.btn{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;background:var(--green);color:var(--white);padding:.7rem 1.5rem;border:none;border-radius:4px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.btn:hover{background:var(--green-mid)}
+footer{background:var(--black);color:rgba(255,255,255,.4);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.72rem}
+footer a{color:rgba(255,255,255,.4);text-decoration:none}
+footer a:hover{color:var(--green-light)}
+@media(max-width:768px){.hero{grid-template-columns:1fr;padding:4rem 1.25rem 2rem}.hero-right{display:none}.wrap{padding:2rem 1.25rem}.info-grid,.species-grid{grid-template-columns:1fr}.lifecycle{grid-template-columns:repeat(2,1fr)}nav{padding:.75rem 1.25rem}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">PCO<span>Kit</span></a>
+  <a href="/pests/" class="nav-back">← 知识库</a>
+</nav>
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-cat">寄生虫类 · 有害生物详解</div>
+    <h1 class="hero-name">跳蚤</h1>
+    <div class="hero-latin">Siphonaptera</div>
+    <div class="hero-badges"><span class="badge b-amber">中风险</span><span class="badge b-blue">宠物家庭</span><span class="badge b-blue">酒店宠物房</span><span class="badge b-blue">传播疾病</span></div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-icon">🦗</div>
+    <div class="quick-facts"><div class="qf-item"><span class="qf-lbl">体长</span><span class="qf-val">雌蚤约3mm，雄蚤稍短</span></div>
+<div class="qf-item"><span class="qf-lbl">颜色</span><span class="qf-val">棕黄色至深褐色，有眼或无眼</span></div>
+<div class="qf-item"><span class="qf-lbl">弹跳</span><span class="qf-val">可跳至自身高度200倍</span></div>
+<div class="qf-item"><span class="qf-lbl">孳生</span><span class="qf-val">宠物毛发、地毯、床垫缝隙</span></div>
+<div class="qf-item"><span class="qf-lbl">传病</span><span class="qf-val">鼠疫（历史）、猫抓病、绦虫</span></div>
+<div class="qf-item"><span class="qf-lbl">寿命</span><span class="qf-val">成虫数周至数月</span></div></div>
+  </div>
+</div>
+<div class="wrap">
+  
+<div class="section">
+  <div class="sec-title">形态特征与识别</div>
+  <div class="info-grid">
+    <div class="info-card"><div class="ic-lbl">外观</div><div class="ic-val">体长约3mm，身体侧扁（适合在毛发间穿行），棕黄色至深褐色，无翅但后腿极发达，弹跳力惊人</div></div>
+    <div class="info-card"><div class="ic-lbl">识别方法</div><div class="ic-val">白纸测试法：在宠物活动区域地毯上铺白纸，白纸上出现会跳动的小黑点即为跳蚤。或用细梳梳理宠物毛发，检查梳齿上的小虫</div></div>
+    <div class="info-card"><div class="ic-lbl">叮咬特征</div><div class="ic-val">叮咬后出现小红点，周围有红晕，排列成线状或簇状，多见于脚踝和小腿——这与蚊子叮咬的随机分布不同</div></div>
+    <div class="info-card"><div class="ic-lbl">粪便识别</div><div class="ic-val">跳蚤粪便呈黑色小颗粒，遇水变红（因含消化的血液）。在宠物卧具或地毯上发现能遇水变红的黑色颗粒，确认为跳蚤粪便</div></div>
+  </div>
+  <div class="lifecycle">
+    <div class="lc"><div class="lc-icon">🥚</div><div class="lc-name">卵</div><div class="lc-time">1-12天孵化</div></div>
+    <div class="lc"><div class="lc-icon">🐛</div><div class="lc-name">幼虫</div><div class="lc-time">5-18天</div></div>
+    <div class="lc"><div class="lc-icon">🫘</div><div class="lc-name">蛹</div><div class="lc-time">1周-1年</div></div>
+    <div class="lc"><div class="lc-icon">🦗</div><div class="lc-name">成虫</div><div class="lc-time">数周-数月</div></div>
+  </div>
+  <div class="alert">
+    <div class="alert-lbl">蛹期的关键问题</div>
+    跳蚤蛹期被茧包裹，对杀虫剂有极强抵抗力，蛹可休眠长达1年。这解释了为什么处理后几周又重新出现——休眠的蛹检测到振动（有人走动）后羽化。必须提前告知客户，处理后2-4周内可能仍有成虫出现，这是正常现象。
+  </div>
+</div>
+<div class="section">
+  <div class="sec-title">习性与孳生场所</div>
+  <div class="loc-list">
+    <div class="loc-item">宠物卧具、毛毯——成虫在宠物身上，卵落入卧具孳生</div>
+    <div class="loc-item">地毯纤维深处——幼虫躲避光线在地毯底部生活</div>
+    <div class="loc-item">沙发缝隙、床底木框——幼虫化蛹位置</div>
+    <div class="loc-item">宠物常经过的走廊、室内任何阴暗处——卵随宠物活动散落</div>
+  </div>
+  <div class="insight">
+    <div class="insight-lbl">必须同步处理宠物+环境</div>
+    只处理环境不驱虫宠物：宠物继续带入成虫，处理无效。只给宠物驱虫不处理环境：环境中的卵、幼虫、蛹继续孵化成成虫侵扰宠物。两者必须同步进行，才能打破生命周期。
+  </div>
+</div>
+<div class="section">
+  <div class="sec-title">防治要点</div>
+  <div class="steps">
+    <div class="step"><span class="step-num">1</span><div><div class="step-title">宠物驱虫（同步进行）</div><div class="step-desc">带宠物去兽医处使用处方级驱虫产品（滴剂/口服药），同时处理宠物生活环境。非处方产品效果有限</div></div></div>
+    <div class="step"><span class="step-num">2</span><div><div class="step-title">彻底吸尘</div><div class="step-desc">用吸尘器清理所有地毯、沙发缝隙、床底、踢脚线。吸尘时振动会刺激蛹羽化，使其接触后续处理的药剂。吸尘袋立即密封丢弃</div></div></div>
+    <div class="step"><span class="step-num">3</span><div><div class="step-title">环境喷洒处理</div><div class="step-desc">对地毯、宠物卧具周边、沙发底部喷洒含IGR（昆虫生长调节剂）的杀虫剂。IGR能阻止幼虫发育，是处理跳蚤环境最重要的成分</div></div></div>
+    <div class="step"><span class="step-num">4</span><div><div class="step-title">2-4周后必须复查</div><div class="step-desc">告知客户：处理后2-4周内仍可能看到跳蚤（蛹羽化）是正常现象，不是处理失败。此时进行第二次处理可显著提高效果</div></div></div>
+  </div>
+</div>
+  <div class="article-cta">
+    <div class="cta-title">需要处理这种虫害的专业提示词？</div>
+    <div class="cta-desc">获取 PCO 行业 AI 提示词完整包，含客服话术、处理方案、合规文件</div>
+    <a href="/#prompts" class="btn">免费获取提示词包 →</a>
+  </div>
+</div>
+<footer>
+  <div>© 2025 PCOKit.com · 虫害防治行业知识平台</div>
+  <div><a href="/pests/">← 知识库</a></div>
+</footer>
+</body>
+</html>

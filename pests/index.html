@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PCO行业常见有害生物图鉴——鼠类、蟑螂、蝇类、蚊类、寄生虫、仓储害虫、白蚁、蚂蚁详细识别指南，29种虫害详解，中英双语。">
+<title>虫害知识库 — 29种常见有害生物图鉴 | PCOKit</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Noto+Serif+SC:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0a0a08;--white:#f5f3ee;--green:#1a4a2e;--green-mid:#2d6e45;--green-light:#4a9e6a;--green-pale:#e8f5ec;--amber:#c8860a;--amber-pale:#fef3c7;--red:#7f1d1d;--red-pale:#fee2e2;--border:#d4cfc4;--muted:#6b6456;--mono:'DM Mono',monospace;--serif:'Noto Serif SC',Georgia,serif;--display:'Syne',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);background:var(--white);color:var(--black)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2.5rem;background:rgba(245,243,238,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--green);letter-spacing:-.02em;text-decoration:none}
+.nav-logo span{color:var(--black)}
+.nav-back{font-family:var(--mono);font-size:.75rem;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-back:hover{color:var(--green)}
+.page-wrap{max-width:1100px;margin:0 auto;padding:5rem 2rem 4rem}
+.page-hero{margin-bottom:2.5rem}
+.page-cat{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green-light);margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.page-cat::before{content:'';width:16px;height:1px;background:var(--green-light)}
+.page-title{font-family:var(--display);font-weight:800;font-size:clamp(2rem,4vw,3rem);letter-spacing:-.02em;line-height:1.05;margin-bottom:.75rem}
+.page-desc{font-size:.95rem;color:var(--muted);line-height:1.8;max-width:560px}
+.stats{display:flex;gap:2rem;margin-top:1.25rem;flex-wrap:wrap}
+.stat{display:flex;flex-direction:column}
+.stat-num{font-family:var(--display);font-weight:800;font-size:1.6rem;color:var(--green);line-height:1}
+.stat-lbl{font-size:.72rem;color:var(--muted);margin-top:.2rem}
+.filter-bar{display:flex;gap:.45rem;flex-wrap:wrap;margin:2rem 0 1rem}
+.filter-btn{font-family:var(--mono);font-size:.72rem;padding:5px 12px;border-radius:20px;border:1px solid var(--border);cursor:pointer;background:transparent;color:var(--muted);transition:all .15s}
+.filter-btn:hover,.filter-btn.on{background:var(--green);color:#fff;border-color:var(--green)}
+.section-label{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:2rem 0 .85rem;padding-bottom:.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem}
+.pest-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.75rem;margin-bottom:.5rem}
+.pest-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1rem 1.1rem;text-decoration:none;color:var(--black);transition:all .2s;display:block}
+.pest-card:hover{border-color:var(--green);box-shadow:0 4px 16px rgba(26,74,46,.08);transform:translateY(-2px)}
+.pc-icon{font-size:1.5rem;margin-bottom:.4rem}
+.pc-name{font-family:var(--display);font-weight:700;font-size:.92rem;margin-bottom:.12rem}
+.pc-latin{font-family:var(--mono);font-size:.62rem;color:var(--muted);margin-bottom:.45rem}
+.pc-desc{font-size:.78rem;color:var(--muted);line-height:1.55;margin-bottom:.5rem}
+.pc-tags{display:flex;gap:.3rem;flex-wrap:wrap}
+.pc-tag{font-size:.58rem;padding:2px 6px;border-radius:3px;font-family:var(--mono)}
+.t-red{background:var(--red-pale);color:var(--red)}
+.t-amber{background:var(--amber-pale);color:var(--amber)}
+.t-green{background:var(--green-pale);color:var(--green)}
+.t-blue{background:#e8f0fb;color:#1e3a5f}
+footer{background:var(--black);color:rgba(255,255,255,.4);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.72rem}
+footer a{color:rgba(255,255,255,.4);text-decoration:none}
+footer a:hover{color:var(--green-light)}
+@media(max-width:640px){nav{padding:.75rem 1.25rem}.page-wrap{padding:4rem 1.25rem 3rem}.pest-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">PCO<span>Kit</span></a>
+  <a href="/" class="nav-back">← 首页</a>
+</nav>
+<div class="page-wrap">
+  <div class="page-hero">
+    <div class="page-cat">虫害知识库</div>
+    <h1 class="page-title">常见有害生物图鉴</h1>
+    <p class="page-desc">基于行业专业资料与酒店驻场一线经验整理。每种有害生物含形态识别、行为习性、孳生场所、防治要点，中英双语。</p>
+    <div class="stats">
+      <div class="stat"><span class="stat-num">29</span><span class="stat-lbl">虫害种类</span></div>
+      <div class="stat"><span class="stat-num">8</span><span class="stat-lbl">分类类别</span></div>
+      <div class="stat"><span class="stat-num">一线</span><span class="stat-lbl">驻场经验</span></div>
+    </div>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn on" onclick="filter('all',this)">全部 29种</button>
+    <button class="filter-btn" onclick="filter('rodent',this)">🐀 鼠类</button>
+    <button class="filter-btn" onclick="filter('cockroach',this)">🪳 蟑螂</button>
+    <button class="filter-btn" onclick="filter('fly',this)">🪰 蝇类</button>
+    <button class="filter-btn" onclick="filter('mosquito',this)">🦟 蚊类</button>
+    <button class="filter-btn" onclick="filter('parasite',this)">🩸 寄生虫</button>
+    <button class="filter-btn" onclick="filter('stored',this)">🌾 仓储害虫</button>
+    <button class="filter-btn" onclick="filter('termite',this)">🐜 白蚁蚂蚁</button>
+    <button class="filter-btn" onclick="filter('other',this)">🦔 其他</button>
+  </div>
+
+  <!-- 鼠类 -->
+  <div class="section-label" data-cat="rodent">🐀 鼠类 Rodents</div>
+  <div class="pest-grid">
+    <a href="/pests/norway-rat/" class="pest-card" data-cat="rodent">
+      <div class="pc-icon">🐀</div><div class="pc-name">褐家鼠</div><div class="pc-latin">Rattus norvegicus</div>
+      <div class="pc-desc">最大家栖鼠，善打洞游水，栖于地面下水道，工厂仓储主要威胁</div>
+      <div class="pc-tags"><span class="pc-tag t-red">高风险</span><span class="pc-tag t-blue">工厂</span><span class="pc-tag t-blue">仓储</span></div>
+    </a>
+    <a href="/pests/roof-rat/" class="pest-card" data-cat="rodent">
+      <div class="pc-icon">🐁</div><div class="pc-name">黄胸鼠</div><div class="pc-latin">Rattus rattus</div>
+      <div class="pc-desc">善攀爬，栖于屋顶天花板，酒店餐饮高处鼠患主要来源</div>
+      <div class="pc-tags"><span class="pc-tag t-red">高风险</span><span class="pc-tag t-blue">酒店</span><span class="pc-tag t-blue">餐饮</span></div>
+    </a>
+    <a href="/pests/house-mouse/" class="pest-card" data-cat="rodent">
+      <div class="pc-icon">🐭</div><div class="pc-name">小家鼠</div><div class="pc-latin">Mus musculus</div>
+      <div class="pc-desc">体型最小，好奇不回避，每日仅需3g食物，仓储包装区常见</div>
+      <div class="pc-tags"><span class="pc-tag t-amber">中风险</span><span class="pc-tag t-blue">仓储</span><span class="pc-tag t-blue">住宅</span></div>
+    </a>
+    <a href="/pests/house-shrew/" class="pest-card" data-cat="other">
+      <div class="pc-icon">🦔</div><div class="pc-name">臭鼩（鼩鼱）</div><div class="pc-latin">Suncus murinus</div>
+      <div class="pc-desc">非啮齿类，受惊释放臭味，主要分布华南，可传染疾病</div>
+      <div class="pc-tags"><span class="pc-tag t-amber">可传病</span><span class="pc-tag t-blue">华南</span></div>
+    </a>
+  </div>
+
+  <!-- 蟑螂 -->
+  <div class="section-label" data-cat="cockroach">🪳 蟑螂 Cockroaches</div>
+  <div class="pest-grid">
+    <a href="/pests/german-cockroach/" class="pest-card" data-cat="cockroach">
+      <div class="pc-icon">🪳</div><div class="pc-name">德国小蠊</div><div class="pc-latin">Blattella germanica</div>
+      <div class="pc-desc">繁殖力最强，前胸2条黑纵纹，酒店餐饮食品工厂首要防治对象</div>
+      <div class="pc-tags"><span class="pc-tag t-red">最高风险</span><span class="pc-tag t-blue">餐饮</span><span class="pc-tag t-blue">酒店</span></div>
+    </a>
+    <a href="/pests/american-cockroach/" class="pest-card" data-cat="cockroach">
+      <div class="pc-icon">🪲</div><div class="pc-name">美洲大蠊</div><div class="pc-latin">Periplaneta americana</div>
+      <div class="pc-desc">最大蟑螂30-40mm，酱红色蝴蝶斑，栖于下水道管道井</div>
+      <div class="pc-tags"><span class="pc-tag t-red">高风险</span><span class="pc-tag t-blue">下水道</span></div>
+    </a>
+    <a href="/pests/smoky-brown-cockroach/" class="pest-card" data-cat="cockroach">
+      <div class="pc-icon">🟤</div><div class="pc-name">黑胸大蠊</div><div class="pc-latin">Periplaneta fuliginosa</div>
+      <div class="pc-desc">全身黑褐色，飞行能力强，寿命240天，受灯光吸引飞入室内</div>
+      <div class="pc-tags"><span class="pc-tag t-amber">中高风险</span><span class="pc-tag t-blue">厨房</span></div>
+    </a>
+    <a href="/pests/asian-cockroach/" class="pest-card" data-cat="cockroach">
+      <div class="pc-icon">🟡</div><div class="pc-name">亚洲小蠊</div><div class="pc-latin">Blattella asahinai</div>
+      <div class="pc-desc">外观似德国小蠊，飞行力更强，最远滑翔45米，偏室外落叶层</div>
+      <div class="pc-tags"><span class="pc-tag t-amber">中风险</span><span class="pc-tag t-green">室外</span></div>
+    </a>
+    <a href="/pests/oriental-cockroach/" class="pest-card" data-cat="cockroach">
+      <div class="pc-icon">⬛</div><div class="pc-name">东方蜚蠊</div><div class="pc-latin">Blatta orientalis</div>
+      <div class="pc-desc">暗褐至黑色，雌虫翅短，栖于地下室垃圾场排水管道</div>
+      <div class="pc-tags"><span class="pc-tag t-amber">中高风险</span><span class="pc-tag t-blue">地下室</span></div>
+    </a>
+    <a href="/pests/brown-banded-cockroach/" class="pest-card" data-cat="cockroach">
+      <div class="pc-icon">🟡</div><div class="pc-name">褐带蜚蠊</div><div class="pc-latin">Supella longipalpa</div>
+      <div class="pc-desc">腹部有淡色横带，偏干燥环境，不限于厨房，可见于卧室书房</div>
+      <div class="pc-tags"><span class="pc-tag t-amber">中风险</span><span class="pc-tag t-blue">干燥环境</span></div>
+    </a>
+  </div>
+
+  <!-- 蝇类 -->
+  <div class="section-label" data-cat="fly">🪰 蝇类 Flies</div>
+  <div class="pest-grid">
+    <a href="/pests/house-fly/" class="pest-card" data-cat="fly">
+      <div class="pc-icon">🪰</div><div class="pc-name">家蝇</div><div class="pc-latin">Musca domestica</div>
+      <div class="pc-desc">最常见蝇种，胸背4条纵纹，孳生于垃圾场，可传播多种疾病</div>
+      <div class="pc-tags"><span class="pc-tag t-red">高风险</span><span class="pc-tag t-blue">餐饮</span></div>
+    </a>
+    <a href="/pests/drain-fly/" class="pest-card" data-cat="fly">
+      <div class="pc-icon">🦋</div><div class="pc-name">蛾蠓（下水道蝇）</div><div class="pc-latin">family Psychodidae</div>
+      <div class="pc-desc">全身绒毛2mm，幼虫以管道淤泥为食，高楼层出现必查排水系统</div>
+      <div class="pc-tags"><span class="pc-tag t-red">酒店重点</span><span class="pc-tag t-blue">排水管道</span></div>
+    </a>
+    <a href="/pests/fruit-fly/" class="pest-card" data-cat="fly">
+      <div class="pc-icon">🍊</div><div class="pc-name">果蝇</div><div class="pc-latin">Drosophila spp.</div>
+      <div class="pc-desc">红棕色红眼，孳生于发酵残留物，茶饮咖啡餐饮高频投诉</div>
+      <div class="pc-tags"><span class="pc-tag t-amber">餐饮重点</span><span class="pc-tag t-blue">茶饮</span></div>
+    </a>
+    <a href="/pests/phorid-fly/" class="pest-card" data-cat="fly">
+      <div class="pc-icon">🦟</div><div class="pc-name">蚤蝇</div><div class="pc-latin">family Phoridae</div>
+      <div class="pc-desc">褐色背部隆起，善于奔跑不爱飞，有时与蚁巢白蚁巢关联</div>
+      <div class="pc-tags"><span class="pc-tag t-amber">中风险</span><span class="pc-tag t-green">蚁巢关联</span></div>
+    </a>
+    <a href="/pests/green-bottle-fly/" class="pest-card" data-cat="fly">
+      <div class="pc-icon">💚</div><div class="pc-name">丝光绿蝇</div><div class="pc-latin">Lucilia sericata</div>
+      <div class="pc-desc">金属绿色有光泽，对腥臭最敏感，室内大量出现可能有鼠尸</div>
+      <div class="pc-tags"><span class="pc-tag t-amber">尸体指示</span></div>
+    </a>
+    <a href="/pests/flesh-fly/" class="pest-card" data-cat="fly">
+      <div class="pc-icon">⬜</div><div class="pc-name">麻蝇</div><div class="pc-latin">Sarcophaga sp.</div>
+      <div class="pc-desc">胸部3条纵纹，腹部格子斑纹，卵胎生，孳生于腐肉粪便</div>
+      <div class="pc-tags"><span class="pc-tag t-amber">尸体指示</span><span class="pc-tag t-blue">卵胎生</span></div>
+    </a>
+    <a href="/pests/oriental-latrine-fly/" class="pest-card" data-cat="fly">
+      <div class="pc-icon">💙</div><div class="pc-name">大头金蝇</div><div class="pc-latin">Chrysomya megacephala</div>
+      <div class="pc-desc">蓝绿金属光泽，硕大红色复眼，孳生于人畜粪便和动物尸体</div>
+      <div class="pc-tags"><span class="pc-tag t-red">高风险</span><span class="pc-tag t-blue">粪便孳生</span></div>
+    </a>
+  </div>
+
+  <!-- 蚊类 -->
+  <div class="section-label" data-cat="mosquito">🦟 蚊类 Mosquitoes</div>
+  <div class="pest-grid">
+    <a href="/pests/anopheles/" class="pest-card" data-cat="mosquito">
+      <div class="pc-icon">🦟</div><div class="pc-name">按蚊</div><div class="pc-latin">Anopheles sp.</div>
+      <div class="pc-desc">翅有斑，停留时身体翘起成角度，夜间活动，传播疟疾丝虫病</div>
+      <div class="pc-tags"><span class="pc-tag t-red">传播疟疾</span><span class="pc-tag t-blue">大型水体</span></div>
+    </a>
+    <a href="/pests/culex/" class="pest-card" data-cat="mosquito">
+      <div class="pc-icon">🦟</div><div class="pc-name">库蚊</div><div class="pc-latin">Culex sp.</div>
+      <div class="pc-desc">棕黄色无翅斑，室内最常见，夜间吸血，传播乙型脑炎</div>
+      <div class="pc-tags"><span class="pc-tag t-red">传播乙脑</span><span class="pc-tag t-blue">室内常见</span></div>
+    </a>
+    <a href="/pests/aedes/" class="pest-card" data-cat="mosquito">
+      <div class="pc-icon">🦟</div><div class="pc-name">伊蚊（花蚊子）</div><div class="pc-latin">Aedes sp.</div>
+      <div class="pc-desc">黑色白斑，白天活动，孳生于容器积水，传播登革热</div>
+      <div class="pc-tags"><span class="pc-tag t-red">传播登革热</span><span class="pc-tag t-blue">白天活动</span></div>
+    </a>
+  </div>
+
+  <!-- 寄生虫 -->
+  <div class="section-label" data-cat="parasite">🩸 寄生虫类 Parasites</div>
+  <div class="pest-grid">
+    <a href="/pests/bed-bug/" class="pest-card" data-cat="parasite">
+      <div class="pc-icon">🩸</div><div class="pc-name">臭虫（床虱）</div><div class="pc-latin">Cimex lectularius</div>
+      <div class="pc-desc">4-5mm红褐色扁平，夜间吸血，酒店投诉率最高虫害，需专业热处理</div>
+      <div class="pc-tags"><span class="pc-tag t-red">酒店投诉第一</span><span class="pc-tag t-blue">客房</span></div>
+    </a>
+    <a href="/pests/flea/" class="pest-card" data-cat="parasite">
+      <div class="pc-icon">🦗</div><div class="pc-name">跳蚤</div><div class="pc-latin">Siphonaptera</div>
+      <div class="pc-desc">棕黄至深褐色，宠物家庭高发，蛹期耐药，需宠物+环境同步处理</div>
+      <div class="pc-tags"><span class="pc-tag t-amber">中风险</span><span class="pc-tag t-blue">宠物家庭</span></div>
+    </a>
+    <a href="/pests/mite/" class="pest-card" data-cat="parasite">
+      <div class="pc-icon">🔬</div><div class="pc-name">螨虫</div><div class="pc-latin">Acari</div>
+      <div class="pc-desc">粉螨污染食品仓储，尘螨引发过敏，控制湿度是根本防治手段</div>
+      <div class="pc-tags"><span class="pc-tag t-amber">过敏风险</span><span class="pc-tag t-blue">食品仓储</span></div>
+    </a>
+  </div>
+
+  <!-- 仓储害虫 -->
+  <div class="section-label" data-cat="stored">🌾 仓储害虫 Stored Product Pests</div>
+  <div class="pest-grid">
+    <a href="/pests/booklice/" class="pest-card" data-cat="stored">
+      <div class="pc-icon">📖</div><div class="pc-name">书虱</div><div class="pc-latin">Psocoptera</div>
+      <div class="pc-desc">1-2mm，孳生于高湿货盘和纸箱，11月达高峰，BRC审核必查项</div>
+      <div class="pc-tags"><span class="pc-tag t-amber">食品安全</span><span class="pc-tag t-blue">货盘</span></div>
+    </a>
+    <a href="/pests/indian-meal-moth/" class="pest-card" data-cat="stored">
+      <div class="pc-icon">🦋</div><div class="pc-name">印度谷斑螟</div><div class="pc-latin">Plodia interpunctella</div>
+      <div class="pc-desc">翅展15-20mm前翅双色，幼虫在食品中结丝网，孳生于坚果干果谷物</div>
+      <div class="pc-tags"><span class="pc-tag t-red">食品污染</span><span class="pc-tag t-blue">坚果干果</span></div>
+    </a>
+    <a href="/pests/red-flour-beetle/" class="pest-card" data-cat="stored">
+      <div class="pc-icon">🟠</div><div class="pc-name">赤拟谷盗</div><div class="pc-latin">Tribolium castaneum</div>
+      <div class="pc-desc">3-4mm红褐色，触角末端膨大，高温会飞，面粉香料谷物主要害虫</div>
+      <div class="pc-tags"><span class="pc-tag t-red">食品污染</span><span class="pc-tag t-blue">面粉谷物</span></div>
+    </a>
+  </div>
+
+  <!-- 白蚁蚂蚁 -->
+  <div class="section-label" data-cat="termite">🐜 白蚁与蚂蚁 Termites & Ants</div>
+  <div class="pest-grid">
+    <a href="/pests/termite/" class="pest-card" data-cat="termite">
+      <div class="pc-icon">🐜</div><div class="pc-name">白蚁</div><div class="pc-latin">Isoptera</div>
+      <div class="pc-desc">台湾乳白蚁与散白蚁，4-7月分飞期，从内部蛀蚀木质结构，危害极隐蔽</div>
+      <div class="pc-tags"><span class="pc-tag t-red">结构危害</span><span class="pc-tag t-blue">4-7月分飞</span></div>
+    </a>
+    <a href="/pests/ant/" class="pest-card" data-cat="termite">
+      <div class="pc-icon">🐜</div><div class="pc-name">蚂蚁</div><div class="pc-latin">Formicidae</div>
+      <div class="pc-desc">小黄家蚁/黑褐毛蚁/黑头酸臭蚁/红火蚁，饵剂前禁止喷药</div>
+      <div class="pc-tags"><span class="pc-tag t-amber">中风险</span><span class="pc-tag t-red">红火蚁危险</span></div>
+    </a>
+  </div>
+
+  <!-- 偶然入侵 -->
+  <div class="section-label" data-cat="other">🪲 偶然入侵型虫害 Occasional Invaders</div>
+  <div class="pest-grid">
+    <a href="/pests/occasional-invaders/" class="pest-card" data-cat="other">
+      <div class="pc-icon">🪲</div><div class="pc-name">偶然入侵型虫害</div><div class="pc-latin">Occasional Invaders</div>
+      <div class="pc-desc">蠼螋、衣鱼、潮虫、蜈蚣——不在室内繁殖，封堵入口为主要防治手段</div>
+      <div class="pc-tags"><span class="pc-tag t-green">低风险</span><span class="pc-tag t-blue">环境整改</span></div>
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  <div>© 2025 PCOKit.com · 虫害防治行业知识平台 · 共 29 种虫害详解</div>
+  <div><a href="/">返回首页</a> &nbsp;|&nbsp; <a href="/en/">English</a></div>
+</footer>
+
+<script>
+function filter(cat,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.pest-card').forEach(c=>{
+    c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none';
+  });
+  document.querySelectorAll('.section-label').forEach(l=>{
+    l.style.display=(cat==='all'||l.dataset.cat===cat)?'flex':'none';
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="酒店洗衣房德国小蠊处理实战案例：监测布点、凝胶饵剂点施、滞留粉联合处理，两次作业后实现零粘捕。PCO驻场技术员一手经验分享。">
+<meta name="keywords" content="德国小蠊,酒店蟑螂,洗衣房虫害,蟑螂处理,PCO,凝胶饵剂,滞留粉,驻场技术员">
+<title>酒店洗衣房德国小蠊处理实录 | PCOKit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Noto+Serif+SC:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black:#0a0a08; --white:#f5f3ee; --green:#1a4a2e;
+  --green-mid:#2d6e45; --green-light:#4a9e6a; --green-pale:#e8f5ec;
+  --amber:#c8860a; --amber-pale:#fef3c7;
+  --border:#d4cfc4; --muted:#6b6456;
+  --mono:'DM Mono',monospace;
+  --serif:'Noto Serif SC',Georgia,serif;
+  --display:'Syne',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);background:var(--white);color:var(--black)}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem 2.5rem;
+  background:rgba(245,243,238,.92);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--green);letter-spacing:-.02em;text-decoration:none}
+.nav-logo span{color:var(--black)}
+.nav-back{font-family:var(--mono);font-size:.75rem;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:.4rem;transition:color .2s}
+.nav-back:hover{color:var(--green)}
+
+.article-wrap{max-width:720px;margin:0 auto;padding:5rem 2rem 4rem}
+
+/* HERO */
+.article-hero{margin-bottom:3rem}
+.article-cat{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--green-light);margin-bottom:1rem;
+  display:flex;align-items:center;gap:.5rem;
+}
+.article-cat::before{content:'';width:16px;height:1px;background:var(--green-light)}
+.article-title{
+  font-family:var(--display);font-weight:800;
+  font-size:clamp(1.8rem,4vw,2.6rem);
+  line-height:1.1;letter-spacing:-.02em;
+  color:var(--black);margin-bottom:1.25rem;
+}
+.article-meta{
+  display:flex;gap:1rem;flex-wrap:wrap;align-items:center;
+  padding:.75rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  font-family:var(--mono);font-size:.7rem;color:var(--muted);
+}
+.meta-tag{
+  background:var(--green-pale);color:var(--green);
+  padding:2px 8px;border-radius:3px;font-size:.65rem;
+}
+.meta-tag.amber{background:var(--amber-pale);color:var(--amber)}
+
+/* SUMMARY BOX */
+.summary-box{
+  background:var(--green);color:#fff;
+  border-radius:8px;padding:1.5rem 1.75rem;
+  margin:2rem 0;
+}
+.summary-title{
+  font-family:var(--display);font-weight:700;font-size:.8rem;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(255,255,255,.6);margin-bottom:1rem;
+}
+.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.summary-item{}
+.summary-lbl{font-family:var(--mono);font-size:.65rem;color:rgba(255,255,255,.5);margin-bottom:.2rem}
+.summary-val{font-size:.88rem;color:#fff;line-height:1.4}
+
+/* BODY */
+.article-body{line-height:1.9;font-size:1rem;color:#2a2820}
+.article-body h2{
+  font-family:var(--display);font-weight:700;
+  font-size:1.15rem;color:var(--black);
+  margin:2.5rem 0 .85rem;padding-left:1rem;
+  border-left:3px solid var(--green);
+}
+.article-body h3{
+  font-family:var(--display);font-weight:600;
+  font-size:1rem;color:var(--green-mid);
+  margin:1.75rem 0 .6rem;
+}
+.article-body p{margin-bottom:1.1rem}
+.article-body strong{color:var(--black);font-weight:600}
+
+/* INSIGHT BOX */
+.insight{
+  background:var(--green-pale);
+  border-left:3px solid var(--green);
+  border-radius:0 6px 6px 0;
+  padding:1rem 1.25rem;margin:1.5rem 0;
+  font-size:.9rem;color:var(--green);line-height:1.7;
+}
+.insight-lbl{font-family:var(--mono);font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green-mid);margin-bottom:.35rem}
+
+.warn-box{
+  background:var(--amber-pale);
+  border-left:3px solid var(--amber);
+  border-radius:0 6px 6px 0;
+  padding:1rem 1.25rem;margin:1.5rem 0;
+  font-size:.9rem;color:#633806;line-height:1.7;
+}
+.warn-lbl{font-family:var(--mono);font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:.35rem}
+
+/* STEPS */
+.steps{display:flex;flex-direction:column;gap:.6rem;margin:1.25rem 0}
+.step-item{
+  display:flex;align-items:flex-start;gap:.85rem;
+  background:var(--white);border:1px solid var(--border);
+  border-radius:6px;padding:.75rem 1rem;
+}
+.step-num{
+  width:22px;height:22px;border-radius:50%;
+  background:var(--green);color:#fff;
+  font-family:var(--mono);font-size:.7rem;font-weight:500;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;
+}
+.step-body{}
+.step-title{font-family:var(--display);font-weight:600;font-size:.88rem;color:var(--black);margin-bottom:.2rem}
+.step-desc{font-size:.82rem;color:var(--muted);line-height:1.55}
+
+/* RESULT */
+.result-box{
+  background:var(--black);color:#fff;
+  border-radius:8px;padding:1.5rem 1.75rem;margin:2rem 0;
+}
+.result-title{font-family:var(--display);font-weight:700;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green-light);margin-bottom:1rem}
+.result-items{display:flex;flex-direction:column;gap:.5rem}
+.result-item{display:flex;align-items:center;gap:.75rem;font-size:.88rem;color:rgba(255,255,255,.8)}
+.result-item::before{content:'✓';color:var(--green-light);font-family:var(--mono);flex-shrink:0}
+
+/* TAGS */
+.article-tags{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;gap:.4rem;flex-wrap:wrap;align-items:center}
+.tag-lbl{font-family:var(--mono);font-size:.68rem;color:var(--muted)}
+.tag{font-family:var(--mono);font-size:.68rem;padding:3px 9px;border-radius:3px;border:1px solid var(--border);color:var(--muted);text-decoration:none;transition:all .15s}
+.tag:hover{border-color:var(--green);color:var(--green)}
+
+/* RELATED */
+.related{margin-top:3rem;padding:1.5rem;background:var(--green-pale);border-radius:8px}
+.related-title{font-family:var(--display);font-weight:700;font-size:.85rem;color:var(--green);margin-bottom:1rem}
+.related-links{display:flex;flex-direction:column;gap:.5rem}
+.related-link{font-size:.88rem;color:var(--green-mid);text-decoration:none;display:flex;align-items:center;gap:.4rem}
+.related-link:hover{color:var(--green)}
+.related-link::before{content:'→';font-family:var(--mono)}
+
+/* CTA */
+.article-cta{
+  margin-top:2.5rem;text-align:center;
+  border:1.5px dashed var(--border);border-radius:8px;padding:2rem;
+}
+.cta-title{font-family:var(--display);font-weight:700;font-size:1rem;color:var(--black);margin-bottom:.5rem}
+.cta-desc{font-size:.85rem;color:var(--muted);margin-bottom:1.25rem}
+.btn-primary{
+  font-family:var(--display);font-weight:700;font-size:.82rem;
+  letter-spacing:.04em;text-transform:uppercase;
+  background:var(--green);color:var(--white);
+  padding:.75rem 1.75rem;border:none;border-radius:4px;
+  cursor:pointer;text-decoration:none;transition:all .2s;display:inline-block;
+}
+.btn-primary:hover{background:var(--green-mid)}
+
+footer{
+  background:var(--black);color:rgba(255,255,255,.4);
+  padding:2rem 2.5rem;display:flex;justify-content:space-between;
+  align-items:center;flex-wrap:wrap;gap:1rem;
+  font-family:var(--mono);font-size:.72rem;
+}
+footer a{color:rgba(255,255,255,.4);text-decoration:none}
+footer a:hover{color:var(--green-light)}
+
+@media(max-width:640px){
+  nav{padding:.75rem 1.25rem}
+  .article-wrap{padding:4rem 1.25rem 3rem}
+  .summary-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">PCO<span>Kit</span></a>
+  <a href="/" class="nav-back">← 返回首页</a>
+</nav>
+
+<article class="article-wrap">
+
+  <div class="article-hero">
+    <div class="article-cat">实战案例 · 蟑螂防治</div>
+    <h1 class="article-title">酒店洗衣房德国小蠊处理实录：为什么这里最容易被忽视</h1>
+    <div class="article-meta">
+      <span>2025年</span>
+      <span>·</span>
+      <span>PCOKit 驻场技术员</span>
+      <span>·</span>
+      <span class="meta-tag">德国小蠊</span>
+      <span class="meta-tag">酒店</span>
+      <span class="meta-tag amber">洗衣房</span>
+    </div>
+  </div>
+
+  <div class="summary-box">
+    <div class="summary-title">案例摘要</div>
+    <div class="summary-grid">
+      <div class="summary-item">
+        <div class="summary-lbl">虫害类型</div>
+        <div class="summary-val">德国小蠊（成虫 + 若虫混合侵染）</div>
+      </div>
+      <div class="summary-item">
+        <div class="summary-lbl">发现位置</div>
+        <div class="summary-val">酒店洗衣房</div>
+      </div>
+      <div class="summary-item">
+        <div class="summary-lbl">侵染程度</div>
+        <div class="summary-val">中等（5只以上，有若虫）</div>
+      </div>
+      <div class="summary-item">
+        <div class="summary-lbl">处理结果</div>
+        <div class="summary-val">连续两次处理后零粘捕</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-body">
+
+    <p>酒店里蟑螂最多的地方是哪里？很多人第一反应是后厨。但在驻场工作中，我发现<strong>洗衣房</strong>才是最容易被忽视、也是最适合蟑螂生存的地方之一。</p>
+
+    <p>这次记录的就是一起典型的酒店洗衣房德国小蠊侵染案例。</p>
+
+    <h2>为什么是洗衣房？</h2>
+
+    <p>德国小蠊对生存环境有两个核心需求：<strong>温暖</strong>和<strong>潮湿</strong>。洗衣房同时满足这两点——洗衣机、烘干机持续运转产生热量，排水管道和冷凝水带来充足湿气，加上设备缝隙众多，几乎是为蟑螂量身定制的栖息地。</p>
+
+    <div class="insight">
+      <div class="insight-lbl">技术要点</div>
+      发现成虫和若虫同时存在，说明侵染已经持续一段时间，种群内部已有繁殖。若虫的出现意味着附近有卵鞘，处理时必须针对孳生源，而不只是消灭可见成虫。
+    </div>
+
+    <h2>处理方案设计</h2>
+
+    <h3>第一步：布置粘捕监测</h3>
+
+    <div class="steps">
+      <div class="step-item">
+        <span class="step-num">1</span>
+        <div class="step-body">
+          <div class="step-title">在热源和潮湿区域放置蟑螂屋</div>
+          <div class="step-desc">洗衣机和烘干机背面、压缩机旁边、排水管道附近——这些是蟑螂最常聚集的位置。粘捕屋既是监测工具，也是辅助防治手段。</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <span class="step-num">2</span>
+        <div class="step-body">
+          <div class="step-title">在蟑螂屋上同步点施凝胶饵剂</div>
+          <div class="step-desc">直接在蟑螂屋内部点胶，让蟑螂在进入粘捕区域之前先接触到饵剂。凝胶饵剂通过蟑螂互相梳理和接触传播毒素，能覆盖到没有直接接触饵剂的个体。</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>第二步：墙角滞留粉处理</h3>
+
+    <p>针对阴暗潮湿的墙角区域，使用<strong>优士粉（硅藻土类滞留粉）</strong>进行处理。这类产品通过物理作用破坏蟑螂的外骨骼蜡质层，导致脱水死亡，不依赖化学神经毒素，在潮湿环境中持效期也相对稳定。</p>
+
+    <div class="warn-box">
+      <div class="warn-lbl">注意事项</div>
+      滞留粉施药区域需要避开食品接触面和员工直接接触区域。洗衣房属于非食品生产区域，施药相对灵活，但仍需注意施药后标注处理区域，避免清洁人员误清扫。
+    </div>
+
+    <h3>第三步：重点处理阴暗潮湿区域</h3>
+
+    <p>蟑螂的核心孳生区往往不在视线范围内。洗衣房需要重点检查的位置包括：</p>
+
+    <div class="steps">
+      <div class="step-item">
+        <span class="step-num">✓</span>
+        <div class="step-body">
+          <div class="step-title">设备底部与地面之间的缝隙</div>
+          <div class="step-desc">洗衣机、烘干机底部通常有5-10cm空间，温暖且隐蔽，是德国小蠊的首选栖息地</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <span class="step-num">✓</span>
+        <div class="step-body">
+          <div class="step-title">排水管道穿墙处</div>
+          <div class="step-desc">管道与墙体之间的缝隙既是通道也是藏身处，需要重点检查和处理</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <span class="step-num">✓</span>
+        <div class="step-body">
+          <div class="step-title">电控箱和线管内部</div>
+          <div class="step-desc">温暖且几乎不受干扰，德国小蠊非常喜欢在此产卵。注意：电控箱内禁止使用喷雾剂，只能用凝胶饵剂</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>处理结果</h2>
+
+    <div class="result-box">
+      <div class="result-title">两次处理后的效果</div>
+      <div class="result-items">
+        <div class="result-item">粘捕监测：零粘捕，未发现活虫</div>
+        <div class="result-item">若虫消失，说明卵鞘已被有效处理</div>
+        <div class="result-item">热源和潮湿区域均无新的蟑螂活动迹象</div>
+        <div class="result-item">凝胶饵剂 + 滞留粉联合处理效果稳定</div>
+      </div>
+    </div>
+
+    <h2>这个案例说明了什么</h2>
+
+    <p>德国小蠊的防治，<strong>找对孳生源比用多少药更重要</strong>。洗衣房这类区域之所以容易反复出现，往往不是药效问题，而是：</p>
+
+    <p>第一，只处理了可见的蟑螂，没有找到卵鞘所在位置；第二，设备缝隙和管道穿墙处没有处理到位，蟑螂的「家」还在；第三，潮湿问题没有从根本上改善，处理完成后环境依然适合蟑螂生存。</p>
+
+    <div class="insight">
+      <div class="insight-lbl">驻场经验</div>
+      连续两次处理后实现零粘捕，说明方案有效。但建议继续保留粘捕监测至少一个月，确认没有残余卵鞘孵化出新若虫。德国小蠊的卵鞘孵化期约28天，这是判断是否彻底清除的关键时间节点。
+    </div>
+
+    <p>酒店洗衣房的蟑螂防治，是一个「先找到它们住在哪里，再用对的工具」的过程。监测先行，再联合用药，才是最稳定的处理路径。</p>
+
+  </div>
+
+  <div class="article-tags">
+    <span class="tag-lbl">标签：</span>
+    <a href="/pests/german-cockroach/" class="tag">德国小蠊</a>
+    <a href="/blog/" class="tag">酒店虫害</a>
+    <a href="/blog/" class="tag">洗衣房</a>
+    <a href="/blog/" class="tag">凝胶饵剂</a>
+    <a href="/blog/" class="tag">滞留粉</a>
+    <a href="/blog/" class="tag">驻场案例</a>
+  </div>
+
+  <div class="related">
+    <div class="related-title">相关内容</div>
+    <div class="related-links">
+      <a href="/pests/german-cockroach/" class="related-link">德国小蠊识别与生物学特征详解</a>
+      <a href="/prompts/" class="related-link">餐饮门店蟑螂投诉紧急响应话术（AI提示词）</a>
+      <a href="/blog/" class="related-link">酒店虫害巡检最容易漏掉的8个位置</a>
+    </div>
+  </div>
+
+  <div class="article-cta">
+    <div class="cta-title">需要蟑螂防治的专业提示词？</div>
+    <div class="cta-desc">70+ 条 PCO 行业 AI 提示词，包含客服回复、处理方案、合规文件——留邮箱免费获取完整版</div>
+    <a href="/#prompts" class="btn-primary">免费获取提示词包 →</a>
+  </div>
+
+</article>
+
+<footer>
+  <div>© 2025 PCOKit.com · 虫害防治行业知识平台</div>
+  <div><a href="/">返回首页</a></div>
+</footer>
+
+</body>
+</html>

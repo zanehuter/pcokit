@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="臭虫/床虱（Cimex lectularius）识别特征、习性、防治——体长4-5mm红褐色扁平，夜间吸血，耐-10℃低温，酒店投诉率最高的虫害，含热处理和化学处理方案。">
+<meta name="keywords" content="臭虫,床虱,bed bug,Cimex lectularius,酒店臭虫,客房投诉,床垫检查,热处理,PCO">
+<title>臭虫（床虱） Cimex lectularius — 识别特征·习性·防治 | PCOKit</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Noto+Serif+SC:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0a0a08;--white:#f5f3ee;--green:#1a4a2e;--green-mid:#2d6e45;--green-light:#4a9e6a;--green-pale:#e8f5ec;--amber:#c8860a;--amber-pale:#fef3c7;--red:#7f1d1d;--red-pale:#fee2e2;--border:#d4cfc4;--muted:#6b6456;--mono:'DM Mono',monospace;--serif:'Noto Serif SC',Georgia,serif;--display:'Syne',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);background:var(--white);color:var(--black)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2.5rem;background:rgba(245,243,238,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--green);letter-spacing:-.02em;text-decoration:none}
+.nav-logo span{color:var(--black)}
+.nav-back{font-family:var(--mono);font-size:.75rem;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-back:hover{color:var(--green)}
+.hero{background:var(--green);color:#fff;padding:5rem 2.5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.hero-cat{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green-light);margin-bottom:.75rem}
+.hero-name{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.02em;line-height:1;margin-bottom:.35rem}
+.hero-latin{font-family:var(--mono);font-size:.85rem;color:rgba(255,255,255,.5);margin-bottom:1.5rem}
+.hero-badges{display:flex;gap:.5rem;flex-wrap:wrap}
+.badge{font-size:.65rem;padding:3px 9px;border-radius:3px;font-family:var(--mono)}
+.b-red{background:var(--red-pale);color:var(--red)}
+.b-amber{background:var(--amber-pale);color:var(--amber)}
+.b-green{background:var(--green-pale);color:var(--green)}
+.b-blue{background:#e8f0fb;color:#1e3a5f}
+.hero-right{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:1.5rem}
+.hero-icon{font-size:4rem;text-align:center;padding:1.5rem 0}
+.quick-facts{display:flex;flex-direction:column;gap:.6rem}
+.qf-item{display:flex;gap:.75rem;align-items:flex-start}
+.qf-lbl{font-family:var(--mono);font-size:.65rem;color:rgba(255,255,255,.45);width:60px;flex-shrink:0;padding-top:.1rem}
+.qf-val{font-size:.82rem;color:#fff;line-height:1.45}
+.wrap{max-width:900px;margin:0 auto;padding:3rem 2rem 4rem}
+.section{margin-bottom:2.5rem}
+.sec-title{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--black);margin-bottom:1rem;padding-left:.85rem;border-left:3px solid var(--green)}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.info-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem}
+.ic-lbl{font-family:var(--mono);font-size:.63rem;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.35rem}
+.ic-val{font-size:.88rem;color:var(--black);line-height:1.6}
+.insight{background:var(--green-pale);border-left:3px solid var(--green);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:var(--green);line-height:1.7}
+.insight-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green-mid);margin-bottom:.3rem}
+.warn{background:var(--amber-pale);border-left:3px solid var(--amber);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:#633806;line-height:1.7}
+.warn-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:.3rem}
+.alert{background:var(--red-pale);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:var(--red);line-height:1.7}
+.alert-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:.3rem}
+.loc-list{display:flex;flex-direction:column;gap:.45rem}
+.loc-item{display:flex;align-items:flex-start;gap:.7rem;font-size:.86rem;color:var(--muted);line-height:1.5}
+.loc-item::before{content:'📍';flex-shrink:0;margin-top:.05rem}
+.steps{display:flex;flex-direction:column;gap:.6rem}
+.step{display:flex;align-items:flex-start;gap:.85rem;background:var(--white);border:1px solid var(--border);border-radius:6px;padding:.75rem 1rem}
+.step-num{width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-family:var(--mono);font-size:.7rem;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.step-title{font-family:var(--display);font-weight:600;font-size:.87rem;color:var(--black);margin-bottom:.15rem}
+.step-desc{font-size:.8rem;color:var(--muted);line-height:1.5}
+.compare{background:var(--black);color:#fff;border-radius:8px;padding:1.25rem 1.5rem;margin:1.25rem 0}
+.compare-title{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-light);margin-bottom:.85rem}
+.compare-rows{display:flex;flex-direction:column;gap:.4rem}
+.compare-row{display:flex;gap:.75rem;font-size:.82rem;color:rgba(255,255,255,.75);line-height:1.5}
+.compare-row::before{content:'→';color:var(--green-light);font-family:var(--mono);flex-shrink:0}
+.lifecycle{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin:1.25rem 0}
+.lc{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:.65rem .75rem;text-align:center}
+.lc-icon{font-size:1.2rem;margin-bottom:.25rem}
+.lc-name{font-family:var(--display);font-weight:600;font-size:.75rem;color:var(--black);margin-bottom:.15rem}
+.lc-time{font-family:var(--mono);font-size:.62rem;color:var(--muted)}
+.species-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1.25rem 0}
+.sp-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:.9rem 1rem}
+.sp-name{font-family:var(--display);font-weight:700;font-size:.9rem;color:var(--black);margin-bottom:.2rem}
+.sp-latin{font-family:var(--mono);font-size:.62rem;color:var(--muted);margin-bottom:.5rem}
+.sp-desc{font-size:.8rem;color:var(--muted);line-height:1.55}
+.article-cta{margin-top:2.5rem;text-align:center;border:1.5px dashed var(--border);border-radius:8px;padding:1.75rem}
+.cta-title{font-family:var(--display);font-weight:700;font-size:.95rem;color:var(--black);margin-bottom:.4rem}
+.cta-desc{font-size:.83rem;color:var(--muted);margin-bottom:1.1rem}
+.btn{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;background:var(--green);color:var(--white);padding:.7rem 1.5rem;border:none;border-radius:4px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.btn:hover{background:var(--green-mid)}
+footer{background:var(--black);color:rgba(255,255,255,.4);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.72rem}
+footer a{color:rgba(255,255,255,.4);text-decoration:none}
+footer a:hover{color:var(--green-light)}
+@media(max-width:768px){.hero{grid-template-columns:1fr;padding:4rem 1.25rem 2rem}.hero-right{display:none}.wrap{padding:2rem 1.25rem}.info-grid,.species-grid{grid-template-columns:1fr}.lifecycle{grid-template-columns:repeat(2,1fr)}nav{padding:.75rem 1.25rem}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">PCO<span>Kit</span></a>
+  <a href="/pests/" class="nav-back">← 知识库</a>
+</nav>
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-cat">寄生虫类 · 有害生物详解</div>
+    <h1 class="hero-name">臭虫（床虱）</h1>
+    <div class="hero-latin">Cimex lectularius</div>
+    <div class="hero-badges"><span class="badge b-red">酒店投诉第一</span><span class="badge b-blue">客房</span><span class="badge b-blue">夜间吸血</span></div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-icon">🩸</div>
+    <div class="quick-facts"><div class="qf-item"><span class="qf-lbl">体长</span><span class="qf-val">4–5 mm，扁平椭圆形</span></div>
+<div class="qf-item"><span class="qf-lbl">颜色</span><span class="qf-val">红褐色，吸血后膨大变深红</span></div>
+<div class="qf-item"><span class="qf-lbl">活动</span><span class="qf-val">夜间，距宿主1-2米藏匿</span></div>
+<div class="qf-item"><span class="qf-lbl">卵</span><span class="qf-val">每日产1-5粒，孵化6-10天</span></div>
+<div class="qf-item"><span class="qf-lbl">耐温</span><span class="qf-val">−10℃存活5天，−32℃ 15分钟死亡</span></div>
+<div class="qf-item"><span class="qf-lbl">寿命</span><span class="qf-val">成虫可存活6-12个月</span></div></div>
+  </div>
+</div>
+<div class="wrap">
+  
+<div class="section">
+  <div class="sec-title">形态特征与识别</div>
+  <div class="info-grid">
+    <div class="info-card"><div class="ic-lbl">外观</div><div class="ic-val">体长4-5mm，扁平椭圆形，红褐色，翅膀退化呈鳞状无法飞行。吸血后身体膨大变深红色，体型可增大2-3倍</div></div>
+    <div class="info-card"><div class="ic-lbl">臭腺</div><div class="ic-val">有臭腺，大量侵染时分泌物产生特殊甜腥气味——在严重侵染的房间可闻到此气味，是重要的感官识别依据</div></div>
+    <div class="info-card"><div class="ic-lbl">活动迹象</div><div class="ic-val">床单/枕套上的血迹（红色或铁锈色小点）、黑色粪点（约1mm）、蜕皮壳（半透明空壳）是最常见的现场迹象</div></div>
+    <div class="info-card"><div class="ic-lbl">藏匿位置</div><div class="ic-val">床垫缝隙、床框接缝、床头板背面、墙纸翘起处、插座面板背后——距宿主2米范围内的所有缝隙</div></div>
+  </div>
+  <div class="lifecycle">
+    <div class="lc"><div class="lc-icon">🥚</div><div class="lc-name">卵</div><div class="lc-time">孵化6-10天</div></div>
+    <div class="lc"><div class="lc-icon">🐛</div><div class="lc-name">若虫</div><div class="lc-time">蜕皮5次</div></div>
+    <div class="lc"><div class="lc-icon">🩸</div><div class="lc-name">成虫</div><div class="lc-time">寿命6-12月</div></div>
+    <div class="lc"><div class="lc-icon">📦</div><div class="lc-name">总周期</div><div class="lc-time">30-60天</div></div>
+  </div>
+  <div class="alert">
+    <div class="alert-lbl">为什么臭虫必须专业处理</div>
+    卵对大多数化学药剂有抵抗力。自行处理只能杀死成虫和若虫，卵继续孵化导致1-2周后再次出现。臭虫在16℃以下进入半休眠可存活更久，−10℃仍能存活5天，普通冷冻无效。56℃以上热处理是目前最彻底的方法。
+  </div>
+</div>
+<div class="section">
+  <div class="sec-title">五步床垫检查法（现场操作）</div>
+  <div class="steps">
+    <div class="step"><span class="step-num">1</span><div><div class="step-title">脱掉床单检查表面</div><div class="step-desc">查看床单和枕套上是否有血迹（红色或铁锈色小点）和黑色粪点</div></div></div>
+    <div class="step"><span class="step-num">2</span><div><div class="step-title">检查床垫四周缝隙</div><div class="step-desc">用白纸卡片刮过床垫缝隙，是否带出黑色粪点或蜕皮壳。用手电筒照射缝隙内部</div></div></div>
+    <div class="step"><span class="step-num">3</span><div><div class="step-title">翻转床垫检查背面</div><div class="step-desc">背面缝隙更隐蔽，成虫和卵常聚集在此。重点检查标签附近区域</div></div></div>
+    <div class="step"><span class="step-num">4</span><div><div class="step-title">检查床框和床头板</div><div class="step-desc">床框接缝、螺丝孔、床头板背面——离床垫最近的木质结构必查</div></div></div>
+    <div class="step"><span class="step-num">5</span><div><div class="step-title">检查周边家具</div><div class="step-desc">床头柜抽屉、墙纸翘起处、插座面板背后，距床2米范围内全部检查</div></div></div>
+  </div>
+</div>
+<div class="section">
+  <div class="sec-title">防治方案</div>
+  <div class="steps">
+    <div class="step"><span class="step-num">1</span><div><div class="step-title">热处理（最彻底）</div><div class="step-desc">将受侵染物品置于56℃以上环境90分钟以上，可杀死所有生命阶段包括卵。专业热处理设备可对整个房间进行处理，是目前最彻底的方法</div></div></div>
+    <div class="step"><span class="step-num">2</span><div><div class="step-title">化学处理（配合热处理）</div><div class="step-desc">在缝隙和藏匿点施用触杀型杀虫剂，配合残效药剂处理床框和地毯边缘。单独使用化学药剂需多次处理，对卵效果有限</div></div></div>
+    <div class="step"><span class="step-num">3</span><div><div class="step-title">床垫套封装</div><div class="step-desc">使用防臭虫床垫套将整个床垫密封，困住内部残存臭虫至死（需密封12个月以上）。同时防止新侵染</div></div></div>
+    <div class="step"><span class="step-num">4</span><div><div class="step-title">处理后监测</div><div class="step-desc">放置臭虫监测卡（粘捕式）在床腿下方，每周检查。连续3个月零捕获才能确认彻底清除</div></div></div>
+  </div>
+</div>
+  <div class="article-cta">
+    <div class="cta-title">需要处理这种虫害的专业提示词？</div>
+    <div class="cta-desc">获取 PCO 行业 AI 提示词完整包，含客服话术、处理方案、合规文件</div>
+    <a href="/#prompts" class="btn">免费获取提示词包 →</a>
+  </div>
+</div>
+<footer>
+  <div>© 2025 PCOKit.com · 虫害防治行业知识平台</div>
+  <div><a href="/pests/">← 知识库</a></div>
+</footer>
+</body>
+</html>

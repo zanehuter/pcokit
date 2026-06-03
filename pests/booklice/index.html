@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="书虱（Psocoptera）识别特征、习性——体长1-2mm，浅棕至暗棕色，无幼虫阶段，孳生于高湿度仓储环境和货盘上，11月数量达高峰，是食品工厂审核必查虫害。">
+<meta name="keywords" content="书虱,booklice,Psocoptera,仓储书虱,货盘书虱,潮湿仓库,食品工厂,BRC审核,PCO">
+<title>书虱 Psocoptera — 识别特征·习性·防治 | PCOKit</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Noto+Serif+SC:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0a0a08;--white:#f5f3ee;--green:#1a4a2e;--green-mid:#2d6e45;--green-light:#4a9e6a;--green-pale:#e8f5ec;--amber:#c8860a;--amber-pale:#fef3c7;--red:#7f1d1d;--red-pale:#fee2e2;--border:#d4cfc4;--muted:#6b6456;--mono:'DM Mono',monospace;--serif:'Noto Serif SC',Georgia,serif;--display:'Syne',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);background:var(--white);color:var(--black)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2.5rem;background:rgba(245,243,238,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--green);letter-spacing:-.02em;text-decoration:none}
+.nav-logo span{color:var(--black)}
+.nav-back{font-family:var(--mono);font-size:.75rem;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-back:hover{color:var(--green)}
+.hero{background:var(--green);color:#fff;padding:5rem 2.5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.hero-cat{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green-light);margin-bottom:.75rem}
+.hero-name{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.02em;line-height:1;margin-bottom:.35rem}
+.hero-latin{font-family:var(--mono);font-size:.85rem;color:rgba(255,255,255,.5);margin-bottom:1.5rem}
+.hero-badges{display:flex;gap:.5rem;flex-wrap:wrap}
+.badge{font-size:.65rem;padding:3px 9px;border-radius:3px;font-family:var(--mono)}
+.b-red{background:var(--red-pale);color:var(--red)}
+.b-amber{background:var(--amber-pale);color:var(--amber)}
+.b-green{background:var(--green-pale);color:var(--green)}
+.b-blue{background:#e8f0fb;color:#1e3a5f}
+.hero-right{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:1.5rem}
+.hero-icon{font-size:4rem;text-align:center;padding:1.5rem 0}
+.quick-facts{display:flex;flex-direction:column;gap:.6rem}
+.qf-item{display:flex;gap:.75rem;align-items:flex-start}
+.qf-lbl{font-family:var(--mono);font-size:.65rem;color:rgba(255,255,255,.45);width:60px;flex-shrink:0;padding-top:.1rem}
+.qf-val{font-size:.82rem;color:#fff;line-height:1.45}
+.wrap{max-width:900px;margin:0 auto;padding:3rem 2rem 4rem}
+.section{margin-bottom:2.5rem}
+.sec-title{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--black);margin-bottom:1rem;padding-left:.85rem;border-left:3px solid var(--green)}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.info-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem}
+.ic-lbl{font-family:var(--mono);font-size:.63rem;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.35rem}
+.ic-val{font-size:.88rem;color:var(--black);line-height:1.6}
+.insight{background:var(--green-pale);border-left:3px solid var(--green);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:var(--green);line-height:1.7}
+.insight-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green-mid);margin-bottom:.3rem}
+.warn{background:var(--amber-pale);border-left:3px solid var(--amber);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:#633806;line-height:1.7}
+.warn-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:.3rem}
+.alert{background:var(--red-pale);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:var(--red);line-height:1.7}
+.alert-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:.3rem}
+.loc-list{display:flex;flex-direction:column;gap:.45rem}
+.loc-item{display:flex;align-items:flex-start;gap:.7rem;font-size:.86rem;color:var(--muted);line-height:1.5}
+.loc-item::before{content:'📍';flex-shrink:0;margin-top:.05rem}
+.steps{display:flex;flex-direction:column;gap:.6rem}
+.step{display:flex;align-items:flex-start;gap:.85rem;background:var(--white);border:1px solid var(--border);border-radius:6px;padding:.75rem 1rem}
+.step-num{width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-family:var(--mono);font-size:.7rem;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.step-title{font-family:var(--display);font-weight:600;font-size:.87rem;color:var(--black);margin-bottom:.15rem}
+.step-desc{font-size:.8rem;color:var(--muted);line-height:1.5}
+.compare{background:var(--black);color:#fff;border-radius:8px;padding:1.25rem 1.5rem;margin:1.25rem 0}
+.compare-title{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-light);margin-bottom:.85rem}
+.compare-rows{display:flex;flex-direction:column;gap:.4rem}
+.compare-row{display:flex;gap:.75rem;font-size:.82rem;color:rgba(255,255,255,.75);line-height:1.5}
+.compare-row::before{content:'→';color:var(--green-light);font-family:var(--mono);flex-shrink:0}
+.lifecycle{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin:1.25rem 0}
+.lc{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:.65rem .75rem;text-align:center}
+.lc-icon{font-size:1.2rem;margin-bottom:.25rem}
+.lc-name{font-family:var(--display);font-weight:600;font-size:.75rem;color:var(--black);margin-bottom:.15rem}
+.lc-time{font-family:var(--mono);font-size:.62rem;color:var(--muted)}
+.species-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1.25rem 0}
+.sp-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:.9rem 1rem}
+.sp-name{font-family:var(--display);font-weight:700;font-size:.9rem;color:var(--black);margin-bottom:.2rem}
+.sp-latin{font-family:var(--mono);font-size:.62rem;color:var(--muted);margin-bottom:.5rem}
+.sp-desc{font-size:.8rem;color:var(--muted);line-height:1.55}
+.article-cta{margin-top:2.5rem;text-align:center;border:1.5px dashed var(--border);border-radius:8px;padding:1.75rem}
+.cta-title{font-family:var(--display);font-weight:700;font-size:.95rem;color:var(--black);margin-bottom:.4rem}
+.cta-desc{font-size:.83rem;color:var(--muted);margin-bottom:1.1rem}
+.btn{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;background:var(--green);color:var(--white);padding:.7rem 1.5rem;border:none;border-radius:4px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.btn:hover{background:var(--green-mid)}
+footer{background:var(--black);color:rgba(255,255,255,.4);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.72rem}
+footer a{color:rgba(255,255,255,.4);text-decoration:none}
+footer a:hover{color:var(--green-light)}
+@media(max-width:768px){.hero{grid-template-columns:1fr;padding:4rem 1.25rem 2rem}.hero-right{display:none}.wrap{padding:2rem 1.25rem}.info-grid,.species-grid{grid-template-columns:1fr}.lifecycle{grid-template-columns:repeat(2,1fr)}nav{padding:.75rem 1.25rem}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">PCO<span>Kit</span></a>
+  <a href="/pests/" class="nav-back">← 知识库</a>
+</nav>
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-cat">仓储害虫 · 有害生物详解</div>
+    <h1 class="hero-name">书虱</h1>
+    <div class="hero-latin">Psocoptera</div>
+    <div class="hero-badges"><span class="badge b-amber">食品安全风险</span><span class="badge b-blue">食品仓储</span><span class="badge b-blue">货盘</span><span class="badge b-blue">高湿环境</span></div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-icon">📖</div>
+    <div class="quick-facts"><div class="qf-item"><span class="qf-lbl">体长</span><span class="qf-val">1–2 mm，不同物种略有差异</span></div>
+<div class="qf-item"><span class="qf-lbl">颜色</span><span class="qf-val">浅棕色至暗棕色</span></div>
+<div class="qf-item"><span class="qf-lbl">发育</span><span class="qf-val">无幼虫阶段，若虫极小近透明</span></div>
+<div class="qf-item"><span class="qf-lbl">适温</span><span class="qf-val">25-30℃，高湿环境</span></div>
+<div class="qf-item"><span class="qf-lbl">高峰期</span><span class="qf-val">11月数量达高峰</span></div>
+<div class="qf-item"><span class="qf-lbl">危害</span><span class="qf-val">污染食品，是审核失分项</span></div></div>
+  </div>
+</div>
+<div class="wrap">
+  
+<div class="section">
+  <div class="sec-title">形态特征与识别</div>
+  <div class="info-grid">
+    <div class="info-card"><div class="ic-lbl">外观</div><div class="ic-val">体长1-2mm，极小，浅棕色至暗棕色，肉眼勉强可见。静止时形似细小的白芝麻，移动缓慢但可爬行</div></div>
+    <div class="info-card"><div class="ic-lbl">发育特点</div><div class="ic-val">无幼虫阶段，直接从卵孵化为若虫，若虫极小且近透明——这是与其他仓储害虫的重要区别</div></div>
+    <div class="info-card"><div class="ic-lbl">发现位置</div><div class="ic-val">常在货盘木质表面、包装纸箱表面、食品原料袋外侧发现。大量聚集时可见白色粉末状移动物</div></div>
+    <div class="info-card"><div class="ic-lbl">季节规律</div><div class="ic-val">11月数量达高峰，与温湿度变化密切相关。在5-15℃低温下仍可繁殖，冬季仓库也不能忽视</div></div>
+  </div>
+  <div class="alert">
+    <div class="alert-lbl">食品工厂审核风险</div>
+    书虱是BRC/SQF/FSSC 22000审核中仓储虫害的重点检查对象。在货盘、包装材料、原料袋外侧发现书虱，属于需要记录CAPA的发现项。建议食品工厂定期检查货盘和仓储环境湿度，并保留检查记录。
+  </div>
+</div>
+<div class="section">
+  <div class="sec-title">习性与孳生场所</div>
+  <div class="loc-list">
+    <div class="loc-item">木质货盘表面——高湿度货盘是书虱最常见孳生地</div>
+    <div class="loc-item">食品包装纸箱——纸质包装材料吸湿后提供孳生条件</div>
+    <div class="loc-item">仓库墙角高湿度区域——结露或漏水区域风险最高</div>
+    <div class="loc-item">旧书籍、文件档案——办公室和档案室也可能出现</div>
+  </div>
+  <div class="insight">
+    <div class="insight-lbl">控制湿度是根本方法</div>
+    书虱对湿度极为敏感，将仓储相对湿度控制在60%以下可有效抑制繁殖。安装温湿度记录仪并保留数据，既是防治基础也是应对审核的重要文件证据。
+  </div>
+</div>
+<div class="section">
+  <div class="sec-title">防治要点</div>
+  <div class="steps">
+    <div class="step"><span class="step-num">1</span><div><div class="step-title">控制仓储湿度</div><div class="step-desc">将相对湿度控制在60%以下，安装除湿设备和温湿度监控记录仪。湿度控制是最经济有效的预防方法</div></div></div>
+    <div class="step"><span class="step-num">2</span><div><div class="step-title">定期检查货盘</div><div class="step-desc">每批入库货物检查货盘是否有书虱，发现后隔离处理。建议使用塑料托盘替代木质货盘（书虱无法在塑料表面孳生）</div></div></div>
+    <div class="step"><span class="step-num">3</span><div><div class="step-title">先进先出管理</div><div class="step-desc">FIFO原则避免货物长期堆放，减少书虱在静止货物中积累繁殖的机会</div></div></div>
+    <div class="step"><span class="step-num">4</span><div><div class="step-title">专业熏蒸处理</div><div class="step-desc">严重侵染的仓储区域进行专业熏蒸处理。处理后彻底清洁，并提升湿度管控措施防止复发</div></div></div>
+  </div>
+</div>
+  <div class="article-cta">
+    <div class="cta-title">需要处理这种虫害的专业提示词？</div>
+    <div class="cta-desc">获取 PCO 行业 AI 提示词完整包，含客服话术、处理方案、合规文件</div>
+    <a href="/#prompts" class="btn">免费获取提示词包 →</a>
+  </div>
+</div>
+<footer>
+  <div>© 2025 PCOKit.com · 虫害防治行业知识平台</div>
+  <div><a href="/pests/">← 知识库</a></div>
+</footer>
+</body>
+</html>

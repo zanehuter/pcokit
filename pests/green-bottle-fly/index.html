@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="丝光绿蝇（Lucilia sericata）识别特征、习性——金属绿色有光泽，对腥臭鱼肉最敏感，孳生于腐败动物尸体，室内发现可能有鼠尸或死鸟，是尸体存在的重要指示昆虫。">
+<meta name="keywords" content="丝光绿蝇,green bottle fly,Lucilia sericata,金属绿色苍蝇,鼠尸指示,腐败孳生,PCO">
+<title>丝光绿蝇 Lucilia sericata — 识别特征·习性·防治 | PCOKit</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Noto+Serif+SC:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0a0a08;--white:#f5f3ee;--green:#1a4a2e;--green-mid:#2d6e45;--green-light:#4a9e6a;--green-pale:#e8f5ec;--amber:#c8860a;--amber-pale:#fef3c7;--red:#7f1d1d;--red-pale:#fee2e2;--border:#d4cfc4;--muted:#6b6456;--mono:'DM Mono',monospace;--serif:'Noto Serif SC',Georgia,serif;--display:'Syne',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);background:var(--white);color:var(--black)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2.5rem;background:rgba(245,243,238,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--green);letter-spacing:-.02em;text-decoration:none}
+.nav-logo span{color:var(--black)}
+.nav-back{font-family:var(--mono);font-size:.75rem;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-back:hover{color:var(--green)}
+.hero{background:var(--green);color:#fff;padding:5rem 2.5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.hero-cat{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green-light);margin-bottom:.75rem}
+.hero-name{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-.02em;line-height:1;margin-bottom:.35rem}
+.hero-latin{font-family:var(--mono);font-size:.88rem;color:rgba(255,255,255,.5);margin-bottom:1.5rem}
+.hero-badges{display:flex;gap:.5rem;flex-wrap:wrap}
+.badge{font-size:.65rem;padding:3px 9px;border-radius:3px;font-family:var(--mono)}
+.b-red{background:var(--red-pale);color:var(--red)}
+.b-amber{background:var(--amber-pale);color:var(--amber)}
+.b-green{background:var(--green-pale);color:var(--green)}
+.b-blue{background:#e8f0fb;color:#1e3a5f}
+.hero-right{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:1.5rem}
+.hero-icon{font-size:4rem;text-align:center;padding:1.5rem 0}
+.quick-facts{display:flex;flex-direction:column;gap:.6rem}
+.qf-item{display:flex;gap:.75rem;align-items:flex-start}
+.qf-lbl{font-family:var(--mono);font-size:.65rem;color:rgba(255,255,255,.45);width:60px;flex-shrink:0;padding-top:.1rem}
+.qf-val{font-size:.82rem;color:#fff;line-height:1.45}
+.wrap{max-width:900px;margin:0 auto;padding:3rem 2rem 4rem}
+.section{margin-bottom:2.5rem}
+.sec-title{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--black);margin-bottom:1rem;padding-left:.85rem;border-left:3px solid var(--green)}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.info-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem}
+.ic-lbl{font-family:var(--mono);font-size:.63rem;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.35rem}
+.ic-val{font-size:.88rem;color:var(--black);line-height:1.6}
+.insight{background:var(--green-pale);border-left:3px solid var(--green);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:var(--green);line-height:1.7}
+.insight-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green-mid);margin-bottom:.3rem}
+.warn{background:var(--amber-pale);border-left:3px solid var(--amber);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:#633806;line-height:1.7}
+.warn-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:.3rem}
+.alert{background:var(--red-pale);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.88rem;color:var(--red);line-height:1.7}
+.alert-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:.3rem}
+.location-list{display:flex;flex-direction:column;gap:.45rem}
+.loc-item{display:flex;align-items:flex-start;gap:.7rem;font-size:.86rem;color:var(--muted);line-height:1.5}
+.loc-item::before{content:'📍';flex-shrink:0;margin-top:.05rem}
+.treatment-steps{display:flex;flex-direction:column;gap:.6rem}
+.ts-item{display:flex;align-items:flex-start;gap:.85rem;background:var(--white);border:1px solid var(--border);border-radius:6px;padding:.75rem 1rem}
+.ts-num{width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-family:var(--mono);font-size:.7rem;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.ts-title{font-family:var(--display);font-weight:600;font-size:.87rem;color:var(--black);margin-bottom:.15rem}
+.ts-desc{font-size:.8rem;color:var(--muted);line-height:1.5}
+.compare-box{background:var(--black);color:#fff;border-radius:8px;padding:1.25rem 1.5rem;margin:1.25rem 0}
+.cb-title{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-light);margin-bottom:.85rem}
+.cb-rows{display:flex;flex-direction:column;gap:.4rem}
+.cb-row{display:flex;gap:.75rem;font-size:.82rem;color:rgba(255,255,255,.75);line-height:1.5}
+.cb-row::before{content:'→';color:var(--green-light);font-family:var(--mono);flex-shrink:0}
+.lifecycle{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin:1.25rem 0}
+.lc-item{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:.65rem .75rem;text-align:center}
+.lc-icon{font-size:1.2rem;margin-bottom:.25rem}
+.lc-name{font-family:var(--display);font-weight:600;font-size:.75rem;color:var(--black);margin-bottom:.15rem}
+.lc-time{font-family:var(--mono);font-size:.62rem;color:var(--muted)}
+.disease-list{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin:1rem 0}
+.disease-item{background:var(--red-pale);border-radius:6px;padding:.6rem .85rem;font-size:.82rem;color:var(--red);display:flex;align-items:center;gap:.5rem}
+.disease-item::before{content:'⚠';flex-shrink:0}
+.article-cta{margin-top:2.5rem;text-align:center;border:1.5px dashed var(--border);border-radius:8px;padding:1.75rem}
+.cta-title{font-family:var(--display);font-weight:700;font-size:.95rem;color:var(--black);margin-bottom:.4rem}
+.cta-desc{font-size:.83rem;color:var(--muted);margin-bottom:1.1rem}
+.btn{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;background:var(--green);color:var(--white);padding:.7rem 1.5rem;border:none;border-radius:4px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.btn:hover{background:var(--green-mid)}
+footer{background:var(--black);color:rgba(255,255,255,.4);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.72rem}
+footer a{color:rgba(255,255,255,.4);text-decoration:none}
+footer a:hover{color:var(--green-light)}
+@media(max-width:768px){.hero{grid-template-columns:1fr;padding:4rem 1.25rem 2rem}.hero-right{display:none}.wrap{padding:2rem 1.25rem}.info-grid{grid-template-columns:1fr}.lifecycle{grid-template-columns:repeat(2,1fr)}.disease-list{grid-template-columns:1fr}nav{padding:.75rem 1.25rem}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">PCO<span>Kit</span></a>
+  <a href="/pests/" class="nav-back">← 知识库</a>
+</nav>
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-cat">蝇类 · 有害生物详解</div>
+    <h1 class="hero-name">丝光绿蝇</h1>
+    <div class="hero-latin">Lucilia sericata</div>
+    <div class="hero-badges"><span class="badge b-amber">中风险</span><span class="badge b-blue">腐败物指示</span><span class="badge b-blue">鼠尸鸟尸</span></div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-icon">💚</div>
+    <div class="quick-facts"><div class="qf-item"><span class="qf-lbl">体长</span><span class="qf-val">7–9 mm</span></div>
+<div class="qf-item"><span class="qf-lbl">颜色</span><span class="qf-val">金属绿色，胸部及腹部有光泽</span></div>
+<div class="qf-item"><span class="qf-lbl">孳生地</span><span class="qf-val">腐败动物尸体、腥臭鱼肉</span></div>
+<div class="qf-item"><span class="qf-lbl">生命周期</span><span class="qf-val">与丽蝇相似，约15-30天</span></div>
+<div class="qf-item"><span class="qf-lbl">嗅觉</span><span class="qf-val">对腥臭气味极为敏感</span></div>
+<div class="qf-item"><span class="qf-lbl">特点</span><span class="qf-val">雌蝇喜欢在脓疮、伤口产卵</span></div></div>
+  </div>
+</div>
+<div class="wrap">
+  
+<div class="section">
+  <div class="sec-title">形态特征与识别</div>
+  <div class="info-grid">
+    <div class="info-card"><div class="ic-lbl">外观</div><div class="ic-val">体长7-9mm，胸部及腹部呈金属绿色，有明显光泽。颜色因物种不同略有差异，但金属光泽是核心识别特征</div></div>
+    <div class="info-card"><div class="ic-lbl">幼虫</div><div class="ic-val">除大小外各方面类似家蝇幼虫，成熟幼虫约18mm。孵化时间0-18小时（部分发育在雌虫体内完成）</div></div>
+    <div class="info-card"><div class="ic-lbl">活动习性</div><div class="ic-val">活动范围广，出入人群聚居之处，成虫对腥臭鱼肉最敏感，繁殖期很长</div></div>
+    <div class="info-card"><div class="ic-lbl">产卵偏好</div><div class="ic-val">雌蝇喜欢在脓疮、伤口、腐败动物尸体等处产卵，是法医昆虫学的重要研究对象</div></div>
+  </div>
+  <div class="alert">
+    <div class="alert-lbl">重要提示：室内发现金属绿蝇</div>
+    在酒店客房、餐厅或仓库内发现丝光绿蝇或麻蝇，尤其是数量突然增多，高度怀疑建筑内部有鼠尸或鸟尸腐烂。必须立即排查天花板夹层、管道井、设备后侧等隐蔽区域，找到并清除尸体才能从根本上解决。
+  </div>
+</div>
+<div class="section">
+  <div class="sec-title">习性与孳生场所</div>
+  <div class="location-list">
+    <div class="loc-item">腐败动物尸体——首要孳生地，嗅觉极灵敏</div>
+    <div class="loc-item">腥臭鱼肉、变质肉类——食品加工厂和海鲜餐厅高风险区域</div>
+    <div class="loc-item">天花板夹层内死鼠——酒店出现绿蝇需优先排查</div>
+    <div class="loc-item">垃圾站肉类废弃物——有机废物区域</div>
+  </div>
+</div>
+<div class="section">
+  <div class="sec-title">防治要点</div>
+  <div class="treatment-steps">
+    <div class="ts-item"><span class="ts-num">1</span><div><div class="ts-title">优先排查并清除尸体</div><div class="ts-desc">室内大量出现绿蝇，第一件事是排查天花板、管道井、设备后侧是否有鼠尸或鸟尸。找到并清除是解决问题的唯一根本方法</div></div></div>
+    <div class="ts-item"><span class="ts-num">2</span><div><div class="ts-title">灭蝇灯捕杀成虫</div><div class="ts-desc">在室内布置灭蝇灯减少成虫数量，但这只是辅助手段，尸体不清除绿蝇不会停止繁殖</div></div></div>
+    <div class="ts-item"><span class="ts-num">3</span><div><div class="ts-title">清除腐败有机物</div><div class="ts-desc">清理变质肉类和鱼类废弃物，保持垃圾桶加盖并及时清运，减少孳生基质</div></div></div>
+    <div class="ts-item"><span class="ts-num">4</span><div><div class="ts-title">鼠害防治联动</div><div class="ts-desc">丝光绿蝇大量出现往往意味着有老鼠死在隐蔽处。解决绿蝇问题的同时，需要评估和加强鼠害防控，避免再次出现鼠尸</div></div></div>
+  </div>
+</div>
+  <div class="article-cta">
+    <div class="cta-title">需要处理这种虫害的专业提示词？</div>
+    <div class="cta-desc">获取 PCO 行业 AI 提示词完整包，含客服话术、处理方案、合规文件</div>
+    <a href="/#prompts" class="btn">免费获取提示词包 →</a>
+  </div>
+</div>
+<footer>
+  <div>© 2025 PCOKit.com · 虫害防治行业知识平台</div>
+  <div><a href="/pests/">← 知识库</a></div>
+</footer>
+</body>
+</html>

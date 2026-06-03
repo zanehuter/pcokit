@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="酒店19楼客房大量蛾蠓案例：每天20只以上尸体出现在窗台，通过灭蝇灯隔离监测定位孳生源为马桶封堵不严，滞留粉处理后客房区域零发现。PCO驻场技术员实战记录。">
+<meta name="keywords" content="蛾蠓,下水道蝇,酒店客房,蛾蠓处理,孳生源定位,马桶缝隙,PCO,驻场技术员,drain fly">
+<title>酒店19楼客房蛾蠓溯源实录：每天20只从哪来？ | PCOKit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Noto+Serif+SC:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0a0a08;--white:#f5f3ee;--green:#1a4a2e;
+  --green-mid:#2d6e45;--green-light:#4a9e6a;--green-pale:#e8f5ec;
+  --amber:#c8860a;--amber-pale:#fef3c7;
+  --red:#7f1d1d;--red-pale:#fee2e2;
+  --border:#d4cfc4;--muted:#6b6456;
+  --mono:'DM Mono',monospace;
+  --serif:'Noto Serif SC',Georgia,serif;
+  --display:'Syne',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);background:var(--white);color:var(--black)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2.5rem;background:rgba(245,243,238,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--green);letter-spacing:-.02em;text-decoration:none}
+.nav-logo span{color:var(--black)}
+.nav-back{font-family:var(--mono);font-size:.75rem;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:.4rem;transition:color .2s}
+.nav-back:hover{color:var(--green)}
+.article-wrap{max-width:720px;margin:0 auto;padding:5rem 2rem 4rem}
+.article-cat{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green-light);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.article-cat::before{content:'';width:16px;height:1px;background:var(--green-light)}
+.article-title{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.1;letter-spacing:-.02em;color:var(--black);margin-bottom:1.25rem}
+.article-meta{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;padding:.75rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-bottom:2rem}
+.meta-tag{background:var(--green-pale);color:var(--green);padding:2px 8px;border-radius:3px;font-size:.65rem}
+.meta-tag.red{background:var(--red-pale);color:var(--red)}
+.meta-tag.amber{background:var(--amber-pale);color:var(--amber)}
+
+/* SUMMARY */
+.summary-box{background:var(--black);color:#fff;border-radius:8px;padding:1.5rem 1.75rem;margin-bottom:2rem}
+.summary-title{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green-light);margin-bottom:1rem}
+.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+.summary-lbl{font-family:var(--mono);font-size:.63rem;color:rgba(255,255,255,.45);margin-bottom:.2rem}
+.summary-val{font-size:.86rem;color:#fff;line-height:1.45}
+
+/* BODY */
+.article-body{line-height:1.9;font-size:1rem;color:#2a2820}
+.article-body h2{font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--black);margin:2.5rem 0 .85rem;padding-left:1rem;border-left:3px solid var(--green)}
+.article-body h3{font-family:var(--display);font-weight:600;font-size:.95rem;color:var(--green-mid);margin:1.75rem 0 .6rem}
+.article-body p{margin-bottom:1.1rem}
+.article-body strong{color:var(--black);font-weight:600}
+
+/* BOXES */
+.insight{background:var(--green-pale);border-left:3px solid var(--green);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.5rem 0;font-size:.9rem;color:var(--green);line-height:1.7}
+.insight-lbl{font-family:var(--mono);font-size:.63rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green-mid);margin-bottom:.35rem}
+.warn-box{background:var(--amber-pale);border-left:3px solid var(--amber);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.5rem 0;font-size:.9rem;color:#633806;line-height:1.7}
+.warn-lbl{font-family:var(--mono);font-size:.63rem;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:.35rem}
+.alert-box{background:var(--red-pale);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin:1.5rem 0;font-size:.9rem;color:var(--red);line-height:1.7}
+.alert-lbl{font-family:var(--mono);font-size:.63rem;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:.35rem}
+
+/* TIMELINE */
+.timeline{display:flex;flex-direction:column;gap:0;margin:1.5rem 0}
+.tl-item{display:flex;gap:1rem;position:relative}
+.tl-left{display:flex;flex-direction:column;align-items:center;width:36px;flex-shrink:0}
+.tl-dot{width:12px;height:12px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:14px;position:relative;z-index:1}
+.tl-line{width:2px;flex:1;background:var(--border);margin:0 auto}
+.tl-item:last-child .tl-line{display:none}
+.tl-right{flex:1;padding:.6rem 0 1.5rem .2rem}
+.tl-day{font-family:var(--mono);font-size:.68rem;color:var(--green-light);letter-spacing:.06em;margin-bottom:.3rem}
+.tl-title{font-family:var(--display);font-weight:700;font-size:.92rem;color:var(--black);margin-bottom:.35rem}
+.tl-desc{font-size:.85rem;color:var(--muted);line-height:1.6}
+
+/* LOCATION MAP */
+.location-map{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1.25rem;margin:1.5rem 0}
+.lm-title{font-family:var(--display);font-weight:700;font-size:.82rem;color:var(--black);margin-bottom:1rem}
+.lm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
+.lm-zone{border-radius:6px;padding:.65rem .8rem;text-align:center}
+.lm-zone.active{background:var(--red-pale);border:1.5px solid #fca5a5}
+.lm-zone.check{background:var(--amber-pale);border:1.5px solid #fcd34d}
+.lm-zone.clear{background:var(--green-pale);border:1px solid var(--border)}
+.lm-icon{font-size:1.1rem;margin-bottom:.2rem}
+.lm-name{font-family:var(--display);font-weight:600;font-size:.75rem;color:var(--black)}
+.lm-status{font-family:var(--mono);font-size:.6rem;margin-top:.2rem}
+.lm-status.red{color:var(--red)}
+.lm-status.amber{color:var(--amber)}
+.lm-status.green{color:var(--green)}
+
+/* RESULT */
+.result-box{background:var(--green);color:#fff;border-radius:8px;padding:1.5rem 1.75rem;margin:2rem 0}
+.result-title{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:1rem}
+.result-items{display:flex;flex-direction:column;gap:.5rem}
+.result-item{display:flex;align-items:flex-start;gap:.75rem;font-size:.88rem;color:rgba(255,255,255,.85);line-height:1.5}
+.result-item::before{content:'✓';color:#4ade80;font-family:var(--mono);flex-shrink:0;margin-top:.1rem}
+
+/* RECOMMEND */
+.rec-box{background:var(--white);border:1.5px solid var(--border);border-radius:8px;padding:1.25rem 1.5rem;margin:1.5rem 0}
+.rec-title{font-family:var(--display);font-weight:700;font-size:.85rem;color:var(--black);margin-bottom:.85rem;display:flex;align-items:center;gap:.5rem}
+.rec-items{display:flex;flex-direction:column;gap:.5rem}
+.rec-item{display:flex;align-items:flex-start;gap:.75rem;font-size:.85rem;color:var(--muted);line-height:1.55}
+.rec-num{width:18px;height:18px;border-radius:50%;background:var(--green-pale);color:var(--green);font-family:var(--mono);font-size:.65rem;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem}
+
+/* TAGS CTA */
+.article-tags{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;gap:.4rem;flex-wrap:wrap;align-items:center}
+.tag-lbl{font-family:var(--mono);font-size:.68rem;color:var(--muted)}
+.tag{font-family:var(--mono);font-size:.68rem;padding:3px 9px;border-radius:3px;border:1px solid var(--border);color:var(--muted);text-decoration:none;transition:all .15s}
+.tag:hover{border-color:var(--green);color:var(--green)}
+.related{margin-top:2.5rem;padding:1.5rem;background:var(--green-pale);border-radius:8px}
+.related-title{font-family:var(--display);font-weight:700;font-size:.85rem;color:var(--green);margin-bottom:1rem}
+.related-link{font-size:.88rem;color:var(--green-mid);text-decoration:none;display:flex;align-items:center;gap:.4rem;margin-bottom:.5rem}
+.related-link:hover{color:var(--green)}
+.related-link::before{content:'→';font-family:var(--mono)}
+.article-cta{margin-top:2.5rem;text-align:center;border:1.5px dashed var(--border);border-radius:8px;padding:2rem}
+.cta-title{font-family:var(--display);font-weight:700;font-size:1rem;color:var(--black);margin-bottom:.5rem}
+.cta-desc{font-size:.85rem;color:var(--muted);margin-bottom:1.25rem}
+.btn-primary{font-family:var(--display);font-weight:700;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;background:var(--green);color:var(--white);padding:.75rem 1.75rem;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:all .2s;display:inline-block}
+.btn-primary:hover{background:var(--green-mid)}
+footer{background:var(--black);color:rgba(255,255,255,.4);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.72rem}
+footer a{color:rgba(255,255,255,.4);text-decoration:none}
+footer a:hover{color:var(--green-light)}
+@media(max-width:640px){nav{padding:.75rem 1.25rem}.article-wrap{padding:4rem 1.25rem 3rem}.summary-grid{grid-template-columns:1fr}.lm-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">PCO<span>Kit</span></a>
+  <a href="/" class="nav-back">← 返回首页</a>
+</nav>
+
+<article class="article-wrap">
+
+  <div class="article-cat">实战案例 · 蛾蠓溯源</div>
+  <h1 class="article-title">酒店19楼客房蛾蠓溯源实录：每天20只，从哪里来的？</h1>
+  <div class="article-meta">
+    <span>2025年</span>
+    <span>·</span>
+    <span>PCOKit 驻场技术员</span>
+    <span>·</span>
+    <span class="meta-tag red">严重</span>
+    <span class="meta-tag">蛾蠓</span>
+    <span class="meta-tag">酒店客房</span>
+    <span class="meta-tag amber">孳生源定位</span>
+  </div>
+
+  <div class="summary-box">
+    <div class="summary-title">案例摘要</div>
+    <div class="summary-grid">
+      <div>
+        <div class="summary-lbl">虫害类型</div>
+        <div class="summary-val">蛾蠓（Drain Fly）</div>
+      </div>
+      <div>
+        <div class="summary-lbl">发现位置</div>
+        <div class="summary-val">酒店19楼客房，窗台每天出现大量尸体</div>
+      </div>
+      <div>
+        <div class="summary-lbl">严重程度</div>
+        <div class="summary-val">严重，每天超过20只以上，持续3-4天</div>
+      </div>
+      <div>
+        <div class="summary-lbl">孳生源</div>
+        <div class="summary-val">卫生间马桶后侧封堵不严，排水管道渗漏</div>
+      </div>
+      <div>
+        <div class="summary-lbl">处理结果</div>
+        <div class="summary-val">客房区域零发现，粘虫板零星粘捕（来自管道）</div>
+      </div>
+      <div>
+        <div class="summary-lbl">后续建议</div>
+        <div class="summary-val">对马桶底部进行再次密封处理</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-body">
+
+    <p>接到报告时，客人反映已经连续三四天在窗台发现大量死虫。每天超过20只，全部堆积在窗台区域。</p>
+
+    <p>第一个判断：这不是偶然飘入的虫子，数量和规律性说明<strong>房间内部有持续的孳生源</strong>。19楼窗外不太可能有蛾蠓繁殖地，问题一定出在室内排水系统。</p>
+
+    <h2>为什么是蛾蠓，不是其他飞虫？</h2>
+
+    <p>蛾蠓（学名毛蠓，英文 Drain Fly 或 Moth Fly）体长约2毫米，翅膀和身体布满绒毛，停飞时翅膀如帐状覆盖全身——这是现场快速识别的关键特征。</p>
+
+    <p>它的幼虫以排水管道内的<strong>淤泥状有机物</strong>为食，成虫寿命约3周，一次产卵30到100粒，孵化时间极短。这解释了为什么数量这么多、这么快——只要孳生源还在，每天都会有新的成虫羽化。</p>
+
+    <div class="insight">
+      <div class="insight-lbl">识别要点</div>
+      蛾蠓 vs 果蝇的区分：蛾蠓全身绒毛明显，飞行能力弱，喜欢停在墙面不动；果蝇身体光滑，飞行活跃，眼睛明显红色。窗台出现死虫而非在食物周围聚集，进一步指向蛾蠓而非果蝇。
+    </div>
+
+    <h2>第一步：三区隔离 + 灭蝇灯监测</h2>
+
+    <p>孳生源不明的情况下，先不用药，先找到源头。我在三个区域分别放置粘捕式灭蝇灯，然后<strong>把三个区域关门隔离</strong>：</p>
+
+    <div class="location-map">
+      <div class="lm-title">客房三区隔离监测布置</div>
+      <div class="lm-grid">
+        <div class="lm-zone check">
+          <div class="lm-icon">🚿</div>
+          <div class="lm-name">淋浴间</div>
+          <div class="lm-status amber">监测中</div>
+        </div>
+        <div class="lm-zone active">
+          <div class="lm-icon">🚽</div>
+          <div class="lm-name">卫生间</div>
+          <div class="lm-status red">← 孳生源</div>
+        </div>
+        <div class="lm-zone clear">
+          <div class="lm-icon">❄️</div>
+          <div class="lm-name">卧室空调下</div>
+          <div class="lm-status green">未发现</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="insight-lbl">为什么要隔离分区？</div>
+      蛾蠓飞行能力弱，基本不会主动穿越关闭的门。隔离后，哪个区域灭蝇灯粘捕数量最多，孳生源就在哪里。这比逐处检查排水口效率高得多，尤其是在不能长时间影响客房使用的酒店场景下。
+    </div>
+
+    <h2>第二天：定位孳生源</h2>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-right">
+          <div class="tl-day">第一天</div>
+          <div class="tl-title">三区隔离，灭蝇灯布置完成</div>
+          <div class="tl-desc">淋浴间、卫生间、卧室空调下方各放一台粘捕式灭蝇灯，关门隔离，等待第二天结果</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-right">
+          <div class="tl-day">第二天</div>
+          <div class="tl-title">确认孳生源：卫生间马桶后侧</div>
+          <div class="tl-desc">卫生间灭蝇灯粘捕数量明显高于其他两个区域。进一步检查发现，马桶与地面/墙面之间封堵不严实，排水管道内的蛾蠓通过缝隙爬出并羽化</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-right">
+          <div class="tl-day">处理当天</div>
+          <div class="tl-title">滞留粉处理 + 粘虫板布置</div>
+          <div class="tl-desc">对马桶周边区域施用优士粉进行滞留处理，在马桶下方和侧边放置粘虫板。马桶侧边盖板可拆卸，处理完成后复位，不影响住客正常使用</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-right">
+          <div class="tl-day">后续跟进</div>
+          <div class="tl-title">客房区域零发现，粘虫板零星粘捕</div>
+          <div class="tl-desc">窗台不再出现蛾蠓尸体，客房区域活虫消失。但马桶后侧粘虫板仍有零星粘捕，说明管道内孳生源还在，马桶封堵问题没有根本解决</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>处理的边界在哪里</h2>
+
+    <p>这个案例有一个关键限制：<strong>酒店排水管道内部无法进行深入处理</strong>。</p>
+
+    <p>蛾蠓的根本孳生地是管道内壁的淤泥层，彻底清除需要对管道进行高压冲洗或生物酶处理，这属于工程范畴，不在常规虫害防治服务范围内。我们能做的是：</p>
+
+    <div class="rec-box">
+      <div class="rec-title">🔧 PCO 能处理的范围</div>
+      <div class="rec-items">
+        <div class="rec-item"><span class="rec-num">1</span>通过监测定位孳生源区域，缩小排查范围</div>
+        <div class="rec-item"><span class="rec-num">2</span>对出口缝隙进行滞留处理，阻断成虫逸出路径</div>
+        <div class="rec-item"><span class="rec-num">3</span>粘虫板监测，持续了解孳生源活跃程度</div>
+        <div class="rec-item"><span class="rec-num">4</span>向客户提出工程整改建议，推动根本解决</div>
+      </div>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-lbl">给客户的建议</div>
+      马桶底部与地面之间的封堵是解决这个问题的根本。建议酒店工程部对马桶底部进行硅胶重新密封，封堵管道与地面之间的所有缝隙。这个操作成本极低，但能从根源上阻断蛾蠓的逸出通道。
+    </div>
+
+    <h2>结果评估</h2>
+
+    <div class="result-box">
+      <div class="result-title">处理效果</div>
+      <div class="result-items">
+        <div class="result-item">窗台蛾蠓尸体消失，客房区域零活虫</div>
+        <div class="result-item">住客投诉解决，客房正常使用不受影响</div>
+        <div class="result-item">孳生源已定位并告知客户，提出工程整改建议</div>
+        <div class="result-item">粘虫板持续监测，了解管道内孳生活跃程度</div>
+      </div>
+    </div>
+
+    <h2>这个案例的三个关键判断</h2>
+
+    <p><strong>第一个判断：19楼出现大量蛾蠓，问题一定在室内排水系统，不是室外飘入。</strong> 蛾蠓不会飞到19楼，高层客房出现蛾蠓，90%以上是排水管道问题。这个判断让排查方向从一开始就正确。</p>
+
+    <p><strong>第二个判断：先隔离监测，再用药。</strong> 如果不先定位孳生源就直接喷药，只能消灭已经逸出的成虫，管道内的幼虫和蛹不受影响，三天后又会出现同样数量。找到源头是关键。</p>
+
+    <p><strong>第三个判断：知道边界在哪里，及时告知客户。</strong> 管道内部的孳生源超出了常规PCO服务能处理的范围。及时、清楚地向客户说明这一点，并给出工程整改建议，比承诺一个做不到的结果更专业。</p>
+
+    <div class="insight">
+      <div class="insight-lbl">驻场经验总结</div>
+      酒店高楼层出现蛾蠓，第一反应永远是检查排水系统。马桶、地漏、淋浴排水口是最常见的逸出点。灭蝇灯隔离监测是最高效的定位方法，比逐个检查排水口省时间，也不影响客房正常运营。
+    </div>
+
+  </div>
+
+  <div class="article-tags">
+    <span class="tag-lbl">标签：</span>
+    <a href="/pests/drain-fly/" class="tag">蛾蠓</a>
+    <a href="/blog/" class="tag">酒店客房</a>
+    <a href="/blog/" class="tag">孳生源定位</a>
+    <a href="/blog/" class="tag">马桶封堵</a>
+    <a href="/blog/" class="tag">灭蝇灯监测</a>
+    <a href="/blog/" class="tag">驻场案例</a>
+  </div>
+
+  <div class="related">
+    <div class="related-title">相关内容</div>
+    <a href="/blog/blog-laundry-cockroach.html" class="related-link">酒店洗衣房德国小蠊处理实录</a>
+    <a href="/pests/drain-fly/" class="related-link">蛾蠓识别与生物学特征详解</a>
+    <a href="/prompts/" class="related-link">酒店虫害投诉处理 AI 提示词</a>
+  </div>
+
+  <div class="article-cta">
+    <div class="cta-title">遇到类似问题需要处理方案？</div>
+    <div class="cta-desc">获取完整的酒店虫害处理 AI 提示词包，包含客诉回复、处理报告、合规文件模板</div>
+    <a href="/#prompts" class="btn-primary">免费获取提示词包 →</a>
+  </div>
+
+</article>
+
+<footer>
+  <div>© 2025 PCOKit.com · 虫害防治行业知识平台</div>
+  <div><a href="/">返回首页</a></div>
+</footer>
+
+</body>
+</html>
