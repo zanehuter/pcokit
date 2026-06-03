@@ -761,19 +761,7 @@ footer a:hover { color: var(--green-light); }
 </footer>
 
 <script>
-function handleSub(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('button');
-  const orig = btn.textContent;
-  btn.textContent = '✓ 已提交，请查收邮件';
-  btn.style.background = '#e8f5ec';
-  btn.style.color = '#085041';
-  setTimeout(() => {
-    btn.textContent = orig;
-    btn.style.background = '';
-    btn.style.color = '';
-    e.target.reset();
-  }, 3000);
+function handleSub(e){ e.preventDefault(); window.open('https://eepurl.com/6SnUi6eNbE','_blank'); }, 3000);
 }
 
 // 滚动入场动画
