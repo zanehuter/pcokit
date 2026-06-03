@@ -302,18 +302,7 @@ function renderAll() {
   });
 }
 
-function submitEmail(e) {
-  e.preventDefault();
-  var btn = e.target.querySelector('button');
-  btn.textContent = '✓ 已提交，请查收邮件';
-  btn.style.background = '#e8f5ec';
-  btn.style.color = '#085041';
-  setTimeout(function() {
-    btn.textContent = '免费获取完整版 →';
-    btn.style.background = '';
-    btn.style.color = '';
-    e.target.reset();
-  }, 3000);
+function submitEmail(e){ e.preventDefault(); window.open('https://eepurl.com/6SnUi6eNbE','_blank'); }, 3000);
 }
 
 renderAll();
